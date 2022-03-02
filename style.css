@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : v2.2
+버전 : v3.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
 사용 주의점 :
-ㄴ주석 및 코드 수정 절대 불가
+ㄴ주석 수정 및 삭제 불가
+ㄴfi스킨 문구 삭제 불가
 ㄴ스킨은 무제한적으로 사이트에 적용 가능
 ㄴ재배포 및 코드 무단 사용 절대 불가
-ㄴ하단 저작권 표시 제거 가능
 ㄴitcider 공식 웹사이트에서만 배포 가능
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
@@ -500,9 +500,9 @@ html {
   .box_header .btn_search {
     right: 116px; }
   .box_header .btn_menu {
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_menu_b.svg); }
+    background-image: url(./images/ico_menu_b.svg); }
   .box_header .btn_search {
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_search_b.svg); }
+    background-image: url(./images/ico_search_b.svg); }
   .box_header .btn_menu:hover, .box_header .btn_search:hover {
     color: #333; }
 
@@ -519,9 +519,9 @@ html {
     color: #fff;
     opacity: .6; }
   .white .box_header .btn_menu {
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_menu.svg); }
+    background-image: url(./images/ico_menu.svg); }
   .white .box_header .btn_search {
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_search.svg); }
+    background-image: url(./images/ico_search.svg); }
 
 .white .area_cover {
   margin-top: 0; }
@@ -1084,7 +1084,7 @@ aside .tag_board {
     left: -10px;
     width: 10px;
     height: 29px;
-    background: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_slash.png) no-repeat left center; }
+    background: url(./images/ico_slash.png) no-repeat left center; }
   .area_paging .link_num:last-child span.selected:before {
     background: none; }
   .area_paging .link_num:last-child .selected {
@@ -1465,10 +1465,10 @@ aside .tag_board {
 }
 
 .item-thumbnail {
-  background: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_no.png);
+  background: url(./images/ico_no.png);
 }
 .no-img {
-  background: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/ico_no.png);
+  background: url(./images/ico_no.png);
 }
 
 .btn-for-guest {
@@ -1547,10 +1547,10 @@ aside .tag_board {
     color: #fff; }
   .type_featured .btn_prev {
     float: left;
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/arr_left.png); }
+    background-image: url(./images/arr_left.png); }
   .type_featured .btn_next {
     float: right;
-    background-image: url(https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/arr_right.png); }
+    background-image: url(./images/arr_right.png); }
   .type_featured .slide_item {
     z-index: 1;
     overflow: hidden; }
@@ -2833,15 +2833,15 @@ aside .tag_board {
 
 /*
 스킨명 : fast itcider
-버전 : v2.2
+버전 : v3.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
 사용 주의점 :
-ㄴ주석 및 코드 수정 절대 불가
+ㄴ주석 수정 및 삭제 불가
+ㄴfi스킨 문구 삭제 불가
 ㄴ스킨은 무제한적으로 사이트에 적용 가능
 ㄴ재배포 및 코드 무단 사용 절대 불가
-ㄴ하단 저작권 표시 제거 가능
 ㄴitcider 공식 웹사이트에서만 배포 가능
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
