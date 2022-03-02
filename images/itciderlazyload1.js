@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.removeAttribute("srcset");
         }
 
-        img.src = "https://t1.daumcdn.net/tistory/4614459/skin/images/1x1.png";
+        img.src = "https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/1x1.png";
     };
 
     if ("IntersectionObserver" in window) {
