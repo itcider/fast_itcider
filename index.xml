@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+    <information>
+        <name>fast itcider</name>
+        <version>3.1</version>
+        <description>
+            <![CDATA[티스토리의 포트폴리오 스킨을 개선한 스킨입니다. ]]>
+        </description>
+        <license>
+            <![CDATA[ itcider License 주석 삭제 불가, 사이드바 fi스킨 문구 삭제 불가, 재배포 불가]]>
+        </license>
+    </information>
+    <author>
+        <name>itcider 쉽고 시원한 it</name>
+        <homepage>https://itcider.com</homepage>
+        <email>support@itcider.com</email>
+    </author>
+    <default>
+        <entriesOnPage>6</entriesOnPage>
+        <entriesOnList>6</entriesOnList>
+        <recentEntries>4</recentEntries>
+        <recentComments>4</recentComments>
+        <recentTrackbacks>4</recentTrackbacks>
+        <itemsOnGuestbook>4</itemsOnGuestbook>
+        <tagsInCloud>20</tagsInCloud>
+        <sortInCloud>3</sortInCloud>
+        <expandComment>8</expandComment>
+        <lengthOfRecentNotice>40</lengthOfRecentNotice>
+        <lengthOfRecentEntry>30</lengthOfRecentEntry>
+        <lengthOfRecentComment>40</lengthOfRecentComment>
+        <lengthOfRecentTrackback>40</lengthOfRecentTrackback>
+        <lengthOfLink>30</lengthOfLink>
+        <commentMessage>
+            <none>0</none>
+            <single>1</single>
+        </commentMessage>
+        <trackbackMessage>
+            <none>0</none>
+            <single>1</single>
+        </trackbackMessage>
+        <contentWidth>700</contentWidth>
+        <toolbar>white</toolbar>
+    </default>
+    <variables>
+        <variablegroup name="상단 및 하단 로고">
+            <variable>
+                <name>logoImage</name>
+                <label>로고 (높이 48px)</label>
+                <description></description>
+                <type>IMAGE</type>
+                <option></option>
+                <default></default>
+            </variable>
+        </variablegroup>
+      
+        <variablegroup name="티스토리 블로그 seo 설정">
+
+            <variable>
+                <name>metaportal</name>
+                <label>
+                    <![CDATA[ 네이버와 구글의 사이트 인증이 가능합니다. ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 네이버와 구글의 사이트 인증이 가능합니다.]]>
+                </description>
+            </variable>
+            <variable>
+                <name>navermeta</name>
+                <label>
+                    <![CDATA[ 네이버 사이트 소유 인증]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 네이버 사이트 소유 인증 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>googlemeta</name>
+                <label>
+                    <![CDATA[ 구글 사이트 소유 인증]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 구글 사이트 소유 인증 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>metaauthor</name>
+                <label>
+                    <![CDATA[ 블로그 관리자 명 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 블로그필명을 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>metakeyword</name>
+                <label>
+                    <![CDATA[ seo용 키워드 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ seo 설정 키워드를 적어주세요. ]]>
+                </description>
+            </variable>
+        
+           
+
+        </variablegroup>
+
+        <variablegroup name="블로그 업데이트 설정">
+
+            <variable>
+                <name>autoupdate</name>
+                <label>
+                    <![CDATA[jsdelivr에서 파일을 불러옴(자동 업데이트)-자동이나 수동 하나만 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[jsdelivr에서 css를 불러옴(자동 업데이트)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>manualupdate</name>
+                <label>
+                    <![CDATA[다음cdn에서 파일을 불러옴(수동 업데이트)-자동이나 수동 하나만 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[다음에서 css를 불러옴(수동 업데이트) ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+
+        <variablegroup name="티스토리 블로그 속도 설정">
+            <variable>
+                <name>waiting</name>
+                <label>
+                    <![CDATA[  로딩바 (사용시 느려지나 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[  로딩바 (사용시 느려지나 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>lazyload1</name>
+                <label>
+                    <![CDATA[ 이미지 지연로드 A (A나 B 하나만 사용) ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 이미지 지연로드 A (A나 B 하나만 사용) ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>lazyload2</name>
+                <label>
+                    <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>webshare</name>
+                <label>
+                    <![CDATA[ 공유 api(브라우저 공유기능)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 공유 api(브라우저 공유기능) ]]>
+                </description>
+            </variable>
+
+			<variable>
+                <name>daumcdnfont</name>
+                <label>
+                    <![CDATA[티스토리 폰트 사용 여부]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[티스토리 폰트 사용 여부 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+		<variablegroup name="블로그 검색 설정">
+            <variable>
+                <name>searchkeyword</name>
+                <label>
+				    <![CDATA[ 검색창 문구 ]]>
+				</label>
+                <description>
+				<![CDATA[ 검색창 문구 ]]>
+				</description>
+                <type>STRING</type>
+                <option></option>
+                <default>검색어를 입력해주세요!</default>
+            </variable>
+			<variable>
+                <name>searchtag</name>
+                <label>
+                    <![CDATA[ 검색창 아래 태그 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 검색창 아래 태그 ]]>
+                </description>
+            </variable>
+			<variable>
+                <name>searchreply</name>
+                <label>
+                    <![CDATA[ 검색창 아래 댓글 목록 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 검색창 아래 댓글 목록 ]]>
+                </description>
+            </variable>
+			<variable>
+                <name>searcharch</name>
+                <label>
+                    <![CDATA[ 검색 시 아카이브 목록 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 검색 시 아카이브 목록 ]]>
+                </description>
+            </variable>
+						<variable>
+                <name>searchrecent</name>
+                <label>
+                    <![CDATA[ 검색 시 최신글 목록 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 검색 시 최신글 목록 ]]>
+                </description>
+            </variable>
+			<variable>
+                <name>searchnotice</name>
+                <label>
+                    <![CDATA[ 검색 시 공지사항 목록 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 검색 시 공지사항 목록 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+		<variablegroup name="블로그 목차 설정">
+            <variable>
+                <name>tocload</name>
+                <label>
+                    <![CDATA[ 목차 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option/>
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차 활성화 여부 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>tocset</name>
+                <label>
+				    <![CDATA[ 목차설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"toc_main", "label":"제목1", "value":"h2"},
+					{"name":"toc12", "label":"제목1 제목2", "value":"h2, h3"},
+					{"name":"toc123", "label":"제목1 제목2 제목3", "value":"h2, h3, h4"},
+					{"name":"toc2", "label":"제목2", "value":"h3"},
+					{"name":"toc23", "label":"제목2 제목3", "value":"h3, h4"},
+					{"name":"toc13", "label":"제목1, 제목3", "value":"h2, h4"},
+					{"name":"toc3", "label":"제목3", "value":"h4"}
+				]
+			]]>
+                </option>
+                <default>toc_main</default>
+            </variable>
+            <variable>
+                <name>tocoption</name>
+                <label>
+                    <![CDATA[ 목차 옵션 설정 - itcider fi스킨 문서 확인해주세요.]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>none</default>
+                <description>
+                    <![CDATA[ 목차 옵션 설정 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+        <variablegroup name="티스토리 블로그 설정">
+
+            <variable>
+                <name>colorSet</name>
+                <label>
+				    <![CDATA[ 티스토리 색상 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+            <![CDATA[
+				[
+					{"name":"theme_pink", "label":"핑크", "value":"theme_pink"},
+					{"name":"theme_blue", "label":"블루", "value":"theme_blue"},
+					{"name":"theme_green", "label":"그린", "value":"theme_green"},
+					{"name":"theme_gray", "label":"그레이", "value":"theme_gray"}
+				]
+			]]>
+                </option>
+                <default>theme_gray</default>
+            </variable>
+            
+
+            <variable>
+                <name>listType</name>
+                <label>
+				<![CDATA[ 메인페이지 리스트 방식 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+                    <![CDATA[
+				[
+					{"name":"related", "label":"블로그형", "value":"related"}
+				]
+			]]>
+                </option>
+                <default>related</default>
+            </variable>
+
+            <variable>
+                <name>itciderbanner</name>
+                <label>
+                    <![CDATA[ 페이지 목록에서 배너 송출 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 페이지 목록에서 배너 송출 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderbannerurl</name>
+                <label>
+                    <![CDATA[ 배너를 누를시 이동할 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 배너를 누를시 이동할 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderbannerimg</name>
+                <label>
+                    <![CDATA[ 배너에 사용될 이미지 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fiskin.png</default>
+                <description>
+                    <![CDATA[ 배너에 사용될 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderbanneralt</name>
+                <label>
+                    <![CDATA[ 배너가 안 나올 경우 나올 문구 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 배너가 안 나올 경우 나올 문구를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itcidertitle</name>
+                <label>
+                    <![CDATA[ 메인 페이지 리스트에서 제목 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 메인에서 제목을 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itcidersummary</name>
+                <label>
+                    <![CDATA[ 메인 페이지 리스트에서 요약 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 메인에서 요약을 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderdate</name>
+                <label>
+                    <![CDATA[ 메인 페이지 리스트에서 날짜 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 메인에서 날짜를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderposttag</name>
+                <label>
+                    <![CDATA[ 글 태그 목록 활성화여부]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 글 태그 목록 활성화여부 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderrelate</name>
+                <label>
+                    <![CDATA[ 관련글 활성화여부]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 관련글 활성화여부 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderrelatetitle</name>
+                <label>
+                    <![CDATA[ 관련글 제목 활성화 여부]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 관련글 제목 활성화 여부 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderrelatedate</name>
+                <label>
+                    <![CDATA[ 관련글 날짜 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 관련글 날짜 활성화 여부 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itciderreplyset</name>
+                <label>
+                    <![CDATA[ 댓글창 활성화여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 댓글창 활성화여부 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>noieoption</name>
+                <label>
+                    <![CDATA[ 인터넷 익스플로러로 접속시 다른 브라우저로 유도 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 인터넷 익스플로러로 접속시 다른 브라우저로 유도 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>itcidercovernotgrad</name>
+                <label>
+                    <![CDATA[ 본문 상단의 썸네일 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 본문 상단의 썸네일 활성화 여부 ]]>
+                </description>
+            </variable>
+             <variable>
+                <name>itcidercovergrad</name>
+                <label>
+                    <![CDATA[ 본문 상단의 썸네일 비활성화 및 그라데이션으로 교체 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 본문 상단의 썸네일 비활성화 및 그라데이션으로 교체 ]]>
+                </description>
+            </variable>
+
+        </variablegroup>
+
+ 		<variablegroup name="사이드바">
+
+		 <variable>
+                <name>tistorycategory</name>
+                <label>
+                    <![CDATA[ 사이드바에서 카테고리 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 사이드바에서 카테고리를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tistorymenu</name>
+                <label>
+                    <![CDATA[ 사이드바에서 메뉴 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 사이드바에서 메뉴를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tistoryrss</name>
+                <label>
+                    <![CDATA[ 사이드바에서 rss 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ rss를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>tistoryadmin</name>
+                <label>
+                    <![CDATA[ 사이드바에서 관리자페이지 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 관리페이지를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+ 		<variablegroup name="저작권 및 리소스 보호">
+            <variable>
+                <name>discopy</name>
+                <label>
+                    <![CDATA[ 우클릭 및 개발자도구 제한]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 우클릭 및 개발자도구 제한 ]]>
+                </description>
+            </variable>
+			<variable>
+                <name>copyscript</name>
+                <label>
+                    <![CDATA[ 복사시 자동 출처 표기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 복사시 자동 출처 표기  ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>copyscriptsource</name>
+                <label>
+                    <![CDATA[ 출처 표기 문구 - 특수기호를 쓰지 마시길 바랍니다. ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>위 블로그글은 저작권법에 의해서 보호됩니다. 무단 전재 또는 복제시 관련법에 따라 처벌될 수 있습니다.</default>
+                <description>
+                    <![CDATA[ 출처 표기 문구 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+ 		<variablegroup name="url 리다이렉트 (잘못 설정할 경우 사이트가 작동되지 않을 수 있습니다.)">
+            <variable>
+                <name>redirection</name>
+                <label>
+                    <![CDATA[ 리다이렉트 - 잘못된 url은 오작동을 일으킬 수 있습니다.]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 필요하신 경우 리다이렉트를 활성화시키실 수 있습니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>url1</name>
+                <label>
+                    <![CDATA[ 리다이렉트 대상 url1 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://r1.itcider.com</default>
+                <description>
+                    <![CDATA[ 리다이렉트 대상 url1을 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>url2</name>
+                <label>
+                    <![CDATA[ 리다이렉트 대상 url2 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://r2.itcider.com</default>
+                <description>
+                    <![CDATA[ 리다이렉트 대상 url2를 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>urlreal</name>
+                <label>
+                    <![CDATA[ 현재 티스토리 주소 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com</default>
+                <description>
+                    <![CDATA[ 현재 티스토리 주소를 적어주세요. ]]>
+                </description>
+            </variable>
+        </variablegroup>
+        <variable>
+            <name>footerCopyright</name>
+            <label>하단 카피라이트</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default>© itcider.com All rights reserved.</default>
+        </variable>
+        <variable>
+            <name>footerLink1Name</name>
+            <label>하단 링크1 이름</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default>fast itcider</default>
+        </variable>
+        <variable>
+            <name>footerLink1Url</name>
+            <label>하단 링크1 URL</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default>https://itcider.com/903</default>
+        </variable>
+        <variable>
+            <name>footerLink2Name</name>
+            <label>하단 링크2 이름</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default>itcider 검색</default>
+        </variable>
+        <variable>
+            <name>footerLink2Url</name>
+            <label>하단 링크2 URL</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default>https://itcider.net</default>
+        </variable>
+        <variable>
+            <name>footerLink3Name</name>
+            <label>하단 링크3 이름</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default></default>
+        </variable>
+        <variable>
+            <name>footerLink3Url</name>
+            <label>하단 링크3 URL</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default></default>
+        </variable>
+        <variable>
+            <name>footerLink4Name</name>
+            <label>하단 링크4 이름</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default></default>
+        </variable>
+        <variable>
+            <name>footerLink4Url</name>
+            <label>하단 링크4 URL</label>
+            <description></description>
+            <type>STRING</type>
+            <option></option>
+            <default></default>
+        </variable>
+    </variables>
+</skin>
