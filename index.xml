@@ -4,7 +4,7 @@
         <name>fast itcider</name>
         <version>3.1</version>
         <description>
-            <![CDATA[티스토리의 포트폴리오 스킨을 개선한 스킨입니다. ]]>
+            <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
         <license>
             <![CDATA[ itcider License 주석 삭제 불가, 사이드바 fi스킨 문구 삭제 불가, 재배포 불가]]>
@@ -336,6 +336,30 @@
                     <![CDATA[ 목차 옵션 설정 ]]>
                 </description>
             </variable>
+                         <variable>
+                <name>tocgrad1</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러1]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>rgba(255,255,255,0)</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러1]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tocgrad2</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러2]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>blue</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러2]]>
+                </description>
+            </variable>
         </variablegroup>
 
         <variablegroup name="티스토리 블로그 설정">
@@ -550,6 +574,18 @@
                     <![CDATA[ 본문 상단의 썸네일 활성화 여부 ]]>
                 </description>
             </variable>
+            <variable>
+                <name>notgradpixel</name>
+                <label>
+                    <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>520</default>
+                <description>
+                    <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
+                </description>
+            </variable>
              <variable>
                 <name>itcidercovergrad</name>
                 <label>
@@ -560,6 +596,42 @@
                 <default>true</default>
                 <description>
                     <![CDATA[ 본문 상단의 썸네일 비활성화 및 그라데이션으로 교체 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>gradpixel</name>
+                <label>
+                    <![CDATA[본문 상단의 그라데이션 사용시 크기 설정]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>500</default>
+                <description>
+                    <![CDATA[본문 상단의 그라데이션 사용시 크기 설정]]>
+                </description>
+            </variable>
+            <variable>
+                <name>gradcolor1</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러1]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>rgb(255, 123, 0)</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러1]]>
+                </description>
+            </variable>
+            <variable>
+                <name>gradcolor2</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러2]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>rgb(12, 58, 211)</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러2]]>
                 </description>
             </variable>
 
@@ -586,7 +658,7 @@
                 </label>
                 <type>BOOL</type>
                 <option />
-                <default>true</default>
+                <default>false</default>
                 <description>
                     <![CDATA[ 사이드바에서 메뉴를 보일지 설정이 가능합니다. ]]>
                 </description>
@@ -713,7 +785,7 @@
             <description></description>
             <type>STRING</type>
             <option></option>
-            <default>© itcider.com All rights reserved.</default>
+            <default>copyright 블로그 이름</default>
         </variable>
         <variable>
             <name>footerLink1Name</name>

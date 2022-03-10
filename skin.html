@@ -37,7 +37,7 @@
 
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev3-0.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev3-1.css" />                                              
       <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/jquery.min.js"></script>    
   </s_if_var_autoupdate>
 
@@ -51,17 +51,17 @@
 
 <s_if_var_itcidercovernotgrad>
   <style>                    
-  .type_article_header_cover .inner_header {
-    height: 520px; }
-    </style>
-  </s_if_var_itcidercovernotgrad>
-  <s_if_var_itcidercovergrad>
-    <style>              
     .type_article_header_cover .inner_header {
-      height: 300px; 
-      background: linear-gradient(to bottom right, rgb(255, 123, 0),rgb(12, 58, 211));
-    }
+      height: [##_var_notgradpixel_##]px; }
       </style>
+    </s_if_var_itcidercovernotgrad>
+    <s_if_var_itcidercovergrad>
+      <style>              
+      .type_article_header_cover .inner_header {
+        height: [##_var_gradpixel_##]px; 
+        background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##]);
+      }
+        </style>
     </s_if_var_itcidercovergrad>
  
 
@@ -994,6 +994,8 @@
   </s_t3>
 
   <s_if_var_autoupdate>
+    <s_if_var_webshare>
+
    <!--shareurl-->
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
 left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
@@ -1013,10 +1015,12 @@ left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itc
 right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
+    </s_if_var_webshare>
 
   </s_if_var_autoupdate>
 
   <s_if_var_manualupdate>
+    <s_if_var_webshare>
 
 
   <!--shareurl-->
@@ -1038,6 +1042,8 @@ left: 60px;" id ="shared"><img src="./images/share.png" width="40" alt="공유�
 right: 10px;"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
+    </s_if_var_webshare>
+
   </s_if_var_manualupdate>
 
 </body>
@@ -1245,6 +1251,9 @@ $().ready(function () {
   <style>
     .book-toc ul {
     list-style-type: [##_var_tocoption_##];
+}
+#toc a:hover {
+  background: linear-gradient(180deg, [##_var_tocgrad1_##] 50%, [##_var_tocgrad2_##] 50%);
 }
   </style>
 <script>
