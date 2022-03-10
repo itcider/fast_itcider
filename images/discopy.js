@@ -17,7 +17,7 @@
       //=================================================================================
       // 우클릭, 드래그, 복사 차단https://gist.github.com/ab-c-d/7aa98987589466eee696952e154c98e1
       //=================================================================================
-      var events = ["contextmenu", "selectstart", "dragstart", "copy", "cut"];
+      var events = ["contextmenu", "selectstart", "dragstart", "cut"];
 
       events.forEach(function (event) {
           window.addEventListener(event, blockEvent, true);
