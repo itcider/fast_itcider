@@ -463,8 +463,8 @@
               <li class="item_category">
                 <a href="[##_list_rep_link_##]" class="link_category">
 
-                    <span class="thumnail item-thumbnail" <s_list_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]')"</s_list_rep_thumbnail>></span>
-
+                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" loading="lazy"/>
+                  </span>
 
                   <div class="info">
                     <s_if_var_itcidertitle>
@@ -566,8 +566,10 @@
                       <s_article_related_rep>
                         <li class="item_related">
                           <a href="[##_article_related_rep_link_##]" class="link_related">
-                            <span class="thumnail item-thumbnail" style="background-image:url('<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/C250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>')"></span>
-                            <div class="box_content">
+                            <span class="thumnail item-thumbnail"><img
+                              src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
+                              loading="lazy" /></span>
+                          <div class="box_content">
                               <s_if_var_itciderrelatetitle>
                               <strong>[##_article_related_rep_title_##]</strong>
                               </s_if_var_itciderrelatetitle>
@@ -604,7 +606,7 @@
                               <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
                                 <div class="thumbnail_reply">
                                   <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50"
-                                    height="50" alt="프로필사진">
+                                    height="50" alt="프로필사진" loading="lazy">
                                 </div>
                                 <div class="box_reply_content">
                                   <div class="user">[##_rp_rep_name_##]<span class="date"><span class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
@@ -623,7 +625,7 @@
                                         <div class="ico_commnent">ㄴ</div>
                                         <div class="thumbnail_reply">
                                           <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
-                                            width="50" height="50" alt="프로필사진">
+                                            width="50" height="50" alt="프로필사진" loading="lazy">
                                         </div>
                                         <div class="box_reply_content">
                                           <div class="user"><a class="link_name">[##_rp_rep_name_##]</a><span class="date"><span
@@ -851,7 +853,7 @@
                         <li id='[##_guest_rep_id_##]' class="item_reply [##_guest_rep_class_##]">
                           <div class="thumbnail_reply">
                             <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png" width="50"
-                              height="50" alt="프로필사진">
+                              height="50" alt="프로필사진" loading="lazy">
                           </div>
                           <div class="box_reply_content">
                             <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
@@ -871,7 +873,7 @@
                                   <div class="ico_commnent">ㄴ</div>
                                   <div class="thumbnail_reply">
                                     <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
-                                      width="50" height="50" alt="프로필사진">
+                                      width="50" height="50" alt="프로필사진" loading="lazy">
                                   </div>
                                   <div class="box_reply_content">
                                     <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
@@ -998,21 +1000,21 @@
 
    <!--shareurl-->
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
   
 <!--shareurl-->
 	
 <!--sharesns-->
 
 <a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
 <a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
     </s_if_var_webshare>
@@ -1025,21 +1027,21 @@ right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/
 
   <!--shareurl-->
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
   
 <!--shareurl-->
 	
 <!--sharesns-->
 
 <a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+left: 60px;" id ="shared"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
 <a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+right: 10px;"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
     </s_if_var_webshare>
