@@ -1,6 +1,6 @@
 /*
 스킨명 : fast itcider
-버전 : v3.1
+버전 : V4.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -17,7 +17,7 @@
       //=================================================================================
       // 우클릭, 드래그, 복사 차단https://gist.github.com/ab-c-d/7aa98987589466eee696952e154c98e1
       //=================================================================================
-      var events = ["contextmenu", "selectstart", "dragstart", "cut"];
+      var events = ["contextmenu", "selectstart", "dragstart",  "cut"];
 
       events.forEach(function (event) {
           window.addEventListener(event, blockEvent, true);
