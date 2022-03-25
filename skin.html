@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : v3.1
+버전 : V4.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -19,10 +19,7 @@
 <head>
   <title>[##_page_title_##]</title>
   <meta name="title" content="[##_page_title_##] : [##_title_##]" />
-  <meta name="description" Content="[##_desc_##]" />
   <meta name="keywords" content="[##_var_metakeyword_##]" />
-  <meta name="title" content="[##_page_title_##] : [##_title_##]" />
-  <meta name="description" Content="[##_desc_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
   <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
@@ -540,14 +537,21 @@
               </div>
           </s_if_var_waiting>
         </s_if_var_manualupdate>
-
-              <div class="article_view">
-                <s_if_var_tocload>
-                  <div class="book-toc">
-                    <p class="toc_title"></p>
-                    <ul id="toc">목차</ul>
-                    </div>
-                  </s_if_var_tocload>
+        <div class="article_view">
+          <s_if_var_itciderarticlebanner>
+            <a href="[##_var_itciderarticlebannerurl_##]"><img src="./images/[##_var_itciderarticlebannerimg_##]"
+              width="100%" height="100%" alt="[##_var_itciderarticlebanneralt_##]"><br></a>
+            </s_if_var_itciderarticlebanner>
+          <s_if_var_tocload>
+            <div class="book-toc">
+              <p class="toc_title"></p>
+              <ul id="toc">목차</ul>
+              </div>
+            </s_if_var_tocload>
+            <s_if_var_itciderarticlebanner2>
+              <a href="[##_var_itciderarticlebanner2url_##]"><img src="./images/[##_var_itciderarticlebanner2img_##]"
+                width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
+              </s_if_var_itciderarticlebanner2>
                 [##_article_rep_desc_##]
               </div>
 
@@ -1341,7 +1345,7 @@ $().ready(function () {
   </s_if_var_copyscript>
 <!--
 스킨명 : fast itcider
-버전 : v3.1
+버전 : V4.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

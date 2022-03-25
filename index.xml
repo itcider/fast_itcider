@@ -341,9 +341,9 @@
                 <label>
                     <![CDATA[목차 그라데이션 컬러1]]>
                 </label>
-                <type>STRING</type>
+                <type>COLOR</type>
                 <option />
-                <default>rgba(255,255,255,0)</default>
+                <default>#FFFFFF</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러1]]>
                 </description>
@@ -353,9 +353,9 @@
                 <label>
                     <![CDATA[목차 그라데이션 컬러2]]>
                 </label>
-                <type>STRING</type>
+                <type>COLOR</type>
                 <option />
-                <default>rgb(97, 255, 92)</default>
+                <default>#B6FF5B</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러2]]>
                 </description>
@@ -550,6 +550,9 @@
                     <![CDATA[ 댓글창 활성화여부 ]]>
                 </description>
             </variable>
+        </variablegroup>
+
+ 		<variablegroup name="글 본문 목차 및 본문 상단">
             <variable>
                 <name>noieoption</name>
                 <label>
@@ -562,6 +565,111 @@
                     <![CDATA[ 인터넷 익스플로러로 접속시 다른 브라우저로 유도 ]]>
                 </description>
             </variable>
+            
+            <variable>
+                <name>itciderarticlebanner</name>
+                <label>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebannerurl</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebannerimg</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 이미지 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fiskin.png</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanneralt</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2url</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2img</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 이미지 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fiskin.png</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2alt</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
+
             <variable>
                 <name>itcidercovernotgrad</name>
                 <label>
@@ -581,7 +689,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>520</default>
+                <default>400</default>
                 <description>
                     <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
                 </description>
@@ -605,7 +713,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>500</default>
+                <default>400</default>
                 <description>
                     <![CDATA[본문 상단의 그라데이션 사용시 크기 설정]]>
                 </description>
@@ -615,9 +723,9 @@
                 <label>
                     <![CDATA[글 상단 그라데이션 컬러1]]>
                 </label>
-                <type>STRING</type>
+                <type>COLOR</type>
                 <option />
-                <default>rgb(255, 123, 0)</default>
+                <default>#7DCCFF</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러1]]>
                 </description>
@@ -627,9 +735,9 @@
                 <label>
                     <![CDATA[글 상단 그라데이션 컬러2]]>
                 </label>
-                <type>STRING</type>
+                <type>COLOR</type>
                 <option />
-                <default>rgb(12, 58, 211)</default>
+                <default>#ABACFF</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러2]]>
                 </description>
