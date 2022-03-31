@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V4.0
+버전 : V4.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -46,16 +46,25 @@
   <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
   <link rel="stylesheet" href="/favicon.ico">
 
+  <s_not_var_jqueryconfig>
+    <script type="application/javascript">
+      window.jQuery = window.$ = window.tjQuery; 
+    </script>
+    </s_not_var_jqueryconfig>
+
+    <s_if_var_jqueryconfig>
+      <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script>
+    </s_if_var_jqueryconfig>
+
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev4-0.css" />                                              
-      <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/jquery.min.js"></script>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev4-1.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
         <link rel="stylesheet" href="./style.css" />                                             
-          <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>   
       </s_if_var_manualupdate>
+
   
    
 </head>
@@ -856,9 +865,11 @@
           <!-- article_content -->
           <div class="area_article">
             <!-- area_reply -->
+            <s_if_var_itciderguestbookconfig>
+
             <div class="area_reply">
 
-              <h1 class="title_common">방명록</h1>
+              <h1 class="title_common">자유 게시판</h1>
 
               <!-- reply_content -->
               <div class="reply_content">
@@ -927,7 +938,7 @@
                             </div>
                             <div class="box_inp">
                               <div class="inner_inp">
-                                <input type="text" name="[##_guest_input_password_##]" value="비밀번호" title="비밀번호"
+                                <input type="password" name="[##_guest_input_password_##]" value="비밀번호" title="비밀번호"
                                   placeholder="비밀번호" class="inp_comment inp_password" />
                               </div>
                             </div>
@@ -941,12 +952,12 @@
                         </s_guest_form>
                       </s_guest_member>
                       <div class="form_content">
-                        <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]" placeholder="방명록을 입력해주세요."></textarea>
+                        <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]" placeholder="게시판에 글을 남겨주세요."></textarea>
                       </div>
 
                       <div class="form_reg thema_apply">
                         <label><input type="checkbox" name="[##_guest_input_is_secret_##]"> 비공개</label>
-                        <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">방명록 남기기</button>
+                        <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">글 남기기</button>
                       </div>
 
                     </div>
@@ -958,6 +969,12 @@
 
             </div>
             <!-- // area_reply -->
+          </s_if_var_itciderguestbookconfig>
+          <s_not_var_itciderguestbookconfig>
+            <h1 class="title_common">
+              자유게시판이 비활성화되었습니다. 
+            </h1>
+          </s_not_var_itciderguestbookconfig>
 
           </div>
           <!-- article_content -->
@@ -1345,7 +1362,7 @@ $().ready(function () {
   </s_if_var_copyscript>
 <!--
 스킨명 : fast itcider
-버전 : V4.0
+버전 : V4.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

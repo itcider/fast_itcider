@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>4.0</version>
+        <version>4.1</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -144,6 +144,18 @@
                 <default>true</default>
                 <description>
                     <![CDATA[다음에서 css를 불러옴(수동 업데이트) ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>jqueryconfig</name>
+                <label>
+                    <![CDATA[우상단의 세 작대기가 작동하지 않을때]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[우상단의 세 작대기가 작동하지 않을때]]>
                 </description>
             </variable>
         </variablegroup>
@@ -548,6 +560,18 @@
                 <default>true</default>
                 <description>
                     <![CDATA[ 댓글창 활성화여부 ]]>
+                </description>
+            </variable>
+               <variable>
+                <name>itciderguestbookconfig</name>
+                <label>
+                    <![CDATA[ 방명록 활성화여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 방명록 활성화여부 ]]>
                 </description>
             </variable>
         </variablegroup>
