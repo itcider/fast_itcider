@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V4.1
+버전 : V4.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -58,7 +58,7 @@
 
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev4-1.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev4-2.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -109,7 +109,7 @@
           </a>
         </h1>
 
-        <button class="btn_search"></button>
+        <button type="button" class="btn_search"></button>
 
         <!-- 메뉴 및 검색 버튼 클릭시 area_sidebar / area_popup 논처리 삭제 / body 에 style="overflow:hidden" 추가 -->
         <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button>
@@ -482,7 +482,7 @@
               <li class="item_category">
                 <a href="[##_list_rep_link_##]" class="link_category">
 
-                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" loading="lazy"/>
+                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" alt="블로그 썸네일" loading="lazy"/>
                   </span>
 
                   <div class="info">
@@ -594,7 +594,7 @@
                           <a href="[##_article_related_rep_link_##]" class="link_related">
                             <span class="thumnail item-thumbnail"><img
                               src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
-                              loading="lazy" /></span>
+                              loading="lazy" alt="blog related posts" /></span>
                           <div class="box_content">
                               <s_if_var_itciderrelatetitle>
                               <strong>[##_article_related_rep_title_##]</strong>
@@ -1019,7 +1019,7 @@
         </s_if_var_footerLink4Name>
       </div>
       <div>
-        <address>[##_var_footerCopyright_##]</address>
+        <p>[##_var_footerCopyright_##]</p>
       </div>
 
     </footer>
@@ -1040,14 +1040,14 @@ left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_
 	
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
@@ -1067,14 +1067,14 @@ left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" height="40" 
 	
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
 	
 <!--sharesns-->
@@ -1360,9 +1360,11 @@ $().ready(function () {
     
   </script>
   </s_if_var_copyscript>
+  <div id="Copyright_Message">
+  </div>
 <!--
 스킨명 : fast itcider
-버전 : V4.1
+버전 : V4.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
