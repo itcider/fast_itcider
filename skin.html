@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V4.2
+버전 : V4.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -19,10 +19,15 @@
 <head>
   <title>[##_page_title_##]</title>
   <meta name="title" content="[##_page_title_##] : [##_title_##]" />
+  <meta name="description" Content="[##_desc_##]" />
   <meta name="keywords" content="[##_var_metakeyword_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
-  <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+<link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+<link rel="preconnect" href="https://googleads.g.doubleclick.net/">
   <link rel="preconnect" href="https://www.googletagmanager.com/">
   <link rel="preconnect" href="https://tpc.googlesyndication.com/">
   <link rel="preconnect" href="https://www.google-analytics.com/">
@@ -40,11 +45,7 @@
   [##_var_navermeta_##]
   [##_var_googlemeta_##]
   </s_if_var_metaportal>
-  <meta name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
-  <link rel="stylesheet" href="/favicon.ico">
+
 
   <s_not_var_jqueryconfig>
     <script type="application/javascript">
@@ -58,7 +59,7 @@
 
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev4-2.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/styleV4-3.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -371,7 +372,7 @@
               <!-- type_post  -->
               <div class="type_post">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_post">
                   <s_cover_item>
@@ -395,7 +396,7 @@
               <!-- type_card  -->
               <div class="type_card">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_card">
                   <s_cover_item>
@@ -416,7 +417,7 @@
               <!-- type_banner  -->
               <div class="type_banner">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_banner">
                   <s_cover_item>
@@ -440,7 +441,7 @@
               <!-- type_list  -->
               <div class="type_notice">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_notice">
                   <s_cover_item>
@@ -475,7 +476,7 @@
             <a href="[##_var_itciderbannerurl_##]"><img src="./images/[##_var_itciderbannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderbanneralt_##]"><br></a>
             </s_if_var_itciderbanner>
-          <h1 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h1>
+          <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
 
           <ul class="list_category">
             <s_list_rep>
@@ -869,7 +870,7 @@
 
             <div class="area_reply">
 
-              <h1 class="title_common">자유 게시판</h1>
+              <h2 class="title_common">자유 게시판</h2>
 
               <!-- reply_content -->
               <div class="reply_content">
@@ -971,9 +972,9 @@
             <!-- // area_reply -->
           </s_if_var_itciderguestbookconfig>
           <s_not_var_itciderguestbookconfig>
-            <h1 class="title_common">
+            <h2 class="title_common">
               자유게시판이 비활성화되었습니다. 
-            </h1>
+            </h2>
           </s_not_var_itciderguestbookconfig>
 
           </div>
@@ -1033,6 +1034,8 @@
     <s_if_var_webshare>
 
    <!--shareurl-->
+   <s_if_var_shareurlcopybtn>
+
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
 left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
   
@@ -1042,14 +1045,17 @@ left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_
 
 <a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
-	
+	    </s_if_var_shareurlcopybtn>
+
 <!--sharesns-->
 
 <!--sharesns-->
+<s_if_var_gototopbtn>
 
 <a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-	
+	</s_if_var_gototopbtn>
+
 <!--sharesns-->
     </s_if_var_webshare>
 
@@ -1060,6 +1066,8 @@ right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/
 
 
   <!--shareurl-->
+  <s_if_var_shareurlcopybtn>
+
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
 left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
   
@@ -1069,14 +1077,17 @@ left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" height="40" 
 
 <a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
-	
+	    </s_if_var_shareurlcopybtn>
+
 <!--sharesns-->
 
 <!--sharesns-->
+<s_if_var_gototopbtn>
 
 <a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-	
+	</s_if_var_gototopbtn>
+
 <!--sharesns-->
     </s_if_var_webshare>
 
@@ -1364,7 +1375,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V4.2
+버전 : V4.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

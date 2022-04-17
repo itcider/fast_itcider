@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>4.2</version>
+        <version>4.3</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -165,13 +165,13 @@
             <variable>
                 <name>waiting</name>
                 <label>
-                    <![CDATA[  로딩바 (사용시 느려지나 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                    <![CDATA[  로딩바 (활성화시엔 웹사이트가 느려지지만 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>false</default>
                 <description>
-                    <![CDATA[  로딩바 (사용시 느려지나 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                    <![CDATA[  로딩바 (활성화시엔 웹사이트가 느려지지만 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
                 </description>
             </variable>
             <variable>
@@ -201,15 +201,40 @@
             <variable>
                 <name>webshare</name>
                 <label>
-                    <![CDATA[ 공유 api(브라우저 공유기능)]]>
+                    <![CDATA[ 공유 버튼 및 상단버튼 로드 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.)]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>true</default>
                 <description>
-                    <![CDATA[ 공유 api(브라우저 공유기능) ]]>
+                    <![CDATA[ 공유 버튼 및 상단버튼 로드 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.) ]]>
                 </description>
             </variable>
+             <variable>
+                <name>gototopbtn</name>
+                <label>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>shareurlcopybtn</name>
+                <label>
+                    <![CDATA[링크 복사 및 공유 버튼 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[링크 복사 및 공유 버튼 활성화 ]]>
+                </description>
+            </variable>
+
 
 			<variable>
                 <name>daumcdnfont</name>
@@ -565,13 +590,13 @@
                <variable>
                 <name>itciderguestbookconfig</name>
                 <label>
-                    <![CDATA[ 방명록 활성화여부 ]]>
+                    <![CDATA[ 방명록 (자유게시판) 활성화여부 ]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>true</default>
                 <description>
-                    <![CDATA[ 방명록 활성화여부 ]]>
+                    <![CDATA[ 방명록 (자유게시판) 활성화여부 ]]>
                 </description>
             </variable>
         </variablegroup>
