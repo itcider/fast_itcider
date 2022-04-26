@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>4.3</version>
+        <version>4.4</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -198,6 +198,10 @@
                     <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
                 </description>
             </variable>
+        </variablegroup>
+
+
+        <variablegroup name="티스토리 하단부분 도구 아이콘">
             <variable>
                 <name>webshare</name>
                 <label>
@@ -210,18 +214,7 @@
                     <![CDATA[ 공유 버튼 및 상단버튼 로드 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.) ]]>
                 </description>
             </variable>
-             <variable>
-                <name>gototopbtn</name>
-                <label>
-                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화 ]]>
-                </description>
-            </variable>
+
             <variable>
                 <name>shareurlcopybtn</name>
                 <label>
@@ -234,7 +227,102 @@
                     <![CDATA[링크 복사 및 공유 버튼 활성화 ]]>
                 </description>
             </variable>
-
+              <variable>
+                <name>sharesearchbtn</name>
+                <label>
+                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>sharesearchlink</name>
+                <label>
+				    <![CDATA[ 검색버튼 누를시 링크 ]]>
+				</label>
+                <description>
+				<![CDATA[ 검색버튼 누를시 링크 ]]>
+				</description>
+                <type>STRING</type>
+                <option></option>
+                <default>https://qask.kr</default>
+            </variable>
+            <variable>
+                <name>sharesearchalt</name>
+                <label>
+				    <![CDATA[ 검색관련 alt ]]>
+				</label>
+                <description>
+				<![CDATA[ 검색관련 alt ]]>
+				</description>
+                <type>STRING</type>
+                <option></option>
+                <default>검색하기 by itcider.com</default>
+            </variable>
+            <variable>
+                <name>gototopbtn</name>
+                <label>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화 ]]>
+                </description>
+            </variable>
+              <variable>
+                <name>sharesearchbtncolor</name>
+                <label>
+                    <![CDATA[아이콘도구 배경 및 경계 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[아이콘도구 배경 및 경계 활성화 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeyborderpx</name>
+                <label>
+                    <![CDATA[ 아이콘 부분 경계선 설정]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>0.5</default>
+                <description>
+                    <![CDATA[ 아이콘 부분 경계선 설정 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeybordercolor</name>
+                <label>
+                    <![CDATA[아이콘 경계선 색상 설정]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#000</default>
+                <description>
+                    <![CDATA[아이콘 경계선 색상 설정]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeybackgroundcolor</name>
+                <label>
+                    <![CDATA[아이콘 배경 색상 설정]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[아이콘 배경 색상 설정]]>
+                </description>
+            </variable>
 
 			<variable>
                 <name>daumcdnfont</name>
@@ -974,7 +1062,7 @@
             <description></description>
             <type>STRING</type>
             <option></option>
-            <default>https://itcider.net</default>
+            <default>https://qask.kr</default>
         </variable>
         <variable>
             <name>footerLink3Name</name>

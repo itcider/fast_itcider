@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V4.3
+버전 : V4.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -59,7 +59,7 @@
 
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/styleV4-3.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/styleV4-4.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -84,6 +84,15 @@
       }
         </style>
     </s_if_var_itcidercovergrad>
+    <s_if_var_sharesearchbtncolor>
+      <style>              
+	.shareBtn li {
+	border: [##_var_toolkeyborderpx_##]px solid [##_var_toolkeybordercolor_##];
+	border-radius: 10px;
+	background: [##_var_toolkeybackgroundcolor_##];
+	}
+        </style>
+    </s_if_var_sharesearchbtncolor>
  
 
 
@@ -1032,63 +1041,54 @@
 
   <s_if_var_autoupdate>
     <s_if_var_webshare>
-
-   <!--shareurl-->
-   <s_if_var_shareurlcopybtn>
-
-<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
-  
-<!--shareurl-->
-	
-<!--sharesns-->
-
-<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
-	    </s_if_var_shareurlcopybtn>
-
-<!--sharesns-->
-
-<!--sharesns-->
-<s_if_var_gototopbtn>
-
-<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-	</s_if_var_gototopbtn>
-
-<!--sharesns-->
+      <div class="shareBtn">
+        <ul>
+       <s_if_var_shareurlcopybtn>
+        <li>
+          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+            </li>
+          </s_if_var_shareurlcopybtn>
+    
+    <!--sharesns-->
+    
+    <!--sharesns-->
+    <s_if_var_gototopbtn>
+      <li>
+      <s_if_var_sharesearchbtn>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+        </li>
+      </s_if_var_gototopbtn>
+    </ul>
+    </div>
     </s_if_var_webshare>
 
   </s_if_var_autoupdate>
 
   <s_if_var_manualupdate>
     <s_if_var_webshare>
-
-
-  <!--shareurl-->
-  <s_if_var_shareurlcopybtn>
-
-<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
-  
-<!--shareurl-->
-	
-<!--sharesns-->
-
-<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
-	    </s_if_var_shareurlcopybtn>
-
-<!--sharesns-->
-
-<!--sharesns-->
-<s_if_var_gototopbtn>
-
-<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-	</s_if_var_gototopbtn>
-
-<!--sharesns-->
+      <div class="shareBtn">
+        <ul>
+       <s_if_var_shareurlcopybtn>
+        <li>
+          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+            </li>
+          </s_if_var_shareurlcopybtn>
+    
+    <!--sharesns-->
+    
+    <!--sharesns-->
+    <s_if_var_gototopbtn>
+      <li>
+      <s_if_var_sharesearchbtn>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+        </li>
+      </s_if_var_gototopbtn>
+    </ul>
+    </div>
     </s_if_var_webshare>
 
   </s_if_var_manualupdate>
@@ -1375,7 +1375,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V4.3
+버전 : V4.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
