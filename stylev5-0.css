@@ -25,7 +25,7 @@
     }
   }
   #toc a:hover {
-    background: linear-gradient(180deg, #000 50%, rgb(141, 141, 141) 50%) !important;
+    background: linear-gradient(180deg, #1E1E1E 50%, rgb(141, 141, 141) 50%) !important;
   }
   .shareBtn li {
     background: #1e1e1e !important;
