@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>4.5</version>
+        <version>5.0</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -464,25 +464,25 @@
                          <variable>
                 <name>tocgrad1</name>
                 <label>
-                    <![CDATA[목차 그라데이션 컬러1]]>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드 시 비활성화)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
                 <default>#FFFFFF</default>
                 <description>
-                    <![CDATA[목차 그라데이션 컬러1]]>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드 시 비활성화)]]>
                 </description>
             </variable>
             <variable>
                 <name>tocgrad2</name>
                 <label>
-                    <![CDATA[목차 그라데이션 컬러2]]>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드 시 비활성화)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
                 <default>#B6FF5B</default>
                 <description>
-                    <![CDATA[목차 그라데이션 컬러2]]>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드 시 비활성화)]]>
                 </description>
             </variable>
         </variablegroup>
