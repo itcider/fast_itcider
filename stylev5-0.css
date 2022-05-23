@@ -33,6 +33,10 @@
     color: rgb(255, 255, 255) !important;
   }
 
+  .item_comment{
+    background-color: #1E1E1E !important;
+  }
+
   code.hijs {
     background-color: #fff !important;
   }
