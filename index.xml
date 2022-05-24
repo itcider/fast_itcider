@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>5.0</version>
+        <version>5.1</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -160,6 +160,28 @@
             </variable>
         </variablegroup>
 
+        <variablegroup name="다크모드 설정">
+
+ 
+            <variable>
+                <name>darkmodeconfig</name>
+                <label>
+				    <![CDATA[ 라이트/다크모드 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"autolightdark", "label":"자동으로 라이트/다크 모드", "value":"autolightdark"},
+					{"name":"onlylight", "label":"라이트모드만 사용", "value":"onlylight"},
+					{"name":"onlydark", "label":"다크모드만 사용", "value":"onlydark"}
+				]
+			]]>
+                </option>
+                <default>autolightdark</default>
+            </variable>
+        </variablegroup>
 
         <variablegroup name="티스토리 블로그 속도 설정">
             <variable>
@@ -421,12 +443,11 @@
                 </label>
                 <type>BOOL</type>
                 <option/>
-                <default>false</default>
+                <default>true</default>
                 <description>
                     <![CDATA[ 목차 활성화 여부 설정이 가능합니다. ]]>
                 </description>
             </variable>
-
             <variable>
                 <name>tocset</name>
                 <label>
@@ -437,18 +458,19 @@
                 <option>
 			<![CDATA[
 				[
-					{"name":"toc_main", "label":"제목1", "value":"h2"},
-					{"name":"toc12", "label":"제목1 제목2", "value":"h2, h3"},
-					{"name":"toc123", "label":"제목1 제목2 제목3", "value":"h2, h3, h4"},
-					{"name":"toc2", "label":"제목2", "value":"h3"},
-					{"name":"toc23", "label":"제목2 제목3", "value":"h3, h4"},
-					{"name":"toc13", "label":"제목1, 제목3", "value":"h2, h4"},
-					{"name":"toc3", "label":"제목3", "value":"h4"}
+					{"name":"h2", "label":"제목1", "value":"h2"},
+					{"name":"h2h3", "label":"제목1 제목2", "value":"h2, h3"},
+					{"name":"h2h3h4", "label":"제목1 제목2 제목3", "value":"h2, h3, h4"},
+					{"name":"h3only", "label":"제목2", "value":"h3"},
+					{"name":"h3h4", "label":"제목2 제목3", "value":"h3, h4"},
+					{"name":"h2h4", "label":"제목1 제목3", "value":"h2, h4"},
+					{"name":"h4only", "label":"제목3", "value":"h4"}
 				]
 			]]>
                 </option>
-                <default>toc_main</default>
+                <default>h2</default>
             </variable>
+            
             <variable>
                 <name>tocoption</name>
                 <label>
@@ -461,7 +483,7 @@
                     <![CDATA[ 목차 옵션 설정 ]]>
                 </description>
             </variable>
-                         <variable>
+            <variable>
                 <name>tocgrad1</name>
                 <label>
                     <![CDATA[목차 그라데이션 컬러1 (다크모드 시 비활성화)]]>
@@ -483,6 +505,30 @@
                 <default>#B6FF5B</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러2 (다크모드 시 비활성화)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darktocgrad1</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#1E1E1E</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darktocgrad2</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#BDBDBD</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
                 </description>
             </variable>
         </variablegroup>
@@ -858,25 +904,73 @@
             <variable>
                 <name>gradcolor1</name>
                 <label>
-                    <![CDATA[글 상단 그라데이션 컬러1]]>
+                    <![CDATA[글 상단 그라데이션 컬러1 (라이트 모드에서)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#7DCCFF</default>
+                <default>#FE56A8</default>
                 <description>
-                    <![CDATA[글 상단 그라데이션 컬러1]]>
+                    <![CDATA[글 상단 그라데이션 컬러1] (라이트 모드에서)]]>
                 </description>
             </variable>
             <variable>
                 <name>gradcolor2</name>
                 <label>
-                    <![CDATA[글 상단 그라데이션 컬러2]]>
+                    <![CDATA[글 상단 그라데이션 컬러2 (라이트 모드에서)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#ABACFF</default>
+                <default>#ACCCFF</default>
                 <description>
-                    <![CDATA[글 상단 그라데이션 컬러2]]>
+                    <![CDATA[글 상단 그라데이션 컬러2 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>gradcolor3</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러3 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#F8C954</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러3 (라이트 모드에서)]]>
+                </description>
+            </variable>
+                       <variable>
+                <name>darkgradcolor1</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러1 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#B6B1FE</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러1 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darkgradcolor2</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러2 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#ACCCFF</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러2 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darkgradcolor3</name>
+                <label>
+                    <![CDATA[글 상단 그라데이션 컬러3 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#1E1E1E</default>
+                <description>
+                    <![CDATA[글 상단 그라데이션 컬러3 (다크 모드에서)]]>
                 </description>
             </variable>
 

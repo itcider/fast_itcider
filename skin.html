@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V5.0
+버전 : V5.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -58,11 +58,13 @@
 
 
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev5-0.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev5-1.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
-        <link rel="stylesheet" href="./style.css" />                                             
+        <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
+        <link rel="stylesheet" href="./style.css" />                                                                                        
       </s_if_var_manualupdate>
 
   
@@ -76,12 +78,20 @@
       </style>
     </s_if_var_itcidercovernotgrad>
     <s_if_var_itcidercovergrad>
-      <style>              
-      .type_article_header_cover .inner_header {
-        height: [##_var_gradpixel_##]px; 
-        background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##]);
-      }
-        </style>
+      <style>
+        @media (prefers-color-scheme: dark) {              
+          .type_article_header_cover .inner_header {
+            height: [##_var_gradpixel_##]px; 
+            background: linear-gradient(to bottom right, [##_var_darkgradcolor1_##],[##_var_darkgradcolor2_##],[##_var_darkgradcolor3_##])!important;
+          }
+        }
+            </style>
+        <style>              
+        .type_article_header_cover .inner_header {
+          height: [##_var_gradpixel_##]px; 
+          background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##],[##_var_gradcolor3_##]);
+        }
+          </style>
     </s_if_var_itcidercovergrad>
     <s_if_var_sharesearchbtncolor>
       <style>              
@@ -904,15 +914,15 @@
         <ul>
        <s_if_var_shareurlcopybtn>
         <li>
-          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
-          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" alt="공유하기 by itcider.com"></a>
             </li>
           </s_if_var_shareurlcopybtn>
           <s_if_var_gototopbtn>
       <li>
       <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
         </li>
       </s_if_var_gototopbtn>
     </ul>
@@ -1135,6 +1145,14 @@ $().ready(function () {
 
 <s_if_var_tocload>
   <style>
+@media (prefers-color-scheme: dark) {
+
+#toc a:hover {
+  background: linear-gradient(180deg, [##_var_darktocgrad1_##] 50%, [##_var_darktocgrad2_##] 50%)!important;
+}
+}
+  </style>
+  <style>
     .book-toc ul {
     list-style-type: [##_var_tocoption_##];
 }
@@ -1142,6 +1160,7 @@ $().ready(function () {
   background: linear-gradient(180deg, [##_var_tocgrad1_##] 50%, [##_var_tocgrad2_##] 50%);
 }
   </style>
+
 <script>
   $(function(){
   $("#toc").toc( {content: ".article_view", headings: "[##_var_tocset_##]" , top: -90, isBlink : true, blinkColor : '#000000' } )
@@ -1214,7 +1233,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V5.0
+버전 : V5.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
