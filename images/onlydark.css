@@ -122,6 +122,8 @@
   .comments h2,
   .cover-event ul li .title,
   a,
+  h1,
+  h1.title_common,
   h2,
   h3 {
     color: #eee !important;
