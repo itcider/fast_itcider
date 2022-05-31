@@ -1,7 +1,7 @@
 fast_itcider
 
 스킨명 : fast itcider<br>
-버전 : v5.0<br>
+버전 : v5.2<br>
 제작자 : itcider 쉽고 시원한 it<br>
 제작자 웹사이트 : itcider.com<br>
 사용 조건 : itcider license<br>
