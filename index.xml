@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>5.1</version>
+        <version>5.2</version>
         <description>
             <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
         </description>
@@ -157,6 +157,23 @@
                 <description>
                     <![CDATA[우상단의 세 작대기가 작동하지 않을때]]>
                 </description>
+            </variable>
+            <variable>
+                <name>imageloader</name>
+                <label>
+				    <![CDATA[ 이미지 로드할 서버 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"img1", "label":"img1서버 (아카마이)", "value":"img1"},
+					{"name":"i1", "label":"i1서버 (카카오)", "value":"i1"}
+				]
+			]]>
+                </option>
+                <default>img1</default>
             </variable>
         </variablegroup>
 
@@ -471,17 +488,27 @@
                 <default>h2</default>
             </variable>
             
-            <variable>
+                       <variable>
                 <name>tocoption</name>
                 <label>
-                    <![CDATA[ 목차 옵션 설정 - itcider fi스킨 문서 확인해주세요.]]>
-                </label>
-                <type>STRING</type>
-                <option />
+				    <![CDATA[ 목차 옵션 설정  ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+                    {"name":"none", "label":"기본(없음)", "value":"none"},
+                    {"name":"decimal", "label":"숫자", "value":"decimal"},			
+                    {"name":"upper-latin", "label":"대문자", "value":"upper-latin"},
+                    {"name":"lower-latin", "label":"소문자", "value":"lower-latin"},
+					{"name":"disc", "label":"원", "value":"disc"},
+                    {"name":"square", "label":"사각형", "value":"square"},
+                    {"name":"circle", "label":"빈 원", "value":"circle"}				
+				]
+			]]>
+                </option>
                 <default>none</default>
-                <description>
-                    <![CDATA[ 목차 옵션 설정 ]]>
-                </description>
             </variable>
             <variable>
                 <name>tocgrad1</name>
