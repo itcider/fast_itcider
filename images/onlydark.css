@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V5.1
+버전 : V5.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -35,9 +35,7 @@
     background-color: #1E1E1E !important;
   }
 
-  code.hijs {
-    background-color: #fff !important;
-  }
+
 
   footer,
   #header,
@@ -74,8 +72,11 @@
     color: rgb(212, 212, 212) !important;
   }
 
-  span {
-    color: rgb(212, 212, 212) !important;
+  span:not(.article_view pre code.hljs span) {
+    color: rgb(212, 212, 212) ;
+  }
+  code.hljs {
+    background-color: #1E1E1E !important;
   }
 
   span.selected {
@@ -106,8 +107,11 @@
   ul,
   li,
   p span {
-    color: #aaa !important;
+    color: #aaa ;
   }
+  .article_view p {
+	color:#eee !important;
+	}
 
   ul,
   li,
@@ -348,7 +352,7 @@
 
 /*
 스킨명 : fast itcider
-버전 : V5.1
+버전 : V5.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
