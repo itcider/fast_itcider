@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V5.2
+버전 : V5.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -33,6 +33,9 @@
 
 	.item_comment{
     background-color: #1E1E1E !important;
+  }
+	 footer p {
+    color: rgb(255, 255, 255) !important;
   }
 
 
@@ -352,7 +355,7 @@
 
 /*
 스킨명 : fast itcider
-버전 : V5.2
+버전 : V5.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
