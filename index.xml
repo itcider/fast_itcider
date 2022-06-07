@@ -2,12 +2,12 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>5.2</version>
+        <version>5.3</version>
         <description>
-            <![CDATA[html편집 없이도 사용가능하도록 편하게 만들어놓은 스킨입니다. ]]>
+            <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
         <license>
-            <![CDATA[ itcider License 주석 삭제 불가, 사이드바 fi스킨 문구 삭제 불가, 재배포 불가]]>
+            <![CDATA[itcider skin license 저작자 표시 제거 절대 불가, 재배포 불가, 코드 무단 사용 불가]]>
         </license>
     </information>
     <author>
@@ -173,7 +173,7 @@
 				]
 			]]>
                 </option>
-                <default>img1</default>
+                <default>i1</default>
             </variable>
         </variablegroup>
 
@@ -273,7 +273,7 @@
                 </label>
                 <type>BOOL</type>
                 <option />
-                <default>false</default>
+                <default>true</default>
                 <description>
                     <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화 ]]>
                 </description>
@@ -1159,7 +1159,7 @@
             <description></description>
             <type>STRING</type>
             <option></option>
-            <default>fast itcider</default>
+            <default>fi스킨 설정하기</default>
         </variable>
         <variable>
             <name>footerLink1Url</name>
