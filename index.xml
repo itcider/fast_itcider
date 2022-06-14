@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>5.3</version>
+        <version>5.4</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -763,17 +763,36 @@
         </variablegroup>
 
  		<variablegroup name="글 본문 목차 및 본문 상단">
-            <variable>
-                <name>noieoption</name>
+                       <variable>
+                <name>ieredirect</name>
                 <label>
-                    <![CDATA[ 인터넷 익스플로러로 접속시 다른 브라우저로 유도 ]]>
+                    <![CDATA[ ie 리다이렉트 ]]>
                 </label>
                 <type>BOOL</type>
-                <option />
+                <option/>
                 <default>true</default>
                 <description>
-                    <![CDATA[ 인터넷 익스플로러로 접속시 다른 브라우저로 유도 ]]>
+                    <![CDATA[ ie 리다이렉트 설정이 가능합니다. ]]>
                 </description>
+            </variable>
+
+            <variable>
+                <name>ieconfig</name>
+                <label>
+				    <![CDATA[ ie 리다이렉트 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"ietoedge", "label":"엣지 브라우저로 리다이렉트", "value":"ietoedge"},
+					{"name":"ietoieitc", "label":"브라우저 다운로드 유도 페이지(itcnet)", "value":"ietoieitc"},
+					{"name":"ietoitc", "label":"브라우저 다운로드 유도 페이지(itccom)", "value":"ietoitc"}
+				]
+			]]>
+                </option>
+                <default>ietoieitc</default>
             </variable>
             
             <variable>
