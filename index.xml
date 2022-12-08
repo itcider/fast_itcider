@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>5.4</version>
+        <version>6.0</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -158,23 +158,7 @@
                     <![CDATA[우상단의 세 작대기가 작동하지 않을때]]>
                 </description>
             </variable>
-            <variable>
-                <name>imageloader</name>
-                <label>
-				    <![CDATA[ 이미지 로드할 서버 설정 ]]>
-				</label>
-                <description></description>
-                <type>SELECT</type>
-                <option>
-			<![CDATA[
-				[
-					{"name":"img1", "label":"img1서버 (아카마이)", "value":"img1"},
-					{"name":"i1", "label":"i1서버 (카카오)", "value":"i1"}
-				]
-			]]>
-                </option>
-                <default>i1</default>
-            </variable>
+            
         </variablegroup>
 
         <variablegroup name="다크모드 설정">
@@ -288,7 +272,7 @@
 				</description>
                 <type>STRING</type>
                 <option></option>
-                <default>https://qask.kr</default>
+                <default>https://ohon.net</default>
             </variable>
             <variable>
                 <name>sharesearchalt</name>
@@ -1202,7 +1186,7 @@
             <description></description>
             <type>STRING</type>
             <option></option>
-            <default>https://qask.kr</default>
+            <default>https://ohon.net</default>
         </variable>
         <variable>
             <name>footerLink3Name</name>
