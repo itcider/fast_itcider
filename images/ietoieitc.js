@@ -1,6 +1,6 @@
 /*
 스킨명 : fast itcider
-버전 : V5.4
+버전 : V6.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -13,7 +13,7 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 if(detectIE()){
-    window.location('https://ie.itcider.net')
+    window.location('https://ie.itcider.com')
 } else {
 ;
 }
