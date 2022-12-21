@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V6.0
+버전 : V6.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -22,7 +22,7 @@
   <meta name="keywords" content="[##_var_metakeyword_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=10.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
   <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
@@ -58,7 +58,7 @@
 
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev6-0.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev6-1.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -111,7 +111,7 @@
         <h1 class="title_logo">
           <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
             <s_if_var_logoImage>
-              <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+              <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
             </s_if_var_logoImage>
             <s_not_var_logoImage>
               [##_title_##]
@@ -119,7 +119,7 @@
           </a>
         </h1>
 
-        <button type="button" class="btn_search"></button>
+        <button type="button" class="btn_search" title="검색"></button>
         <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button>
       </header>
       <div id="container">
@@ -130,7 +130,7 @@
               <h1 class="title_logo">
                 <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
                   <s_if_var_logoImage>
-                    <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+                    <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
                   </s_if_var_logoImage>
                   <s_not_var_logoImage>
                     [##_title_##]
@@ -218,7 +218,7 @@
           <h1 class="title_logo">
             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
               <s_if_var_logoImage>
-                <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+                <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
               </s_if_var_logoImage>
               <s_not_var_logoImage>
                 [##_title_##]
@@ -464,7 +464,7 @@
               <li class="item_category">
                 <a href="[##_list_rep_link_##]" class="link_category">
 
-                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" alt="블로그 썸네일" loading="lazy"/>
+                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" alt="블로그 썸네일" onerror="this.src='./images/ico_no.png';" width="100%" height="100%" loading="lazy"/>
                   </span>
 
                   <div class="info">
@@ -505,7 +505,7 @@
               <s_if_var_autoupdate>
               <s_if_var_waiting>                                                
                 <div id="waiting">
-                    <img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider.gif">
+                    <img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider.gif" width="100%" height="100%">
                 </div>
             </s_if_var_waiting>
           </s_if_var_autoupdate>
@@ -513,7 +513,7 @@
               <s_if_var_manualupdate>
             <s_if_var_waiting>                                                
               <div id="waiting">
-                  <img src="./images/itcider.gif">
+                  <img src="./images/itcider.gif" width="100%" height="100%">
               </div>
           </s_if_var_waiting>
         </s_if_var_manualupdate>
@@ -562,7 +562,7 @@
                           <a href="[##_article_related_rep_link_##]" class="link_related">
                             <span class="thumnail item-thumbnail"><img
                               src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
-                              loading="lazy" alt="blog related posts" /></span>
+                              onerror="this.src='./images/ico_no.png';" loading="lazy" alt="blog related posts" /></span>
                           <div class="box_content">
                               <s_if_var_itciderrelatetitle>
                               <strong>[##_article_related_rep_title_##]</strong>
@@ -901,13 +901,13 @@
 
       <s_paging>
         <div class="area_paging">
-          <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]"><span class="icon-Keyboard-Arrow---Left"></span></a>
+          <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]" title="이전" rel="nofollow"><span class="icon-Keyboard-Arrow---Left"></span></a>
           <div class="paging_num thema_apply">
             <s_paging_rep>
-              <a [##_paging_rep_link_##] class="link_num">[##_paging_rep_link_num_##]</a>
+              <a [##_paging_rep_link_##] class="link_num" title="[##_paging_rep_link_##]" rel="nofollow">[##_paging_rep_link_num_##]</a>
             </s_paging_rep>
           </div>
-          <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]"><span class="icon-Keyboard-Arrow---Right"></span></a>
+          <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]" title="다음" rel="nofollow"><span class="icon-Keyboard-Arrow---Right"></span></a>
         </div>
       </s_paging>
     </main>
@@ -940,15 +940,15 @@
         <ul>
        <s_if_var_shareurlcopybtn>
         <li>
-          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
-          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
+          <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
             </li>
           </s_if_var_shareurlcopybtn>
           <s_if_var_gototopbtn>
       <li>
       <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
         </li>
       </s_if_var_gototopbtn>
     </ul>
@@ -963,15 +963,15 @@
         <ul>
        <s_if_var_shareurlcopybtn>
         <li>
-          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
-          <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
+          <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
             </li>
           </s_if_var_shareurlcopybtn>    
     <s_if_var_gototopbtn>
       <li>
       <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="./images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
         </li>
       </s_if_var_gototopbtn>
     </ul>
@@ -1259,7 +1259,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V6.0
+버전 : V6.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
