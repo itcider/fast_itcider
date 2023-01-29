@@ -1,6 +1,6 @@
 /*
 스킨명 : fast itcider
-버전 : V6.1
+버전 : V7.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -12,6 +12,7 @@
 ㄴitcider 공식 웹사이트에서만 배포 가능
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
+/*
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
@@ -25,7 +26,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-
+*/
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari

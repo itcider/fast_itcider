@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V6.1
+버전 : V7.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -40,7 +40,9 @@
   }
 
 
-
+  blockquote{
+    color: #aaa!important;
+  }
   footer,
   #header,
   .mobile-menu #aside,
@@ -359,7 +361,7 @@
 }
 /*
 스킨명 : fast itcider
-버전 : V6.1
+버전 : V7.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
