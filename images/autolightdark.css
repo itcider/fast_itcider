@@ -82,9 +82,12 @@
     color: rgb(212, 212, 212) ;
   }
   code.hljs {
-    background-color: #1E1E1E !important;
+    background-color: #121212 !important;
+    color: #ebebeb !important;;
   }
-
+  hljs-meta{
+    background-color: #ebebeb !important;
+  }
   span.selected {
     color: #000 !important;
   }

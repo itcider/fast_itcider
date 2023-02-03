@@ -14,342 +14,351 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 /* fi skin dark mode start*/
-  .layer_post .btn_mark {
-    color: #1E1E1E !important;
-  }
+.layer_post .btn_mark {
+  color: #1E1E1E !important;
+}
 
-  @media screen and (max-width: 767px) {
-    #header h1 {
-      background-color: #444 !important;
-    }
-  }
-
-  .shareBtn li {
-    background: #1e1e1e !important;
-    border-color: rgb(255, 255, 255) !important;
-    color: rgb(255, 255, 255) !important;
-  }
-
-
-	.item_comment{
-    background-color: #1E1E1E !important;
-  }
-	 footer p {
-    color: rgb(255, 255, 255) !important;
-  }
-
-
-
-  footer,
-  #header,
-  .mobile-menu #aside,
-  #aside .profile::before {
-    background-color: rgb(26, 26, 26) !important;
-  }
-
-  a.link_num {
-    color: rgb(212, 212, 212) !important;
-  }
-
-  a.link_category {
-    color: rgb(212, 212, 212) !important;
-  }
-
-  #header {
-    border-bottom: 1px solid #000 !important;
-  }
-
-  body,
-  .comment-list ul li ul {
-    background-color: #1E1E1E !important;
-  }
-
-  table,
-  select {
-    color: #ddd !important;
-  }
-  strong {
-    color: rgb(212, 212, 212) !important;
-  }
-  strong.name {
-    color: rgb(212, 212, 212) !important;
-  }
-
-  span:not(.article_view pre code.hljs span) {
-    color: rgb(212, 212, 212) ;
-  }
-  code.hljs {
-    background-color: #1E1E1E !important;
-  }
-
-  span.selected {
-    color: #000 !important;
-  }
-
-  div.swal2-popup {
-    background-color: #333 !important;
-    color: #fff !important;
-  }
-
-
-
-  .div_swal {
-    color: rgb(255, 255, 255) !important;
-  }
-
-  .btn_search_del {
-    color: rgb(255, 255, 255) !important;
-  }
-
-  .button {
-    color: rgb(255, 255, 255) !important;
-  }
-
-  .pagination a,
-  p,
-  ul,
-  li,
-  p span {
-    color: #aaa ;
-  }
-  .article_view p {
-	color:#eee !important;
-	}
-
-  ul,
-  li,
-  ol,
-  div,
-  span.date {
-    color: #eee !important;
-  }
-
-  .comments h2 .count,
-  .og-title,
-  .comments h2,
-  .cover-event ul li .title,
-  a,
-  h1,
-  h1.title_common,
-  h2,
-  h3 {
-    color: #eee !important;
-  }
-
-  .cover-event ul li .more {
-    color: #000 !important;
-  }
-
-  h4,
-  h5 {
-    color: #ccc !important;
-  }
-
-  .og-text {
-    background-color: #555 !important;
-  }
-
-  .cover-list,
-  .cover-thumbnail-3,
-  .cover-thumbnail-2,
-  .cover-thumbnail-4,
-  .cover-event,
-  .comment-list ul li ul {
-    border-top: none !important;
-  }
-
-  .cover-list h2,
-  .cover-thumbnail-2 h2 {
-    border-bottom: 1px solid #000 !important;
-  }
-
-  #gnb ul li .current a:after {
-    background-color: #eee !important;
-  }
-
-  #header .util .profile button,
-  #aside .close,
-  .sidebar .social-channel ul li a,
-  #header .util .menu,
-  .tags a,
-  .cover-thumbnail-3 button {
-    background-color: transparent !important;
-    border: 1px solid #1E1E1E !important;
-  }
-
-  #header .util .search::before {
+@media screen and (max-width: 767px) {
+  #header h1 {
     background-color: #444 !important;
-    border: 1px solid #1E1E1E !important;
   }
+}
 
-  .pagination .prev,
-  .pagination .next,
-  .pagination .selected,
-  .cover-thumbnail-4 .next {
-    color: #fff !important;
-    border: 1px solid #1E1E1E !important;
-  }
-
-  figure[data-ke-type='opengraph'] a,
-  #tt-body-page figure[data-ke-type='opengraph'] a {
-    border: 1px soiid #000 !important;
-  }
-
-  figure[data-ke-type='opengraph'] div.og-image {
-    border-right: 1px solid #000 !important;
-  }
-
-  /* sidebar */
-  .box_header .link_logo {
-    color: #eee !important;
-  }
+.shareBtn li {
+  background: #1e1e1e !important;
+  border-color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255) !important;
+}
 
 
-  .area_sidebar .tt_category {
-    color: #1E1E1E !important;
-  }
-
-  .area_sidebar .inner_sidebar {
-    background: #1E1E1E !important;
-  }
-
-  .area_sidebar .link_item {
-    color: #aaa !important;
-  }
-
-  .area_sidebar .link_item .c_cnt {
-    color: #aaa !important;
-  }
-
-  .area_sidebar .link_sub_item {
-    color: #888 !important;
-    font-weight: 500;
-  }
-
-  .area_sidebar .sub_category_list {
-    border-left: 3px solid #888 !important;
-  }
-
-  .area_sidebar .t_menu_home a,
-  .area_sidebar .t_menu_tag a,
-  .area_sidebar .t_menu_guestbook a {
-    color: #ccc !important;
-  }
-
-  .area_sidebar .link_tool {
-    color: #ccc !important;
-  }
-
-  .area_sidebar .link_add {
-    color: #ccc !important;
-  }
-
-  .area_sidebar .btn_close {
-    color: #ccc !important;
-  }
-
-  /*sidebar search*/
-  .area_popup {
-    background: #1E1E1E !important;
-  }
-
-  .area_popup .area_search .btn_close {
-    color: #ccc !important;
-  }
-
-  .area_popup .link_logo {
-    color: #eee !important;
-  }
-
-  .tag_zone a {
-    border: solid 1px #999 !important;
-    color: #eee !important;
-  }
-
-  .area_popup .box_form {
-    border-bottom: 1px solid #ccc !important;
-  }
-
-	span.selected, a.link_num{
-		color: #fff ;
-    background-color: #1E1E1E ;
-	}
+.item_comment{
+  background-color: #1E1E1E !important;
+}
+ footer p {
+  color: rgb(255, 255, 255) !important;
+}
 
 
-  textarea,
-  #wf-form,
-  #container .wf-form,
-  div.inner_inp {
-    background-color: #1E1E1E !important;
-    border: 1px solid rgb(255, 255, 255) !important;
-    color: #fff !important;
-  }
+blockquote{
+  color: #aaa!important;
+}
+footer,
+#header,
+.mobile-menu #aside,
+#aside .profile::before {
+  background-color: rgb(26, 26, 26) !important;
+}
 
-  input.inp_comment,
-  input.inp_search {
-    background-color: #1E1E1E !important;
-    color: #fff !important;
-  }
+a.link_num {
+  color: rgb(212, 212, 212) !important;
+}
 
-  ul#toc {
-    background-color: #1E1E1E !important;
-    color: #fff !important;
-  }
+a.link_category {
+  color: rgb(212, 212, 212) !important;
+}
 
-  li {
-    color: #fff !important;
-  }
+#header {
+  border-bottom: 1px solid #000 !important;
+}
 
-  img {
-    color: #fff !important;
-  }
+body,
+.comment-list ul li ul {
+  background-color: #1E1E1E !important;
+}
 
-  button.btn_register {
-    background-color: #1E1E1E !important;
-    border: 1px solid rgb(255, 255, 255) !important;
-  }
+table,
+select {
+  color: #ddd !important;
+}
+strong {
+  color: rgb(212, 212, 212) !important;
+}
+strong.name {
+  color: rgb(212, 212, 212) !important;
+}
 
-  footer {
-    border-top: 1px solid #000 !important;
-  }
+span:not(.article_view pre code.hljs span) {
+  color: rgb(212, 212, 212) ;
+}
+code.hljs {
+  background-color: #121212 !important;
+  color: #ebebeb !important;;
+}
+hljs-meta{
+  background-color: #ebebeb !important;
+}
+span.selected {
+  color: #000 !important;
+}
 
-  #footer address {
-    color: #bbb !important;
-  }
+div.swal2-popup {
+  background-color: #333 !important;
+  color: #fff !important;
+}
 
-  #footer .link_footer {
-    color: #bbb !important;
-  }
 
-  #footer .page-top {
-    background-color: #555 !important;
-    border-color: #444 !important;
-  }
 
-  #footer .page-top:hover {
-    background-color: #bbb !important;
-  }
+.div_swal {
+  color: rgb(255, 255, 255) !important;
+}
 
-  .box_header .btn_menu,
-  .box_header .btn_search {
-    background-image: url(./ico_menu.svg) !important;
-  }
+.btn_search_del {
+  color: rgb(255, 255, 255) !important;
+}
 
-  .box_header .btn_search {
-    background-image: url(./ico_search.svg) !important;
-  }
+.button {
+  color: rgb(255, 255, 255) !important;
+}
 
-  .info_profile {
-    background-color: #555 !important;
-  }
+.pagination a,
+p,
+ul,
+li,
+p span {
+  color: #aaa ;
+}
+span{
+  color: #eee!important;
+}
+.article_view p {
+color:#eee !important;
+}
 
-  .list_toolbar {
-    background-color: #555 !important;
-  }
+ul,
+li,
+ol,
+div,
+span.date {
+  color: #eee !important;
+}
 
-  .wrap_list {
-    background-color: #555 !important;
-  }
+.comments h2 .count,
+.og-title,
+.comments h2,
+.cover-event ul li .title,
+a,
+h1,
+h1.title_common,
+h2,
+h3 {
+  color: #eee !important;
+}
+
+.cover-event ul li .more {
+  color: #000 !important;
+}
+
+h4,
+h5 {
+  color: #ccc !important;
+}
+
+.og-text {
+  background-color: #555 !important;
+}
+
+.cover-list,
+.cover-thumbnail-3,
+.cover-thumbnail-2,
+.cover-thumbnail-4,
+.cover-event,
+.comment-list ul li ul {
+  border-top: none !important;
+}
+
+.cover-list h2,
+.cover-thumbnail-2 h2 {
+  border-bottom: 1px solid #000 !important;
+}
+
+#gnb ul li .current a:after {
+  background-color: #eee !important;
+}
+
+#header .util .profile button,
+#aside .close,
+.sidebar .social-channel ul li a,
+#header .util .menu,
+.tags a,
+.cover-thumbnail-3 button {
+  background-color: transparent !important;
+  border: 1px solid #1E1E1E !important;
+}
+
+#header .util .search::before {
+  background-color: #444 !important;
+  border: 1px solid #1E1E1E !important;
+}
+
+.pagination .prev,
+.pagination .next,
+.pagination .selected,
+.cover-thumbnail-4 .next {
+  color: #fff !important;
+  border: 1px solid #1E1E1E !important;
+}
+
+figure[data-ke-type='opengraph'] a,
+#tt-body-page figure[data-ke-type='opengraph'] a {
+  border: 1px soiid #000 !important;
+}
+
+figure[data-ke-type='opengraph'] div.og-image {
+  border-right: 1px solid #000 !important;
+}
+
+/* sidebar */
+.box_header .link_logo {
+  color: #eee !important;
+}
+
+
+.area_sidebar .tt_category {
+  color: #1E1E1E !important;
+}
+
+.area_sidebar .inner_sidebar {
+  background: #1E1E1E !important;
+}
+
+.area_sidebar .link_item {
+  color: #aaa !important;
+}
+
+.area_sidebar .link_item .c_cnt {
+  color: #aaa !important;
+}
+
+.area_sidebar .link_sub_item {
+  color: #888 !important;
+  font-weight: 500;
+}
+
+.area_sidebar .sub_category_list {
+  border-left: 3px solid #888 !important;
+}
+
+.area_sidebar .t_menu_home a,
+.area_sidebar .t_menu_tag a,
+.area_sidebar .t_menu_guestbook a {
+  color: #ccc !important;
+}
+
+.area_sidebar .link_tool {
+  color: #ccc !important;
+}
+
+.area_sidebar .link_add {
+  color: #ccc !important;
+}
+
+.area_sidebar .btn_close {
+  color: #ccc !important;
+}
+
+/*sidebar search*/
+.area_popup {
+  background: #1E1E1E !important;
+}
+
+.area_popup .area_search .btn_close {
+  color: #ccc !important;
+}
+
+.area_popup .link_logo {
+  color: #eee !important;
+}
+
+.tag_zone a {
+  border: solid 1px #999 !important;
+  color: #eee !important;
+}
+
+.area_popup .box_form {
+  border-bottom: 1px solid #ccc !important;
+}
+
+span.selected, a.link_num{
+  color: #fff ;
+  background-color: #1E1E1E ;
+}
+
+
+textarea,
+#wf-form,
+#container .wf-form,
+div.inner_inp {
+  background-color: #1E1E1E !important;
+  border: 1px solid rgb(255, 255, 255) !important;
+  color: #fff !important;
+}
+
+input.inp_comment,
+input.inp_search {
+  background-color: #1E1E1E !important;
+  color: #fff !important;
+}
+
+ul#toc {
+  background-color: #1E1E1E !important;
+  color: #fff !important;
+}
+
+li {
+  color: #fff !important;
+}
+
+img {
+  color: #fff !important;
+}
+
+button.btn_register {
+  background-color: #1E1E1E !important;
+  border: 1px solid rgb(255, 255, 255) !important;
+}
+
+footer {
+  border-top: 1px solid #000 !important;
+}
+
+#footer address {
+  color: #bbb !important;
+}
+
+#footer .link_footer {
+  color: #bbb !important;
+}
+
+#footer .page-top {
+  background-color: #555 !important;
+  border-color: #444 !important;
+}
+
+#footer .page-top:hover {
+  background-color: #bbb !important;
+}
+
+.box_header .btn_menu,
+.box_header .btn_search {
+  background-image: url(./ico_menu.svg) !important;
+}
+
+.box_header .btn_search {
+  background-image: url(./ico_search.svg) !important;
+}
+
+.info_profile {
+  background-color: #555 !important;
+}
+
+.list_toolbar {
+  background-color: #555 !important;
+}
+
+.wrap_list {
+  background-color: #555 !important;
+}
+
 
 
 
