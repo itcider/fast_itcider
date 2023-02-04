@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V6.1
+버전 : V7.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -16,9 +16,12 @@
 <html lang="ko">
 
 <head>
+  <s_if_var_metaportal>
+    [##_var_navermeta_##]
+    [##_var_googlemeta_##]
+    </s_if_var_metaportal>
   <title>[##_page_title_##]</title>
   <meta name="title" content="[##_page_title_##] : [##_title_##]" />
-  <meta name="description" Content="[##_desc_##]" />
   <meta name="keywords" content="[##_var_metakeyword_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
@@ -39,10 +42,6 @@
   <link rel="dns-prefetch" href="https://tistory2.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://tistory3.daumcdn.net/" crossorigin>
     <link rel="dns-prefetch" href="https://tistory4.daumcdn.net/" crossorigin>
-  <s_if_var_metaportal>
-  [##_var_navermeta_##]
-  [##_var_googlemeta_##]
-  </s_if_var_metaportal>
 
 
   <s_not_var_jqueryconfig>
@@ -58,7 +57,7 @@
 
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev6-1.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-1.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -127,7 +126,7 @@
 
           <div class="inner_sidebar">
             <div class="sidebar_header">
-              <h1 class="title_logo">
+              <h2 class="title_logo">
                 <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
                   <s_if_var_logoImage>
                     <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
@@ -136,7 +135,7 @@
                     [##_title_##]
                   </s_not_var_logoImage>
                 </a>
-              </h1>
+              </h2>
               <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
             </div>
 
@@ -204,7 +203,7 @@
           </s_if_var_tistoryadmin>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">fi스킨 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.1 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -215,7 +214,7 @@
     <div class="area_popup" style="display: none;">
       <div class="area_search thema_apply">
         <div class="search_header">
-          <h1 class="title_logo">
+          <h2 class="title_logo">
             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
               <s_if_var_logoImage>
                 <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
@@ -224,7 +223,7 @@
                 [##_title_##]
               </s_not_var_logoImage>
             </a>
-          </h1>
+          </h2>
           <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
         </div>
 
@@ -1020,7 +1019,6 @@ function snsShare(title, url){
 if(navigator.share){
 navigator.share({
 title: '	[##_article_rep_title_##]', // 공유될 제목
-text: '	[##_article_rep_desc_##]', // 공유될 설명
 url: '[##_article_rep_link_##]', // 공유될 URL
 
 });
@@ -1099,7 +1097,6 @@ if(navigator.share){
 
 navigator.share({
 title: '	[##_article_rep_title_##]', // 공유될 제목
-text: '	[##_article_rep_desc_##]', // 공유될 설명
 url: '[##_article_rep_link_##]', // 공유될 URL
 
 });
@@ -1230,7 +1227,7 @@ $().ready(function () {
               }
               var body_element = document.getElementsByTagName('body')[0];
   
-              if (("" + selection).length < 75) return;
+              if (("" + selection).length < 100) return;
   
               var newdiv = document.createElement('div');
               newdiv.style.position = 'absolute';
@@ -1242,7 +1239,7 @@ $().ready(function () {
                   newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
               }
   
-              newdiv.innerHTML += '<br /><br />[##_var_copyscriptsource_##] 블로그 원본 글:<a href="' + url + '">' + escapeHTML(decodedUrl) + '</a><br /><br /><br /> <a href="https://itcider.com/903">무료티스토리스킨</a>';
+              newdiv.innerHTML += '<br /><br />[##_var_copyscriptsource_##] 블로그 원본 글:<a href="' + url + '">' + escapeHTML(decodedUrl) + '</a>';
   
               selection.selectAllChildren(newdiv);
   
@@ -1259,7 +1256,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V6.1
+버전 : V7.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
