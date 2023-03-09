@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V7.0
+버전 : V7.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -129,7 +129,10 @@
   li,
   ol,
   div,
-  span.date {
+  span.date,
+  code,
+  pre
+  {
     color: #eee !important;
   }
 
@@ -364,7 +367,7 @@
 }
 /*
 스킨명 : fast itcider
-버전 : V7.0
+버전 : V7.2
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
