@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.2
+버전 : V7.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -57,7 +57,7 @@
 
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-2.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-3.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -95,7 +95,7 @@
       <style>              
 	.shareBtn li {
 	border: [##_var_toolkeyborderpx_##]px solid [##_var_toolkeybordercolor_##];
-	border-radius: 10px;
+	border-radius: 12px;
 	background: [##_var_toolkeybackgroundcolor_##];
 	}
         </style>
@@ -203,7 +203,7 @@
           </s_if_var_tistoryadmin>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.2 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.3 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -453,7 +453,7 @@
       <s_list>
         <div class="area_category category_type_[##_var_listType_##] category_search_list">
           <s_if_var_itciderbanner>
-            <a href="[##_var_itciderbannerurl_##]"><img src="./images/[##_var_itciderbannerimg_##]"
+            <a href="[##_var_itciderbannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderbannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderbanneralt_##]"><br></a>
             </s_if_var_itciderbanner>
           <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
@@ -518,7 +518,7 @@
         </s_if_var_manualupdate>
         <div class="article_view">
           <s_if_var_itciderarticlebanner>
-            <a href="[##_var_itciderarticlebannerurl_##]"><img src="./images/[##_var_itciderarticlebannerimg_##]"
+            <a href="[##_var_itciderarticlebannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderarticlebanneralt_##]"><br></a>
             </s_if_var_itciderarticlebanner>
           <s_if_var_tocload>
@@ -528,7 +528,7 @@
               </div>
             </s_if_var_tocload>
             <s_if_var_itciderarticlebanner2>
-              <a href="[##_var_itciderarticlebanner2url_##]"><img src="./images/[##_var_itciderarticlebanner2img_##]"
+              <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebanner2img_##]"
                 width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
               </s_if_var_itciderarticlebanner2>
                 [##_article_rep_desc_##]
@@ -561,7 +561,7 @@
                           <a href="[##_article_related_rep_link_##]" class="link_related">
                             <span class="thumnail item-thumbnail"><img
                               src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
-                              onerror="this.src='./images/ico_no.png';" width="100%" height="100%" alt="blog related posts" /></span>
+                              onerror="this.src='./images/ico_no.png';" width="100%" height="100%" alt="블로그 관련글" /></span>
                           <div class="box_content">
                               <s_if_var_itciderrelatetitle>
                               <strong>[##_article_related_rep_title_##]</strong>
@@ -1256,7 +1256,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.2
+버전 : V7.3
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
