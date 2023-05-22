@@ -500,17 +500,20 @@
                   </s_if_var_itcidercovergrad>
                   <div class="info_text">
                     <strong class="title_post">[##_article_rep_title_##]</strong>
-                    <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
-                    <nav role="navigation" aria-label="Breadcrumbs" class="bf-breadcrumb clearfix bc-top-style">
-                      <div class="container bf-breadcrumb-container">
-                      <br>
+                    <p class="info">
+                      <nav role="navigation" aria-label="Breadcrumbs" class="bf-breadcrumb clearfix bc-top-style">
+                        <div class="container bf-breadcrumb-container">
+                        <span class="date">[##_article_rep_date_##]에 게시됨</span>
+                        <span id="mod_date"></span>
+              
+                        <br><br>
                           <ul class="bf-breadcrumb-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                               <meta name="numberOfItems" content="3">
                               <meta name="itemListOrder" content="Ascending">
   
                               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
                                   class="bf-breadcrumb-item bf-breadcrumb-begin">
-                                  <a itemprop="item" href="[##_blog_link_##]" rel="home" "="">
+                                  <a itemprop="item" href="[##_blog_link_##]" rel="home">
                                   <span itemprop=" name">[##_title_##]</span>
                                       <meta itemprop="position" content="1">
                                   </a>
@@ -518,21 +521,22 @@
   
                               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" 
                               class="bf-breadcrumb-item">
-                                  <a itemprop="item" href="[##_blog_link_##][##_article_rep_category_link_##]">
+                                  <a itemprop="item" href="[##_blog_link_##].[##_article_rep_category_link_##]">
                                       <span itemprop="name">[##_article_rep_category_##]</span>
                                       <meta itemprop="position" content="2">
                                   </a>
                               </li>
-  
+                              <br>
                               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" 
                               class="bf-breadcrumb-item bf-breadcrumb-end">
                                   <span itemprop="name">[##_article_rep_title_##]</span>
                                   <meta itemprop="position" content="3">
-                                  <meta itemprop="item" content="[##_blog_link_##][##_article_rep_link_##]">
+                                  <meta itemprop="item" content="[##_blog_link_##].[##_article_rep_link_##]">
                               </li>
                           </ul>
                       </div>
                   </nav>
+                </p>
                   </div>
                   
                 </div>
