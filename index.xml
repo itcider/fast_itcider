@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>7.3</version>
+        <version>7.4</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -938,7 +938,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#FE56A8</default>
+                <default>#FF735A</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러1] (라이트 모드에서)]]>
                 </description>
@@ -950,7 +950,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#ACCCFF</default>
+                <default>#5B9AFF</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러2 (라이트 모드에서)]]>
                 </description>
@@ -962,7 +962,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#F8C954</default>
+                <default>#0C009C</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러3 (라이트 모드에서)]]>
                 </description>
@@ -974,7 +974,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#B6B1FE</default>
+                <default>#1100FF</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러1 (다크 모드에서)]]>
                 </description>
@@ -986,7 +986,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#ACCCFF</default>
+                <default>#01329D</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러2 (다크 모드에서)]]>
                 </description>
@@ -998,7 +998,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#1E1E1E</default>
+                <default>#FF55DF</default>
                 <description>
                     <![CDATA[글 상단 그라데이션 컬러3 (다크 모드에서)]]>
                 </description>
@@ -1027,7 +1027,7 @@
                 </label>
                 <type>BOOL</type>
                 <option />
-                <default>false</default>
+                <default>true</default>
                 <description>
                     <![CDATA[ 사이드바에서 메뉴를 보일지 설정이 가능합니다. ]]>
                 </description>
@@ -1154,7 +1154,7 @@
             <description></description>
             <type>STRING</type>
             <option></option>
-            <default>copyright 블로그 이름</default>
+            <default>copyright [##_title_##]</default>
         </variable>
         <variable>
             <name>footerLink1Name</name>

@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.3
+버전 : V7.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -57,7 +57,7 @@
 
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-3.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-4.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -81,6 +81,7 @@
           .type_article_header_cover .inner_header {
             height: [##_var_gradpixel_##]px; 
             background: linear-gradient(to bottom right, [##_var_darkgradcolor1_##],[##_var_darkgradcolor2_##],[##_var_darkgradcolor3_##])!important;
+            border-radius: 0 0 50px 50px;
           }
         }
             </style>
@@ -88,6 +89,7 @@
         .type_article_header_cover .inner_header {
           height: [##_var_gradpixel_##]px; 
           background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##],[##_var_gradcolor3_##]);
+          border-radius: 0 0 50px 50px;
         }
           </style>
     </s_if_var_itcidercovergrad>
@@ -143,6 +145,17 @@
               <div class="sidebar_menu">
                 <s_sidebar>
                   <s_sidebar_element>
+                    <s_if_var_tistorymenu>
+
+                    <!-- 메인 메뉴 (사이드바) -->
+                    <div class="box_gnb">
+                      [##_blog_menu_##]
+                    </div>
+                  </s_if_var_tistorymenu>
+
+              </div>
+              </s_sidebar_element>
+                  <s_sidebar_element>
                     <div class="sidebar_left">
                       <s_if_var_tistorycategory>
                       <!-- 카테고리 목록 (사이드바) -->
@@ -154,17 +167,7 @@
                     </s_if_var_tistorycategory>
 
                   </s_sidebar_element>
-                  <s_sidebar_element>
-                    <s_if_var_tistorymenu>
-
-                    <!-- 메인 메뉴 (사이드바) -->
-                    <div class="box_gnb">
-                      [##_blog_menu_##]
-                    </div>
-                  </s_if_var_tistorymenu>
-
-              </div>
-              </s_sidebar_element>
+                 
               <s_sidebar_element>
                 <div class="sidebar_right">
                   <!-- 링크 (사이드바) -->
@@ -203,7 +206,7 @@
           </s_if_var_tistoryadmin>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.3 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.4 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -498,7 +501,40 @@
                   <div class="info_text">
                     <strong class="title_post">[##_article_rep_title_##]</strong>
                     <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
+                    <nav role="navigation" aria-label="Breadcrumbs" class="bf-breadcrumb clearfix bc-top-style">
+                      <div class="container bf-breadcrumb-container">
+                      <br>
+                          <ul class="bf-breadcrumb-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                              <meta name="numberOfItems" content="3">
+                              <meta name="itemListOrder" content="Ascending">
+  
+                              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                  class="bf-breadcrumb-item bf-breadcrumb-begin">
+                                  <a itemprop="item" href="[##_blog_link_##]" rel="home" "="">
+                                  <span itemprop=" name">[##_title_##]</span>
+                                      <meta itemprop="position" content="1">
+                                  </a>
+                              </li>
+  
+                              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" 
+                              class="bf-breadcrumb-item">
+                                  <a itemprop="item" href="[##_blog_link_##][##_article_rep_category_link_##]">
+                                      <span itemprop="name">[##_article_rep_category_##]</span>
+                                      <meta itemprop="position" content="2">
+                                  </a>
+                              </li>
+  
+                              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" 
+                              class="bf-breadcrumb-item bf-breadcrumb-end">
+                                  <span itemprop="name">[##_article_rep_title_##]</span>
+                                  <meta itemprop="position" content="3">
+                                  <meta itemprop="item" content="[##_blog_link_##][##_article_rep_link_##]">
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
                   </div>
+                  
                 </div>
               </div>
               <s_if_var_autoupdate>
@@ -1256,7 +1292,7 @@ $().ready(function () {
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.3
+버전 : V7.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
