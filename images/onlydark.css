@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V7.3
+버전 : V7.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -14,7 +14,9 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 /* fi skin dark mode start*/
-
+.area_tag .tag_content a {
+  border: solid 1px #fff !important;
+  }
 .area_popup .box_form {
   border: 1px solid #fff!important;
    }
@@ -375,7 +377,7 @@
 
 /*
 스킨명 : fast itcider
-버전 : V7.3
+버전 : V7.4
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

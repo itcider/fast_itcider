@@ -1,0 +1,1 @@
+var s_temp=location.href,mobile="/m/";-1!=s_temp.indexOf("/m/")&&-1==navigator.userAgent.indexOf("Tistory")&&(location.href=s_temp.replace("/m/","/"));
