@@ -14,6 +14,9 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 /* fi skin dark mode start*/
+.itciderbanner{
+  border: #fff solid 1px!important;
+}
 .area_tag .tag_content a {
   border: solid 1px #fff !important;
   }

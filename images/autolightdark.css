@@ -20,6 +20,9 @@
   .area_tag .tag_content a {
     border: solid 1px #fff !important;
     }
+    .itciderbanner{
+      border: #fff solid 1px!important;
+    }
   .layer_post .btn_mark {
     color: #1E1E1E !important;
   }
