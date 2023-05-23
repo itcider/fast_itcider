@@ -2781,6 +2781,9 @@ pre {
   .tt-btn_register:hover{
     border: #000!important;
   }
+  .tt-item-reply{
+    border: none!important;
+  }
 /*
 .box_tool > a {
     padding: 10px 20px 10px 20px; 
