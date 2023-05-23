@@ -17,6 +17,22 @@
 
 
 @media (prefers-color-scheme: dark) {
+
+  .tt-btn_register,.tt-btn_register:hover{
+    background-color: #1E1E1E!important;
+    border: 1px solid #fff!important;
+  }
+  
+  .tt-area-write .tt-box-account input, .tt-box-textarea .tt-inner-g {
+    background-color: #1E1E1E!important;
+    color: #fff!important;
+  }
+  .tt_desc{
+    color: #fff!important;
+  }
+  .input, .tt-inner-g, .tt-box-write{
+    background-color: #1E1E1E!important;
+  }
   .area_tag .tag_content a {
     border: solid 1px #fff !important;
     }
