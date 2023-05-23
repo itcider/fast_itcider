@@ -102,6 +102,13 @@
 	}
         </style>
     </s_if_var_sharesearchbtncolor>
+    <s_not_var_replyprofile>
+      <style>
+      .tt-thumbnail{
+        display:none!important;
+      }
+      </style>
+    </s_not_var_replyprofile>
 <body id="[##_body_id_##]" class="[##_var_colorSet_##]">
   <s_t3>
     <div id="wrap">
@@ -618,94 +625,12 @@
                 </s_article_related>
               </s_if_var_itciderrelate>
                 <s_if_var_itciderreplyset>
-                <div class="area_reply">
-                  <div class="box_reply_info">
-                    <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events">댓글 <span>[##_article_rep_rp_cnt_##]</span></a>
-                  </div>
-                  <div class="reply_content">
-                    <button type="button" class="btn_more btn_replymore" style="display:none;">+ 이전 댓글 더보기</button>
-                    <s_rp>
-                      <div class="box_comment_list">
-                        <s_rp_container>
-                          <ul class="list_reply">
-                            <s_rp_rep>
-                              <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
-                                <div class="thumbnail_reply">
-                                  <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50"
-                                    height="50" alt="프로필사진" loading="lazy">
-                                </div>
-                                <div class="box_reply_content">
-                                  <div class="user">[##_rp_rep_name_##]<span class="date"><span class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
-                                  <p class="txt">[##_rp_rep_desc_##]</p>
-                                  <div class="modify">
-                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a><span class="slash">I</span><a
-                                      href="#" onclick="[##_rp_rep_onclick_reply_##]">답글</a>
-                                  </div>
-                                </div>
-                                <s_rp2_container>
-                                  <ul class="list_reply_comment">
-                                    <s_rp2_rep>
-                                      <li id='[##_rp_rep_id_##]' class="item_comment reply [##_rp_rep_class_##]">
-                                        <div class="ico_commnent">ㄴ</div>
-                                        <div class="thumbnail_reply">
-                                          <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
-                                            width="50" height="50" alt="프로필사진" loading="lazy">
-                                        </div>
-                                        <div class="box_reply_content">
-                                          <div class="user"><a class="link_name">[##_rp_rep_name_##]</a><span class="date"><span
-                                                class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
-                                          <p class="txt">[##_rp_rep_desc_##]</p>
-                                          <div class="modify">
-                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
-                                          </div>
-                                        </div>
-                                      </li>
-                                    </s_rp2_rep>
-                                  </ul>
-                                </s_rp2_container>
-                              </li>
-                            </s_rp_rep>
-                          </ul>
-                        </s_rp_container>
-                      </div>
-                      <s_rp_input_form>
-                        <form method="post">
-                          <div class="reply_write">
-                            <s_rp_member>
-                              <s_rp_guest>
-                                <div class="form_guest">
-                                  <div class="box_inp">
-                                    <div class="inner_inp">
-                                      <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" title="이름"
-                                        placeholder="이름" class="inp_comment inp_name" />
-                                    </div>
-                                  </div>
-                                  <div class="box_inp">
-                                    <div class="inner_inp">
-                                      <input type="password" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]"
-                                        title="비밀번호" maxlength="12" placeholder="비밀번호" class="inp_comment inp_password" />
-                                    </div>
-                                  </div>
-                                </div>
-                              </s_rp_guest>
-                            </s_rp_member>
-                            <div class="form_content">
-                              <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]" placeholder="댓글을 입력해주세요."></textarea>
-                            </div>
+                  <s_rp>
+                    [##_comment_group_##]
+                  </s_rp>
 
-                            <div class="form_reg thema_apply">
-                              <label><input type="checkbox" name="[##_rp_input_is_secret_##]"> 비공개</label>
-                              <button type="button" class="btn_register" onclick="[##_rp_onclick_submit_##]">댓글 남기기</button>
-                            </div>
-
-                          </div>
-                        </form>
-                      </s_rp_input_form>
-                    </s_rp>
-
-                  </div>
                 </s_if_var_itciderreplyset>
-                </div>
+
               </div>
             </div>
           </s_permalink_article_rep>
@@ -841,93 +766,9 @@
         <div class="area_common">
           <div class="area_article">
             <s_if_var_itciderguestbookconfig>
-            <div class="area_reply">
-              <h2 class="title_common">자유 게시판</h2>
-              <div class="reply_content">
-                <div class="box_comment_list">
-                  <s_guest_container>
-                    <ul class="list_reply">
-                      <s_guest_rep>
-                        <li id='[##_guest_rep_id_##]' class="item_reply [##_guest_rep_class_##]">
-                          <div class="thumbnail_reply">
-                            <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png" width="50"
-                              height="50" alt="프로필사진" loading="lazy">
-                          </div>
-                          <div class="box_reply_content">
-                            <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
-                                [##_guest_rep_date_##]</span></div>
-                            <p class="txt">[##_guest_rep_desc_##]</p>
-                            <div class="modify">
-                              <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a><span class="slash">I</span><a
-                                href="#" onclick="[##_guest_rep_onclick_reply_##]">답글</a>
-                            </div>
-                          </div>
-                          <s_guest_reply_container>
-                            <ul class="list_reply_comment">
-                              <s_guest_reply_rep>
-                                <li id='[##_guest_rep_id_##]' class="item_comment reply [##_guest_rep_class_##]">
-                                  <div class="ico_commnent">ㄴ</div>
-                                  <div class="thumbnail_reply">
-                                    <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
-                                      width="50" height="50" alt="프로필사진" loading="lazy">
-                                  </div>
-                                  <div class="box_reply_content">
-                                    <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
-                                        [##_guest_rep_date_##]</span></div>
-                                    <p class="txt">[##_guest_rep_desc_##]</p>
-                                    <div class="modify">
-                                      <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
-                                    </div>
-                                  </div>
-                                </li>
-                              </s_guest_reply_rep>
-                            </ul>
-                          </s_guest_reply_container>
-                        </li>
-                      </s_guest_rep>
-                    </ul>
-                  </s_guest_container>
-                </div>
-                <s_guest_input_form>
-                  <form method="post">
-                    <div class="reply_write">
-                      <s_guest_member>
-                        <s_guest_form>
-                          <div class="form_guest">
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="text" name="[##_guest_input_name_##]" value="이름" title="이름" placeholder="이름"
-                                  class="inp_comment inp_name" />
-                              </div>
-                            </div>
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="password" name="[##_guest_input_password_##]" value="비밀번호" title="비밀번호"
-                                  placeholder="비밀번호" class="inp_comment inp_password" />
-                              </div>
-                            </div>
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="url" name="[##_guest_input_homepage_##]" value="홈페이지" title="홈페이지"
-                                  placeholder="홈페이지" class="inp_comment inp_homepage" />
-                              </div>
-                            </div>
-                          </div>
-                        </s_guest_form>
-                      </s_guest_member>
-                      <div class="form_content">
-                        <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]" placeholder="게시판에 글을 남겨주세요."></textarea>
-                      </div>
-
-                      <div class="form_reg thema_apply">
-                        <label><input type="checkbox" name="[##_guest_input_is_secret_##]"> 비공개</label>
-                        <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">글 남기기</button>
-                      </div>
-                    </div>
-                  </form>
-                </s_guest_input_form>
-              </div>
-            </div>
+              <s_guest>
+                [##_guestbook_group_##]
+              </s_guset>
           </s_if_var_itciderguestbookconfig>
           <s_not_var_itciderguestbookconfig>
             <h2 class="title_common">

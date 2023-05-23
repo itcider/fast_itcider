@@ -744,6 +744,18 @@
                     <![CDATA[ 방명록 (자유게시판) 활성화여부 ]]>
                 </description>
             </variable>
+            <variable>
+                <name>replyprofile</name>
+                <label>
+                    <![CDATA[ 댓글 및 방명록 프로필 이미지 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 댓글 및 방명록 프로필 이미지 활성화 여부 ]]>
+                </description>
+            </variable>
         </variablegroup>
 
  		<variablegroup name="글 본문 목차 및 본문 상단">
