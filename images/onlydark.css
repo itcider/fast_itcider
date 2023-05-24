@@ -14,7 +14,19 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 /* fi skin dark mode start*/
-
+.tt-button-modify:hover, .tt-box-modify,
+.tt-box-modify-open, .tt-button-modify,
+.tt_img_area_reply, .tt-button-modify{
+  background-color:white!important;
+  border-radius: 50px!important;
+}
+.tt-list-modify a{
+  color: #000!important;
+}
+span.tt_img_area_reply tt-xe-input-helper,
+span.tt-xe-input-helper{
+  background-color: #1E1E1E!important;
+}
 .tt-btn_register,.tt-btn_register:hover{
   background-color: #1E1E1E!important;
   border: 1px solid #fff!important;
