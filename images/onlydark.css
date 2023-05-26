@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V7.4
+버전 : V7.5
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -14,6 +14,22 @@
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
 /* fi skin dark mode start*/
+.area_popup .box_form .btn_search_del  .svg_bg {
+
+  fill: #fff!important;
+  }
+.box_header {
+
+  background: #1e1e1e!important;
+  box-shadow: 0px 1px 3px #2e2e2e!important;
+  color: #fff!important;
+}
+.box_header button {
+  background-color: transparent; 
+  filter: 
+  brightness(100%)!important;
+ }
+
 .tt-button-modify:hover, .tt-box-modify,
 .tt-box-modify-open, .tt-button-modify,
 .tt_img_area_reply, .tt-button-modify{
@@ -407,7 +423,7 @@ span.tt-xe-input-helper{
 
 /*
 스킨명 : fast itcider
-버전 : V7.4
+버전 : V7.5
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
