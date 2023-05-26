@@ -1,7 +1,7 @@
 fast_itcider
 
 스킨명 : fast itcider<br>
-버전 : v7.4<br>
+버전 : v7.5<br>
 제작자 : itcider 쉽고 시원한 it<br>
 제작자 웹사이트 : itcider.com<br>
 사용 조건 : itcider license<br>
@@ -68,3 +68,9 @@ https://urliveblogger.blogspot.com/<br>
 다크 모드 참고<br>
 
 https://aistudy9314.tistory.com/15<br>
+
+티스토리 플로팅 바<br>
+
+https://velog.io/@kimheewon/%EC%8A%A4%ED%81%AC%EB%A1%A4-%EA%B0%90%EC%A7%80%ED%95%98%EC%97%AC-%ED%97%A4%EB%8D%94-%EB%B3%B4%EC%9D%B4%EA%B1%B0%EB%82%98-%EC%88%A8%EA%B8%B0%EA%B8%B0 <br>
+
+https://webdir.tistory.com/481 <br>
