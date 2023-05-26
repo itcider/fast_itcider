@@ -58,13 +58,13 @@
             <variable>
                 <name>metaportal</name>
                 <label>
-                    <![CDATA[ 네이버와 구글의 사이트 인증이 가능합니다. ]]>
+                    <![CDATA[ 네이버와 구글 메타 태그 인증 켜기 ]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>false</default>
                 <description>
-                    <![CDATA[ 네이버와 구글의 사이트 인증이 가능합니다.]]>
+                    <![CDATA[ 네이버와 구글 메타 태그 인증 켜기]]>
                 </description>
             </variable>
             <variable>
