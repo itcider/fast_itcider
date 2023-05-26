@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.4
+버전 : V7.5
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -57,7 +57,7 @@
 
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-4.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-5.css" />                                              
   </s_if_var_autoupdate>
 
       <s_if_var_manualupdate>
@@ -213,7 +213,7 @@
           </s_if_var_tistoryadmin>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.4 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.5 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -1131,11 +1131,29 @@ $().ready(function () {
     
   </script>
   </s_if_var_copyscript>
+  <script>
+    $(function(){
+      let lastScrollTop = 0;
+      const delta = 15;
+    
+      $(window).scroll(function(event){
+        const st = $(this).scrollTop();
+        if(Math.abs(lastScrollTop - st) <= delta) return;
+        if((st > lastScrollTop) && (lastScrollTop > 0)) {
+          $('.box_header').addClass('nav-up');
+        }else {
+          $('.box_header').removeClass('nav-up');
+        };
+        lastScrollTop = st;
+      });
+    });
+    
+    </script>
   <div id="Copyright_Message">
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.4
+버전 : V7.5
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
