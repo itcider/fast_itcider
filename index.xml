@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>7.5</version>
+        <version>7.6</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -115,9 +115,6 @@
                     <![CDATA[ seo 설정 키워드를 적어주세요. ]]>
                 </description>
             </variable>
-        
-           
-
         </variablegroup>
 
         <variablegroup name="블로그 업데이트 설정">
@@ -137,13 +134,13 @@
             <variable>
                 <name>manualupdate</name>
                 <label>
-                    <![CDATA[다음cdn에서 파일을 불러옴(수동 업데이트)-자동이나 수동 하나만 활성화]]>
+                    <![CDATA[티스토리에서 파일을 불러옴(수동 업데이트)-자동이나 수동 하나만 활성화]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>true</default>
                 <description>
-                    <![CDATA[다음에서 css를 불러옴(수동 업데이트) ]]>
+                    <![CDATA[티스토리에서 css를 불러옴(수동 업데이트) ]]>
                 </description>
             </variable>
             <variable>

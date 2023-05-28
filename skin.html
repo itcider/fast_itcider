@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.5
+버전 : V7.6
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -19,7 +19,7 @@
   <s_if_var_metaportal>
     [##_var_navermeta_##]
     [##_var_googlemeta_##]
-    </s_if_var_metaportal>
+  </s_if_var_metaportal>
   <title>[##_page_title_##]</title>
   <meta name="title" content="[##_page_title_##] : [##_title_##]" />
   <meta name="keywords" content="[##_var_metakeyword_##]" />
@@ -41,74 +41,83 @@
   <link rel="dns-prefetch" href="https://tistory1.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://tistory2.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://tistory3.daumcdn.net/" crossorigin>
-    <link rel="dns-prefetch" href="https://tistory4.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://tistory4.daumcdn.net/" crossorigin>
 
-
+  <!--jquery 코드 로드 관련-->
   <s_not_var_jqueryconfig>
     <script type="application/javascript">
       window.jQuery = window.$ = window.tjQuery; 
     </script>
-    </s_not_var_jqueryconfig>
+  </s_not_var_jqueryconfig>
 
-    <s_if_var_jqueryconfig>
-      <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.5.1.min.js"></script>
-    </s_if_var_jqueryconfig>
+  <s_if_var_jqueryconfig>
+    <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.5.1.min.js"></script>
+  </s_if_var_jqueryconfig>
 
-
+  <!--다크모드 코드 로드-->
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-5.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-6.css" />                                              
   </s_if_var_autoupdate>
 
-      <s_if_var_manualupdate>
-        <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
-        <link rel="stylesheet" href="./style.css" />                                                                                        
-      </s_if_var_manualupdate>
+  <s_if_var_manualupdate>
+    <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
+    <link rel="stylesheet" href="./style.css" />                                                                                        
+  </s_if_var_manualupdate>
 
   
    
 </head>
 
-<s_if_var_itcidercovernotgrad>
-  <style>                    
+  <!--글 상단 썸네일 활성화-->
+  <s_if_var_itcidercovernotgrad>
+    <style>                    
     .type_article_header_cover .inner_header {
       height: [##_var_notgradpixel_##]px; }
-      </style>
-    </s_if_var_itcidercovernotgrad>
-    <s_if_var_itcidercovergrad>
-      <style>
-        @media (prefers-color-scheme: dark) {              
-          .type_article_header_cover .inner_header {
-            height: [##_var_gradpixel_##]px; 
-            background: linear-gradient(to bottom right, [##_var_darkgradcolor1_##],[##_var_darkgradcolor2_##],[##_var_darkgradcolor3_##])!important;
-            border-radius: 0 0 10px 10px;
-          }
-        }
-            </style>
-        <style>              
+    </style>
+  </s_if_var_itcidercovernotgrad>
+
+  <!--글 상단 그라데이션 활성화-->
+  <s_if_var_itcidercovergrad>
+    <style>
+      @media (prefers-color-scheme: dark) {              
         .type_article_header_cover .inner_header {
           height: [##_var_gradpixel_##]px; 
-          background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##],[##_var_gradcolor3_##]);
+          background: linear-gradient(to bottom right, [##_var_darkgradcolor1_##],[##_var_darkgradcolor2_##],[##_var_darkgradcolor3_##])!important;
           border-radius: 0 0 10px 10px;
         }
-          </style>
-    </s_if_var_itcidercovergrad>
-    <s_if_var_sharesearchbtncolor>
-      <style>              
-	.shareBtn li {
-	border: [##_var_toolkeyborderpx_##]px solid [##_var_toolkeybordercolor_##];
-	border-radius: 12px;
-	background: [##_var_toolkeybackgroundcolor_##];
-	}
-        </style>
-    </s_if_var_sharesearchbtncolor>
-    <s_not_var_replyprofile>
+      }
+      </style>
       <style>
+        .type_article_header_cover .inner_header {
+          height: [##_var_gradpixel_##]px;
+          background: linear-gradient(to bottom right, [##_var_gradcolor1_##], [##_var_gradcolor2_##], [##_var_gradcolor3_##]);
+          border-radius: 0 0 10px 10px;
+        }
+      </style>
+  </s_if_var_itcidercovergrad>
+
+  <!--도구바 배경 색상 설정-->
+  <s_if_var_sharesearchbtncolor>
+    <style>              
+      .shareBtn li {
+        border: [##_var_toolkeyborderpx_##]px solid [##_var_toolkeybordercolor_##];
+        border-radius: 12px;
+        background: [##_var_toolkeybackgroundcolor_##];
+      }
+    </style>
+  </s_if_var_sharesearchbtncolor>
+
+  <!--댓글창 썸네일 활성화 여부-->
+  <s_not_var_replyprofile>
+    <style>
       .tt-thumbnail{
         display:none!important;
       }
-      </style>
-    </s_not_var_replyprofile>
+    </style>
+  </s_not_var_replyprofile>
+
+
 <body id="[##_body_id_##]" class="[##_var_colorSet_##]">
   <s_t3>
     <div id="wrap">
@@ -211,9 +220,10 @@
               <a href="[##_owner_url_##]" class="link_tool">관리</a>
             </div>
           </s_if_var_tistoryadmin>
+
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.5 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.6 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -510,8 +520,8 @@
                     <p class="info">
                       <nav role="navigation" aria-label="Breadcrumbs" class="bf-breadcrumb clearfix bc-top-style">
                         <div class="container bf-breadcrumb-container">
-                        <span class="date">[##_article_rep_date_##]에 게시됨</span>
-                        <span id="mod_date"></span>
+                          <span class="date">[##_article_rep_date_year_##]. [##_article_rep_date_month_##]. [##_article_rep_date_day_##]에 최초 게시됨</span><br>
+                          <span class="mod_date"></span>에 최종 수정됨
               
                         <br><br>
                           <ul class="bf-breadcrumb-items" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -551,84 +561,95 @@
               <s_if_var_autoupdate>
               <s_if_var_waiting>                                                
                 <div id="waiting">
-                    <img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider.gif" width="100%" height="100%">
-                </div>
-            </s_if_var_waiting>
-          </s_if_var_autoupdate>
+                  <div class="itcwait">
+                    <div class="itcwait-dot"></div>
+                    <div class="itcwait-dot"></div>
+                    <div class="itcwait-dot"></div>
+                    <div class="itcwait-dot"></div>
+                    <div class="itcwait-dot"></div>
+                    <div class="itcwait-dot"></div>
+                  </div>                </div>
+                </s_if_var_waiting>
+              </s_if_var_autoupdate>
 
               <s_if_var_manualupdate>
-            <s_if_var_waiting>                                                
-              <div id="waiting">
-                  <img src="./images/itcider.gif" width="100%" height="100%">
-              </div>
-          </s_if_var_waiting>
-        </s_if_var_manualupdate>
-        <div class="article_view">
-          <s_if_var_itciderarticlebanner>
-            <a href="[##_var_itciderarticlebannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebannerimg_##]"
-              width="100%" height="100%" alt="[##_var_itciderarticlebanneralt_##]"><br></a>
-            </s_if_var_itciderarticlebanner>
-          <s_if_var_tocload>
-            <div class="book-toc">
-              <p class="toc_title"></p>
-              <ul id="toc">목차</ul>
-              </div>
-            </s_if_var_tocload>
-            <s_if_var_itciderarticlebanner2>
-              <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebanner2img_##]"
-                width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
+                <s_if_var_waiting>                                                
+                  <div id="waiting">
+                    <div class="itcwait">
+                      <div class="itcwait-dot"></div>
+                      <div class="itcwait-dot"></div>
+                      <div class="itcwait-dot"></div>
+                      <div class="itcwait-dot"></div>
+                      <div class="itcwait-dot"></div>
+                      <div class="itcwait-dot"></div>
+                    </div>
+                  </div>
+                </s_if_var_waiting>
+              </s_if_var_manualupdate>
+
+                <div class="article_view">
+                  
+              <s_if_var_itciderarticlebanner>
+                <a href="[##_var_itciderarticlebannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebannerimg_##]"
+                    width="100%" height="100%" alt="[##_var_itciderarticlebanneralt_##]"><br></a>
+              </s_if_var_itciderarticlebanner>
+
+              <s_if_var_tocload>
+                <div class="book-toc">
+                  <p class="toc_title"></p>
+                  <ul id="toc">목차</ul>
+                </div>
+              </s_if_var_tocload>
+              <s_if_var_itciderarticlebanner2>
+                <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebanner2img_##]"
+                  width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
               </s_if_var_itciderarticlebanner2>
                 [##_article_rep_desc_##]
               </div>
 
               <!-- article_content -->
               <div class="article_content">
-                <!-- <ul class="list_share list_sns">
-                                        <li class="item_share"><a href="#" class="link_share link_facebook" data-service="facebook"><span class="icon-Facebook"></span><span class="blind">페이스북</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_twitter" data-service="twitter"><span class="icon-Twitter"></span><span class="blind">트위터</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_story" data-service="kakaostory"><span class="icon-Story"></span><span class="blind">카카오스토리</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_kakao" data-service="kakaotalk"><span class="icon-Kakao"></span><span class="blind">카카오톡</span></a></li>
-                                    </ul> -->
+
                 <s_if_var_itciderposttag>
-                <s_tag_label>
-                  <div class="area_tag">
-                    <h3 class="title_tag">TAG</h3>
-                    <div class="tag_content thema_apply">[##_tag_label_rep_##]</div>
-                  </div>
-                </s_tag_label>
-              </s_if_var_itciderposttag>
+                  <s_tag_label>
+                    <div class="area_tag">
+                      <h3 class="title_tag">TAG</h3>
+                      <div class="tag_content thema_apply">[##_tag_label_rep_##]</div>
+                    </div>
+                  </s_tag_label>
+                </s_if_var_itciderposttag>
 
                 <s_if_var_itciderrelate>
-                <s_article_related>
-                  <div class="area_related">
-                    <h3 class="title_related">이 글도 관심있으실 것 같아요!</h3>
-                    <ul class="list_related">
-                      <s_article_related_rep>
-                        <li class="item_related">
-                          <a href="[##_article_related_rep_link_##]" class="link_related">
-                            <span class="thumnail item-thumbnail"><img
-                              src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
-                              onerror="this.src='./images/ico_no.png';" width="100%" height="100%" alt="블로그 관련글" /></span>
-                          <div class="box_content">
-                              <s_if_var_itciderrelatetitle>
-                              <strong>[##_article_related_rep_title_##]</strong>
-                              </s_if_var_itciderrelatetitle>
-                              <s_if_var_itciderrelatedate>
-                              <span class="info">[##_article_related_rep_date_##]</span>
-                              </s_if_var_itciderrelatedate>
-                            </div>
-                          </a>
-                        </li>
-                      </s_article_related_rep>
-                    </ul>
-                  </div>
-                </s_article_related>
-              </s_if_var_itciderrelate>
+                  <s_article_related>
+                    <div class="area_related">
+                      <h3 class="title_related">이 글도 관심있으실 것 같아요!</h3>
+                      <ul class="list_related">
+                        <s_article_related_rep>
+                          <li class="item_related">
+                            <a href="[##_article_related_rep_link_##]" class="link_related">
+                              <span class="thumnail item-thumbnail"><img
+                                src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
+                                onerror="this.src='./images/ico_no.png';" width="100%" height="100%" alt="블로그 관련글" /></span>
+                            <div class="box_content">
+                                <s_if_var_itciderrelatetitle>
+                                <strong>[##_article_related_rep_title_##]</strong>
+                                </s_if_var_itciderrelatetitle>
+                                <s_if_var_itciderrelatedate>
+                                <span class="info">[##_article_related_rep_date_##]</span>
+                                </s_if_var_itciderrelatedate>
+                              </div>
+                            </a>
+                          </li>
+                        </s_article_related_rep>
+                      </ul>
+                    </div>
+                  </s_article_related>
+                </s_if_var_itciderrelate>
+
                 <s_if_var_itciderreplyset>
                   <s_rp>
                     [##_comment_group_##]
                   </s_rp>
-
                 </s_if_var_itciderreplyset>
 
               </div>
@@ -643,10 +664,11 @@
 
             <div class="article_header type_article_header_cover">
 
-              <s_if_var_itcidercovernotgrad>
-                <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-                </s_if_var_itcidercovernotgrad>
-              <s_if_var_itcidercovergrad>
+                <s_if_var_itcidercovernotgrad>
+                  <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
+                  </s_if_var_itcidercovernotgrad>
+                <s_if_var_itcidercovergrad>
+
                 <div class="inner_header">
                 </s_if_var_itcidercovergrad>
                 <div class="info_text">
@@ -675,10 +697,12 @@
 
             <s_if_var_itcidercovernotgrad>
               <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-              </s_if_var_itcidercovernotgrad>
+            </s_if_var_itcidercovernotgrad>
+
             <s_if_var_itcidercovergrad>
               <div class="inner_header">
-              </s_if_var_itcidercovergrad>
+            </s_if_var_itcidercovergrad>
+
               <div class="info_text">
                 <strong class="title_post">[##_article_rep_title_##]</strong>
                 <p class="info"><span class="date">[##_article_rep_date_##]
@@ -715,10 +739,12 @@
 
               <s_if_var_itcidercovernotgrad>
                 <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-                </s_if_var_itcidercovernotgrad>
+              </s_if_var_itcidercovernotgrad>
+
               <s_if_var_itcidercovergrad>
                 <div class="inner_header">
-                </s_if_var_itcidercovergrad>
+              </s_if_var_itcidercovergrad>
+
                 <div class="info_text">
                   <strong class="title_post">[##_notice_rep_title_##]</strong>
                   <p class="info"><span class="date">[##_notice_rep_date_##]</span></p>
@@ -765,14 +791,16 @@
       <s_guest>
         <div class="area_common">
           <div class="area_article">
-            <s_if_var_itciderguestbookconfig>
-                [##_guestbook_group_##]
+          <s_if_var_itciderguestbookconfig>
+            [##_guestbook_group_##]
           </s_if_var_itciderguestbookconfig>
+
           <s_not_var_itciderguestbookconfig>
             <h2 class="title_common">
               자유게시판이 비활성화되었습니다. 
             </h2>
           </s_not_var_itciderguestbookconfig>
+
           </div>
         </div>
       </s_guest>
@@ -816,46 +844,53 @@
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
-       <s_if_var_shareurlcopybtn>
-        <li>
-          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
-          <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
+          <s_if_var_shareurlcopybtn>
+            <li>
+              <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기"></a>
+              <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기"></a>
             </li>
           </s_if_var_shareurlcopybtn>
+          
           <s_if_var_gototopbtn>
-      <li>
-      <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-        </li>
-      </s_if_var_gototopbtn>
-    </ul>
-    </div>
+          <li>
+          <s_if_var_sharesearchbtn>
+            <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
+          </s_if_var_sharesearchbtn>    
+              
+          <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img
+              src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40"
+              alt="상단으로 올라가기"></a>
+            </li>
+          </s_if_var_gototopbtn>
+        </ul>
+      </div>
     </s_if_var_webshare>
-
   </s_if_var_autoupdate>
 
   <s_if_var_manualupdate>
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
-       <s_if_var_shareurlcopybtn>
-        <li>
-          <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기 by itcider.com"></a>
-          <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="./images/share.png" width="40" height="40" alt="공유하기 by itcider.com"></a>
+          <s_if_var_shareurlcopybtn>
+            <li>
+              <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기"></a>
+              <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="./images/share.png" width="40" height="40" alt="공유하기"></a>
             </li>
           </s_if_var_shareurlcopybtn>    
-    <s_if_var_gototopbtn>
-      <li>
-      <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="./images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>         <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="./images/up.png" width="40" height="40" alt="상단으로 올라가기 by itcider.com"></a>
-        </li>
-      </s_if_var_gototopbtn>
-    </ul>
-    </div>
-    </s_if_var_webshare>
 
+          <s_if_var_gototopbtn>
+            <li>
+              <s_if_var_sharesearchbtn>
+                <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="./images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
+              </s_if_var_sharesearchbtn>         
+                
+              <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="./images/up.png" width="40"
+                    height="40" alt="상단으로 올라가기"></a>
+            </li>
+          </s_if_var_gototopbtn>
+        </ul>
+      </div>
+    </s_if_var_webshare>
   </s_if_var_manualupdate>
 
 </body>
@@ -873,217 +908,230 @@
     var online = document.URL;
     if(online.match(Original_URL)) document.location.href = online.replace(Original_URL, Replace_URL);
   </script>
-  </s_if_var_redirection>
-<s_if_var_autoupdate>                                       
-<s_if_var_lazyload1>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload.js" defer></script>
-</s_if_var_lazyload1>
-<s_if_var_lazyload2>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload1.js" defer></script>
-</s_if_var_lazyload2>
+</s_if_var_redirection>
+
+<s_if_var_autoupdate> 
+
+  <s_if_var_lazyload1>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload.js" defer></script>
+  </s_if_var_lazyload1>
+
+  <s_if_var_lazyload2>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload1.js" defer></script>
+  </s_if_var_lazyload2>
+
 </s_if_var_autoupdate>
-<s_if_var_manualupdate>                                            
-<s_if_var_lazyload1>
-<script src="./images/itciderlazyload.js" defer></script>
-</s_if_var_lazyload1>
-<s_if_var_lazyload2>
-<script src="./images/itciderlazyload1.js" defer></script>
-</s_if_var_lazyload2>
+
+<s_if_var_manualupdate>  
+
+  <s_if_var_lazyload1>
+    <script src="./images/itciderlazyload.js" defer></script>
+  </s_if_var_lazyload1>
+
+  <s_if_var_lazyload2>
+    <script src="./images/itciderlazyload1.js" defer></script>
+  </s_if_var_lazyload2>
+
 </s_if_var_manualupdate>
+
 <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/icomoon/icomoon.css" />
 <s_if_var_autoupdate>
-<s_if_var_webshare>
-<script>
-function snsShare(title, url){
-if(navigator.share){
-navigator.share({
-title: '	[##_article_rep_title_##]', // 공유될 제목
-url: '[##_article_rep_link_##]', // 공유될 URL
+  <s_if_var_webshare>
+    <script>
+      function snsShare(title, url){
+      if(navigator.share){
+      navigator.share({
+      title: '	[##_article_rep_title_##]', // 공유될 제목
+      url: '[##_article_rep_link_##]', // 공유될 URL
 
-});
-$().ready(function () {
-      $("#shared").click(function () {
-          const Toast = Swal.mixin({
-              toast: true,
-              position: 'center-center',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer)
-                  toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-          })
-
-          Toast.fire({
-              icon: 'success',
-              title: '공유가 완료되었습니다.'
-          })
       });
-  });
+      $().ready(function () {
+            $("#shared").click(function () {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
 
-}else 
+                Toast.fire({
+                    icon: 'success',
+                    title: '공유가 완료되었습니다.'
+                })
+            });
+        });
 
-$().ready(function () {
-      $("#shared").click(function () {
-          const Toast = Swal.mixin({
-              toast: true,
-              position: 'center-center',
-              showConfirmButton: false,
-              timer: 2500,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer)
-                  toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-          })
+      }else 
 
-          Toast.fire({
-              icon: 'error',
-              title: '공유가 지원되지 않는 브라우저입니다 <br> 왼쪽의 링크 복사 버튼 이용 부탁드립니다.'
-          })
-      });
-  });
+      $().ready(function () {
+            $("#shared").click(function () {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'error',
+                    title: '공유가 지원되지 않는 브라우저입니다 <br> 왼쪽의 링크 복사 버튼 이용 부탁드립니다.'
+                })
+            });
+        });
 
 
-}
+      }
+    </script>
 
-</script>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercopy.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</s_if_var_webshare> 
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercategory.js" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider_top.js" defer></script>
-<s_if_var_tocload>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/js.js" defer></script>
-</s_if_var_tocload>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercopy.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </s_if_var_webshare> 
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercategory.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider_top.js" defer></script>
+  <s_if_var_tocload>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/js.js" defer></script>
+  </s_if_var_tocload>
 
-<s_if_var_discopy>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/discopy.js" defer></script>
-</s_if_var_discopy>
+  <s_if_var_discopy>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/discopy.js" defer></script>
+  </s_if_var_discopy>
 
-<s_if_var_ieredirect>
-<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_ieconfig_##].js" defer></script>
-</s_if_var_ieredirect>
+  <s_if_var_ieredirect>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_ieconfig_##].js" defer></script>
+  </s_if_var_ieredirect>
 </s_if_var_autoupdate>
+
 <s_if_var_manualupdate>
-<s_if_var_webshare>
-<script>
+  <s_if_var_webshare>
+    <script>
 
-function snsShare(title, url){
+      function snsShare(title, url){
 
-if(navigator.share){
+      if(navigator.share){
 
-navigator.share({
-title: '	[##_article_rep_title_##]', // 공유될 제목
-url: '[##_article_rep_link_##]', // 공유될 URL
+      navigator.share({
+      title: '	[##_article_rep_title_##]', // 공유될 제목
+      url: '[##_article_rep_link_##]', // 공유될 URL
 
-});
-$().ready(function () {
-      $("#shared").click(function () {
-          const Toast = Swal.mixin({
-              toast: true,
-              position: 'center-center',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer)
-                  toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-          })
-
-          Toast.fire({
-              icon: 'success',
-              title: '공유가 완료되었습니다.'
-          })
       });
-  });
+      $().ready(function () {
+            $("#shared").click(function () {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
 
-}else 
+                Toast.fire({
+                    icon: 'success',
+                    title: '공유가 완료되었습니다.'
+                })
+            });
+        });
 
-$().ready(function () {
-      $("#shared").click(function () {
-          const Toast = Swal.mixin({
-              toast: true,
-              position: 'center-center',
-              showConfirmButton: false,
-              timer: 2500,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer)
-                  toast.addEventListener('mouseleave', Swal.resumeTimer)
-              }
-          })
+      }else 
 
-          Toast.fire({
-              icon: 'error',
-              title: '공유가 지원되지 않는 브라우저입니다 <br> 왼쪽의 링크 복사 버튼 이용 부탁드립니다.'
-          })
-      });
-  });
+      $().ready(function () {
+            $("#shared").click(function () {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'error',
+                    title: '공유가 지원되지 않는 브라우저입니다 <br> 왼쪽의 링크 복사 버튼 이용 부탁드립니다.'
+                })
+            });
+        });
 
 
-}
+      }
 
-</script>
-<script src="./images/itcidercopy.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</s_if_var_webshare> 
-<script src="./images/itcidercategory.js" defer></script>
-<script src="./images/itcider_top.js" defer></script>
-<s_if_var_tocload>
-<script src="./images/js.js" defer></script>
-</s_if_var_tocload>
+    </script>
 
-<s_if_var_discopy>
-<script src="./images/discopy.js" defer></script>
-</s_if_var_discopy>
+    <script src="./images/itcidercopy.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </s_if_var_webshare> 
 
-<s_if_var_ieredirect>
-<script src="./images/[##_var_ieconfig_##].js" defer></script>
-</s_if_var_ieredirect>
+    <script src="./images/itcidercategory.js" defer></script>
+    <script src="./images/itcider_top.js" defer></script>
+
+  <s_if_var_tocload>
+    <script src="./images/js.js" defer></script>
+  </s_if_var_tocload>
+
+  <s_if_var_discopy>
+    <script src="./images/discopy.js" defer></script>
+  </s_if_var_discopy>
+
+  <s_if_var_ieredirect>
+    <script src="./images/[##_var_ieconfig_##].js" defer></script>
+  </s_if_var_ieredirect>
 </s_if_var_manualupdate>
 
 <s_if_var_tocload>
   <style>
-@media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
 
-#toc a:hover {
-  background: linear-gradient(180deg, [##_var_darktocgrad1_##] 50%, [##_var_darktocgrad2_##] 50%)!important;
-}
-}
-  </style>
-  <style>
-    .book-toc ul {
-    list-style-type: [##_var_tocoption_##];
-}
-#toc a:hover {
-  background: linear-gradient(180deg, [##_var_tocgrad1_##] 50%, [##_var_tocgrad2_##] 50%);
-}
-  </style>
+    #toc a:hover {
+      background: linear-gradient(180deg, [##_var_darktocgrad1_##] 50%, [##_var_darktocgrad2_##] 50%)!important;
+    }
+    }
+      </style>
+      <style>
+        .book-toc ul {
+        list-style-type: [##_var_tocoption_##];
+    }
+    #toc a:hover {
+      background: linear-gradient(180deg, [##_var_tocgrad1_##] 50%, [##_var_tocgrad2_##] 50%);
+    }
+   </style>
 
-<script>
-  $(function(){
-  $("#toc").toc( {content: ".article_view", headings: "[##_var_tocset_##]" , top: -90, isBlink : true, blinkColor : '#000000' } )
-  });
+  <script>
+      $(function(){
+      $("#toc").toc( {content: ".article_view", headings: "[##_var_tocset_##]" , top: -90, isBlink : true, blinkColor : '#000000' } )
+      });
   </script>
-<script>
-  $('.article_view').find('table').each(function (idx, el) {
-    $(el).wrap('<div class="table-overflow">')
-  })
-</script>
+
+  <script>
+    $('.article_view').find('table').each(function (idx, el) {
+      $(el).wrap('<div class="table-overflow">')
+    })
+  </script>
+
 </s_if_var_tocload>
 
 
 <s_if_var_daumcdnfont>
-  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/AvenirLTStd/AvenirLTStd.css" />
-  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/SpoqaHanSans/SpoqaHanSans.css" />
-  </s_if_var_daumcdnfont>
+    <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/AvenirLTStd/AvenirLTStd.css" />
+    <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/SpoqaHanSans/SpoqaHanSans.css" />
+</s_if_var_daumcdnfont>
   
 <s_if_var_copyscript>
-
-
   <script>
       (function($) {
           $("body").bind('copy', function (e) {
@@ -1127,10 +1175,9 @@ $().ready(function () {
               }, 200);
           });
       })(tjQuery);
-    
-    
-  </script>
+    </script>
   </s_if_var_copyscript>
+
   <script>
     $(function(){
       let lastScrollTop = 0;
@@ -1148,12 +1195,22 @@ $().ready(function () {
       });
     });
     
-    </script>
+  </script>
+
+  <script>
+    $( document ).ready( function() {
+      var modTimer = $( 'meta[property="article:modified_time"]' ).attr( 'content' );
+      var newmodTimer = modTimer.split( "T" ); 
+      var date = newmodTimer[ 0 ].replace( /\-/g , ". " ); 
+      $( 'span.mod_date' ).append( date);
+    } );
+  </script>
+
   <div id="Copyright_Message">
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.5
+버전 : V7.6
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
