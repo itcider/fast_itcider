@@ -911,7 +911,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>300</default>
+                <default>350</default>
                 <description>
                     <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
                 </description>
@@ -935,7 +935,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>300</default>
+                <default>350</default>
                 <description>
                     <![CDATA[본문 상단의 그라데이션 사용시 크기 설정]]>
                 </description>
