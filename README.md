@@ -1,7 +1,7 @@
 fast_itcider
 
 스킨명 : fast itcider<br>
-버전 : v7.5<br>
+버전 : v7.6<br>
 제작자 : itcider 쉽고 시원한 it<br>
 제작자 웹사이트 : itcider.com<br>
 사용 조건 : itcider license<br>
@@ -14,63 +14,94 @@ fast_itcider
 위 주의사항을 어기실 경우 사용 불가합니다.<br>
 
 티스토리 글쓰는데만 집중하세요! - 티스토리 무료 스킨 [fi스킨] https://itcider.com/903<br>
+참조 소스 출처 및 제작자, 기여자
+
+    스킨 제작자
 
 
-참조 소스 및 기여<br>
+fi 스킨의 제작자는 itcider입니다. 원본 스킨(티스토리 포트폴리오)의 소유자는 tistory입니다. itcider가 수정하거나 추가한 소스나 리소스의 소유권 및 권리는 itcider에 있습니다.
 
+오픈소스나 타 소스는 소스 개발자에게 권리가 있습니다.
 
-티스토리 포트폴리오 스킨<br>
+ 
 
-https://www.tistory.com/skin/xf_Portfolio<br>
+위 코드를 공유해주신 모든 분들께 이 자리를 빌어 감사의 말을 전하고자 합니다.
 
-web share api<br>
+위 코드 덕분에 사용자와 관리자 모두를 위한 Fi스킨이 탄생하고 발전할 수 있었습니다.
 
-https://blog.naver.com/PostView.nhn?blogId=zgabriel&logNo=221846990627<br>
+진심으로 감사합니다.
 
-https://wooncloud.tistory.com/12<br>
+ 
 
-css 및 메뉴얼<br>
+    티스토리 포트폴리오 스킨 <br>
 
-https://developer.mozilla.org<br>
+https://www.tistory.com/skin/xf_Portfolio  <br>
 
-https://stackoverflow.com/<br>
+    web share api  <br>
 
-lazyload<br>
+https://blog.naver.com/PostView.nhn?blogId=zgabriel&logNo=221846990627   <br>
 
-https://marshallku.com/web/tips/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%97%90%EC%84%9C-lazy-load-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
-<br>
-https://blogpack.tistory.com/817<br>
+https://wooncloud.tistory.com/12 <br>
 
-이미지 리소스<br>
+    css 및 메뉴얼 <br>
 
-https://itcider.com/(itcider 자체 제작 이미지 포함-itcider에게 모든 권한 존재)<br>
+https://developer.mozilla.org <br>
 
-https://pixabay.com/vectors/hexagon-symbol-gui-internet-2307352/ (fi스킨 4.4이상부터 미사용)<br>
+https://stackoverflow.com/ <br>
 
-https://pixabay.com/vectors/link-hyperlink-chain-linking-6931554/ (fi스킨 4.4이상부터 미사용)<br>
+    lazyload <br>
 
-티스토리 치환자<br>
+https://marshallku.com/web/tips/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%97%90%EC%84%9C-lazy-load-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 <br>
 
-https://tistory.github.io/document-tistory-skin/common/basic.html<br>
+https://blogpack.tistory.com/817 <br>
 
-우클릭 및 저작권 보호<br>
+    이미지 리소스 <br>
 
-https://gist.github.com/ab-c-d/7aa98987589466eee696952e154c98e1<br>
+https://itcider.com/(itcider 자체 제작 이미지 포함) <br>
 
-jquery 목차<br>
+(fi스킨 4.4이후부터 아래의 아이콘은 사용하지 않습니다.) <br>
 
-https://www.codingfactory.net/12114<br>
+    https://pixabay.com/vectors/hexagon-symbol-gui-internet-2307352/ <br>
 
-fi스킨 기여자<br>
+    https://pixabay.com/vectors/link-hyperlink-chain-linking-6931554/ <br>
 
-https://urliveblogger.blogspot.com/<br>
+    티스토리 치환자 <br>
 
-다크 모드 참고<br>
+https://tistory.github.io/document-tistory-skin/common/basic.html <br>
 
-https://aistudy9314.tistory.com/15<br>
+    우클릭 및 저작권 보호 <br>
+   
 
-티스토리 플로팅 바<br>
+https://gist.github.com/ab-c-d/7aa98987589466eee696952e154c98e1 <br>
+
+    jquery 목차 <br>
+
+https://www.codingfactory.net/12114 <br>
+
+    다크 모드 참고 <br>
+
+https://aistudy9314.tistory.com/15 <br>
+
+    breadcrumbs 참고 <br>
+
+https://avada.tistory.com/1847 <br>
+
+    티스토리 플로팅 바 <br>
 
 https://velog.io/@kimheewon/%EC%8A%A4%ED%81%AC%EB%A1%A4-%EA%B0%90%EC%A7%80%ED%95%98%EC%97%AC-%ED%97%A4%EB%8D%94-%EB%B3%B4%EC%9D%B4%EA%B1%B0%EB%82%98-%EC%88%A8%EA%B8%B0%EA%B8%B0 <br>
 
 https://webdir.tistory.com/481 <br>
+
+    티스토리 수정시간 참고 <br>
+
+https://tonks.tistory.com/122 <br>
+
+https://www.codingfactory.net/10686 <br>
+
+    로딩바 <br>
+
+https://github.com/tobiasahlin/SpinKit <br>
+
+    fi스킨 기여자 (라이브블로거님) <br>
+
+https://urliveblogger.blogspot.com/ <br>
