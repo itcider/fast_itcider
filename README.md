@@ -1,4 +1,4 @@
-fast_itcider
+    fast_itcider
 
 스킨명 : fast itcider<br>
 버전 : v7.6<br>
@@ -15,6 +15,7 @@ fast_itcider
 
 
 티스토리 글쓰는데만 집중하세요! - 티스토리 무료 스킨 [fi스킨] https://itcider.com/903<br>
+
 참조 소스 출처 및 제작자, 기여자<br>
 
     스킨 제작자
