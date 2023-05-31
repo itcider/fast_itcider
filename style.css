@@ -2542,8 +2542,9 @@ aside .tag_board {
   font-size: 16px;
   line-height: 1.75;
   color: rgba(0, 0, 0, 0.54);
-  border-radius: 8px!important;  
+  border-radius: 20px!important;  
   border: #000 1px solid;
+  padding: 30px 10px 10px 10px!important;
 }
  .og-image , .og-image:before{
   border-radius: 20px 0 0 20px!important;  
