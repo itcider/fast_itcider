@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>7.6</version>
+        <version>7.7</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -117,7 +117,7 @@
             </variable>
         </variablegroup>
 
-        <variablegroup name="블로그 업데이트 설정">
+        <variablegroup name="블로그 속도 및 업데이트 설정">
 
             <variable>
                 <name>autoupdate</name>
@@ -155,33 +155,41 @@
                     <![CDATA[우상단의 세 작대기가 작동하지 않을때]]>
                 </description>
             </variable>
-            
-        </variablegroup>
-
-        <variablegroup name="다크모드 설정">
-
- 
             <variable>
-                <name>darkmodeconfig</name>
+                <name>ieredirect</name>
                 <label>
-				    <![CDATA[ 라이트/다크모드 설정 ]]>
+                    <![CDATA[ ie 리다이렉트 ]]>
+                </label>
+                <type>BOOL</type>
+                <option/>
+                <default>true</default>
+                <description>
+                    <![CDATA[ ie 리다이렉트 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>ieconfig</name>
+                <label>
+				    <![CDATA[ ie 리다이렉트 설정 ]]>
 				</label>
                 <description></description>
                 <type>SELECT</type>
                 <option>
 			<![CDATA[
 				[
-					{"name":"autolightdark", "label":"자동으로 라이트/다크 모드", "value":"autolightdark"},
-					{"name":"onlylight", "label":"라이트모드만 사용", "value":"onlylight"},
-					{"name":"onlydark", "label":"다크모드만 사용", "value":"onlydark"}
+					{"name":"ietoedge", "label":"엣지 브라우저로 리다이렉트", "value":"ietoedge"},
+					{"name":"ietoieitc", "label":"브라우저 다운로드 유도 페이지(iemain)", "value":"ietoieitc"},
+					{"name":"ietoitc", "label":"브라우저 다운로드 유도 페이지(itccom)", "value":"ietoitc"}
 				]
 			]]>
                 </option>
-                <default>autolightdark</default>
+                <default>ietoieitc</default>
+                <description>
+                    <![CDATA[  ie 리다이렉트 설정  ]]>
+                </description>
             </variable>
-        </variablegroup>
 
-        <variablegroup name="티스토리 블로그 속도 설정">
             <variable>
                 <name>waiting</name>
                 <label>
@@ -218,133 +226,7 @@
                     <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
                 </description>
             </variable>
-        </variablegroup>
-
-
-        <variablegroup name="티스토리 하단부분 도구 아이콘">
             <variable>
-                <name>webshare</name>
-                <label>
-                    <![CDATA[ 공유 버튼 및 상단버튼 로드 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.)]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[ 공유 버튼 및 상단버튼 로드 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.) ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>shareurlcopybtn</name>
-                <label>
-                    <![CDATA[링크 복사 및 공유 버튼 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[링크 복사 및 공유 버튼 활성화 ]]>
-                </description>
-            </variable>
-              <variable>
-                <name>sharesearchbtn</name>
-                <label>
-                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화 ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>sharesearchlink</name>
-                <label>
-				    <![CDATA[ 검색버튼 누를시 링크 ]]>
-				</label>
-                <description>
-				<![CDATA[ 검색버튼 누를시 링크 ]]>
-				</description>
-                <type>STRING</type>
-                <option></option>
-                <default>https://ohon.net</default>
-            </variable>
-            <variable>
-                <name>sharesearchalt</name>
-                <label>
-				    <![CDATA[ 검색관련 alt ]]>
-				</label>
-                <description>
-				<![CDATA[ 검색관련 alt ]]>
-				</description>
-                <type>STRING</type>
-                <option></option>
-                <default>검색하기 by itcider.com</default>
-            </variable>
-            <variable>
-                <name>gototopbtn</name>
-                <label>
-                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화 ]]>
-                </description>
-            </variable>
-              <variable>
-                <name>sharesearchbtncolor</name>
-                <label>
-                    <![CDATA[아이콘도구 배경 및 경계 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[아이콘도구 배경 및 경계 활성화 ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>toolkeyborderpx</name>
-                <label>
-                    <![CDATA[ 아이콘 부분 경계선 설정]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>0.5</default>
-                <description>
-                    <![CDATA[ 아이콘 부분 경계선 설정 ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>toolkeybordercolor</name>
-                <label>
-                    <![CDATA[아이콘 경계선 색상 설정]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#000</default>
-                <description>
-                    <![CDATA[아이콘 경계선 색상 설정]]>
-                </description>
-            </variable>
-            <variable>
-                <name>toolkeybackgroundcolor</name>
-                <label>
-                    <![CDATA[아이콘 배경 색상 설정]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#fff</default>
-                <description>
-                    <![CDATA[아이콘 배경 색상 설정]]>
-                </description>
-            </variable>
-
-			<variable>
                 <name>daumcdnfont</name>
                 <label>
                     <![CDATA[티스토리 폰트 사용 여부]]>
@@ -356,9 +238,121 @@
                     <![CDATA[티스토리 폰트 사용 여부 ]]>
                 </description>
             </variable>
+            
         </variablegroup>
 
-		<variablegroup name="블로그 검색 설정">
+ 		<variablegroup name="저작권 및 리소스 보호">
+            <variable>
+                <name>discopy</name>
+                <label>
+                    <![CDATA[ 우클릭 및 개발자도구 제한]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 우클릭 및 개발자도구 제한 ]]>
+                </description>
+            </variable>
+			<variable>
+                <name>copyscript</name>
+                <label>
+                    <![CDATA[ 복사시 자동 출처 표기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 복사시 자동 출처 표기  ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>copyscriptsource</name>
+                <label>
+                    <![CDATA[ 출처 표기 문구 - 특수기호를 쓰지 마시길 바랍니다. ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>위 블로그글은 저작권법에 의해서 보호됩니다. 무단 전재 또는 복제시 관련법에 따라 처벌될 수 있습니다.</default>
+                <description>
+                    <![CDATA[ 출처 표기 문구 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+ 		<variablegroup name="url 리다이렉트 (잘못 설정할 경우 사이트가 작동되지 않을 수 있습니다.)">
+            <variable>
+                <name>redirection</name>
+                <label>
+                    <![CDATA[ 리다이렉트 - 잘못된 url은 오작동을 일으킬 수 있습니다.]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 필요하신 경우 리다이렉트를 활성화시키실 수 있습니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>url1</name>
+                <label>
+                    <![CDATA[ 리다이렉트 대상 url1 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://r1.itcider.com</default>
+                <description>
+                    <![CDATA[ 리다이렉트 대상 url1을 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>url2</name>
+                <label>
+                    <![CDATA[ 리다이렉트 대상 url2 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://r2.itcider.com</default>
+                <description>
+                    <![CDATA[ 리다이렉트 대상 url2를 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>urlreal</name>
+                <label>
+                    <![CDATA[ 현재 티스토리 주소 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com</default>
+                <description>
+                    <![CDATA[ 현재 티스토리 주소를 적어주세요. ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+        <variablegroup name="Fi스킨 다크모드 설정">
+            <variable>
+                <name>darkmodeconfig</name>
+                <label>
+				    <![CDATA[ 라이트/다크모드 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"autolightdark", "label":"자동으로 라이트/다크 모드", "value":"autolightdark"},
+					{"name":"onlylight", "label":"라이트모드만 사용", "value":"onlylight"},
+					{"name":"onlydark", "label":"다크모드만 사용", "value":"onlydark"}
+				]
+			]]>
+                </option>
+                <default>autolightdark</default>
+            </variable>
+        </variablegroup>
+
+		<variablegroup name="블로그 검색창 설정">
             <variable>
                 <name>searchkeyword</name>
                 <label>
@@ -494,25 +488,25 @@
             <variable>
                 <name>tocgrad1</name>
                 <label>
-                    <![CDATA[목차 그라데이션 컬러1 (다크모드 시 비활성화)]]>
+                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
                 <default>#FFFFFF</default>
                 <description>
-                    <![CDATA[목차 그라데이션 컬러1 (다크모드 시 비활성화)]]>
+                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
                 </description>
             </variable>
             <variable>
                 <name>tocgrad2</name>
                 <label>
-                    <![CDATA[목차 그라데이션 컬러2 (다크모드 시 비활성화)]]>
+                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#B6FF5B</default>
+                <default>#ACCCFF</default>
                 <description>
-                    <![CDATA[목차 그라데이션 컬러2 (다크모드 시 비활성화)]]>
+                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
                 </description>
             </variable>
             <variable>
@@ -539,9 +533,112 @@
                     <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
                 </description>
             </variable>
+             <variable>
+                <name>itciderarticlebanner</name>
+                <label>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebannerurl</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebannerimg</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 이미지 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fiskin.png</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanneralt</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2url</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2img</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 이미지 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fiskin.png</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2alt</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
         </variablegroup>
 
-        <variablegroup name="티스토리 블로그 설정">
+        <variablegroup name="블로그 메인 화면 설정">
 
             <variable>
                 <name>colorSet</name>
@@ -623,13 +720,13 @@
             <variable>
                 <name>itciderbanneralt</name>
                 <label>
-                    <![CDATA[ 배너가 안 나올 경우 나올 문구 ]]>
+                    <![CDATA[ 배너의 alt 값 ]]>
                 </label>
                 <type>STRING</type>
                 <option />
                 <default>fi스킨 무료 다운로드</default>
                 <description>
-                    <![CDATA[ 배너가 안 나올 경우 나올 문구를 적어주세요. ]]>
+                    <![CDATA[ 배너의 alt 값를 적어주세요. ]]>
                 </description>
             </variable>
 
@@ -755,142 +852,7 @@
             </variable>
         </variablegroup>
 
- 		<variablegroup name="글 본문 목차 및 본문 상단">
-                       <variable>
-                <name>ieredirect</name>
-                <label>
-                    <![CDATA[ ie 리다이렉트 ]]>
-                </label>
-                <type>BOOL</type>
-                <option/>
-                <default>true</default>
-                <description>
-                    <![CDATA[ ie 리다이렉트 설정이 가능합니다. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>ieconfig</name>
-                <label>
-				    <![CDATA[ ie 리다이렉트 설정 ]]>
-				</label>
-                <description></description>
-                <type>SELECT</type>
-                <option>
-			<![CDATA[
-				[
-					{"name":"ietoedge", "label":"엣지 브라우저로 리다이렉트", "value":"ietoedge"},
-					{"name":"ietoieitc", "label":"브라우저 다운로드 유도 페이지(iemain)", "value":"ietoieitc"},
-					{"name":"ietoitc", "label":"브라우저 다운로드 유도 페이지(itccom)", "value":"ietoitc"}
-				]
-			]]>
-                </option>
-                <default>ietoieitc</default>
-            </variable>
-            
-            <variable>
-                <name>itciderarticlebanner</name>
-                <label>
-                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebannerurl</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 url ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://itcider.com/903</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 url을 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebannerimg</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 이미지 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fiskin.png</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 이미지를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanneralt</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 alt ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fi스킨 무료 다운로드</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 alt를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2url</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 url ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://itcider.com/903</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 url을 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2img</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 이미지 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fiskin.png</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 이미지를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2alt</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 alt ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fi스킨 무료 다운로드</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 alt를 적어주세요. ]]>
-                </description>
-            </variable>
+ 		<variablegroup name="게시글 부분 디자인 설정">
 
             <variable>
                 <name>itcidercovernotgrad</name>
@@ -976,7 +938,7 @@
                     <![CDATA[글 상단 그라데이션 컬러3 (라이트 모드에서)]]>
                 </description>
             </variable>
-                       <variable>
+            <variable>
                 <name>darkgradcolor1</name>
                 <label>
                     <![CDATA[글 상단 그라데이션 컬러1 (다크 모드에서)]]>
@@ -1012,11 +974,449 @@
                     <![CDATA[글 상단 그라데이션 컬러3 (다크 모드에서)]]>
                 </description>
             </variable>
+        </variablegroup>
+
+ 		<variablegroup name="제목글 꾸미기 설정">
+             <variable>
+                <name>postconfig</name>
+                <label>
+                    <![CDATA[ 제목글 꾸미기 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 제목글 꾸미기 활성화]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2config</name>
+                <label>
+                    <![CDATA[ 제목1 (h2) 꾸미기 활성화 (라이트 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 제목1 (h2) 꾸미기 활성화 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2postcolor</name>
+                <label>
+                    <![CDATA[제목1 (h2) 글자 컬러 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 글자 컬러 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2color1</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러1 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#2f7fff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러1 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2color2</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러2 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러2 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2color3</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러3 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#aecdff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러3 (라이트 모드에서)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>posth2darkconfig</name>
+                <label>
+                    <![CDATA[ 제목1 (h2) 꾸미기 활성화 (다크 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 제목1 (h2) 꾸미기 활성화 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2darkpostcolor</name>
+                <label>
+                    <![CDATA[제목1 (h2) 글자 컬러 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 글자 컬러 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2darkcolor1</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러1 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#2f7fff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러1 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2darkcolor2</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러2 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러2 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth2darkcolor3</name>
+                <label>
+                    <![CDATA[제목1 (h2) 테두리 컬러3 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#aecdff</default>
+                <description>
+                    <![CDATA[제목1 (h2) 테두리 컬러3 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth3config</name>
+                <label>
+                    <![CDATA[ 제목2 (h3) 꾸미기 활성화 (라이트 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 제목2 (h3) 꾸미기 활성화 (라이트 모드에서)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>posth3postcolor</name>
+                <label>
+                    <![CDATA[제목2 (h3) 글자 색상 설정 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#000</default>
+                <description>
+                    <![CDATA[제목2 (h3) 글자 색상 설정 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth3color1</name>
+                <label>
+                    <![CDATA[제목2 (h3) 좌측 테두리 색상 설정 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목2 (h3) 좌측 테두리 색상 설정 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth3color2</name>
+                <label>
+                    <![CDATA[제목2 (h3) 하단 테두리 색상 설정 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#2f7fff</default>
+                <description>
+                    <![CDATA[제목2 (h3) 하단 테두리 색상 설정 (라이트 모드에서)]]>
+                </description>
+            </variable>
+              <variable>
+                <name>posth3darkconfig</name>
+                <label>
+                    <![CDATA[ 제목2 (h3) 꾸미기 활성화 (다크 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 제목2 (h3) 꾸미기 활성화 (다크 모드에서)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>posth3darkpostcolor</name>
+                <label>
+                    <![CDATA[제목2 (h3) 글자 색상 설정 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[제목2 (h3) 글자 색상 설정 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth3darkcolor1</name>
+                <label>
+                    <![CDATA[제목2 (h3) 좌측 테두리 색상 설정 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목2 (h3) 좌측 테두리 색상 설정 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth3darkcolor2</name>
+                <label>
+                    <![CDATA[제목2 (h3) 하단 테두리 색상 설정 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#2f7fff</default>
+                <description>
+                    <![CDATA[제목2 (h3) 하단 테두리 색상 설정 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth4config</name>
+                <label>
+                    <![CDATA[ 제목3 (h4) 꾸미기 활성화 (라이트 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 제목3 (h4) 꾸미기 활성화 (라이트 모드에서)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>posth4postcolor</name>
+                <label>
+                    <![CDATA[제목3 (h4) 글자 색상 설정 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[제목3 (h4) 글자 색상 설정 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth4color1</name>
+                <label>
+                    <![CDATA[제목3 (h4) 하단 테두리 색상 설정 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목3 (h4) 하단 테두리 색상 설정 (라이트 모드에서)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>posth4darkconfig</name>
+                <label>
+                    <![CDATA[ 제목3 (h4) 꾸미기 활성화 (다크 모드에서)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 제목3 (h4) 꾸미기 활성화 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth4darkpostcolor</name>
+                <label>
+                    <![CDATA[제목3 (h4) 글자 색상 설정 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[제목3 (h4) 글자 색상 설정 (다크 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>posth4darkcolor1</name>
+                <label>
+                    <![CDATA[제목3 (h4) 하단 테두리 색상 설정 (다크 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#5B9AFF</default>
+                <description>
+                    <![CDATA[제목3 (h4) 하단 테두리 색상 설정 (다크 모드에서)]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+        <variablegroup name="하단부분 도구 아이콘">
+            <variable>
+                <name>webshare</name>
+                <label>
+                    <![CDATA[ 도구 버튼 전체 로딩 여부 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.)]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 도구 버튼 전체 로딩 여부 (비활성화하시면 상단 버튼과 공유버튼이 비활성화됩니다.) ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>shareurlcopybtn</name>
+                <label>
+                    <![CDATA[링크 복사 버튼 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[링크 복사 버튼 활성화 ]]>
+                </description>
+            </variable>
+             <variable>
+                <name>shareurlsharebtn</name>
+                <label>
+                    <![CDATA[링크 공유 버튼 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[링크 공유 버튼 활성화 ]]>
+                </description>
+            </variable>
+              <variable>
+                <name>sharesearchbtn</name>
+                <label>
+                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[검색버튼 (우하단의 검색 버튼) 활성화 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>sharesearchlink</name>
+                <label>
+				    <![CDATA[ 검색버튼 누를시 링크 ]]>
+				</label>
+                <description>
+				<![CDATA[ 검색버튼 누를시 링크 ]]>
+				</description>
+                <type>STRING</type>
+                <option></option>
+                <default>https://ohon.net</default>
+            </variable>
+            <variable>
+                <name>sharesearchalt</name>
+                <label>
+				    <![CDATA[ 검색관련 alt ]]>
+				</label>
+                <description>
+				<![CDATA[ 검색관련 alt ]]>
+				</description>
+                <type>STRING</type>
+                <option></option>
+                <default>검색하기 by itcider.com</default>
+            </variable>
+              <variable>
+                <name>gototopbtn</name>
+                <label>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[상단버튼 (우하단의 화살표 버튼) 활성화 ]]>
+                </description>
+            </variable>
+              <variable>
+                <name>sharesearchbtncolor</name>
+                <label>
+                    <![CDATA[도구 아이콘 배경 및 경계 활성화]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[도구 아이콘 배경 및 경계 활성화 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeyborderpx</name>
+                <label>
+                    <![CDATA[도구 아이콘 부분 경계선 설정]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>0.5</default>
+                <description>
+                    <![CDATA[도구 아이콘 부분 경계선 설정 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeybordercolor</name>
+                <label>
+                    <![CDATA[도구 아이콘 경계선 색상 설정]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#000</default>
+                <description>
+                    <![CDATA[도구 아이콘 경계선 색상 설정]]>
+                </description>
+            </variable>
+            <variable>
+                <name>toolkeybackgroundcolor</name>
+                <label>
+                    <![CDATA[도구 아이콘 배경 색상 설정]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#fff</default>
+                <description>
+                    <![CDATA[도구 아이콘 배경 색상 설정]]>
+                </description>
+            </variable>
 
         </variablegroup>
 
  		<variablegroup name="사이드바">
-
 		 <variable>
                 <name>tistorycategory</name>
                 <label>
@@ -1068,166 +1468,91 @@
             </variable>
         </variablegroup>
 
- 		<variablegroup name="저작권 및 리소스 보호">
+ 		<variablegroup name="하단바 설정">
             <variable>
-                <name>discopy</name>
+                <name>footerconfig</name>
                 <label>
-                    <![CDATA[ 우클릭 및 개발자도구 제한]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 우클릭 및 개발자도구 제한 ]]>
-                </description>
-            </variable>
-			<variable>
-                <name>copyscript</name>
-                <label>
-                    <![CDATA[ 복사시 자동 출처 표기 ]]>
+                    <![CDATA[ 하단바 공개 여부 설정]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>true</default>
                 <description>
-                    <![CDATA[ 복사시 자동 출처 표기  ]]>
+                    <![CDATA[ 하단바 공개 여부 설정 ]]>
                 </description>
             </variable>
             <variable>
-                <name>copyscriptsource</name>
-                <label>
-                    <![CDATA[ 출처 표기 문구 - 특수기호를 쓰지 마시길 바랍니다. ]]>
-                </label>
+                <name>footerCopyright</name>
+                <label>하단 카피라이트</label>
+                <description></description>
                 <type>STRING</type>
-                <option />
-                <default>위 블로그글은 저작권법에 의해서 보호됩니다. 무단 전재 또는 복제시 관련법에 따라 처벌될 수 있습니다.</default>
-                <description>
-                    <![CDATA[ 출처 표기 문구 ]]>
-                </description>
+                <option></option>
+                <default>copyright [##_title_##]</default>
+            </variable>
+            <variable>
+                <name>footerLink1Name</name>
+                <label>하단 링크1 이름</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default>fi스킨 설치하기</default>
+            </variable>
+            <variable>
+                <name>footerLink1Url</name>
+                <label>하단 링크1 URL</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default>https://itcider.com/903</default>
+            </variable>
+            <variable>
+                <name>footerLink2Name</name>
+                <label>하단 링크2 이름</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default>ohon 검색</default>
+            </variable>
+            <variable>
+                <name>footerLink2Url</name>
+                <label>하단 링크2 URL</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default>https://ohon.net</default>
+            </variable>
+            <variable>
+                <name>footerLink3Name</name>
+                <label>하단 링크3 이름</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default></default>
+            </variable>
+            <variable>
+                <name>footerLink3Url</name>
+                <label>하단 링크3 URL</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default></default>
+            </variable>
+            <variable>
+                <name>footerLink4Name</name>
+                <label>하단 링크4 이름</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default></default>
+            </variable>
+            <variable>
+                <name>footerLink4Url</name>
+                <label>하단 링크4 URL</label>
+                <description></description>
+                <type>STRING</type>
+                <option></option>
+                <default></default>
             </variable>
         </variablegroup>
-
- 		<variablegroup name="url 리다이렉트 (잘못 설정할 경우 사이트가 작동되지 않을 수 있습니다.)">
-            <variable>
-                <name>redirection</name>
-                <label>
-                    <![CDATA[ 리다이렉트 - 잘못된 url은 오작동을 일으킬 수 있습니다.]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 필요하신 경우 리다이렉트를 활성화시키실 수 있습니다. ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>url1</name>
-                <label>
-                    <![CDATA[ 리다이렉트 대상 url1 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://r1.itcider.com</default>
-                <description>
-                    <![CDATA[ 리다이렉트 대상 url1을 적어주세요. ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>url2</name>
-                <label>
-                    <![CDATA[ 리다이렉트 대상 url2 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://r2.itcider.com</default>
-                <description>
-                    <![CDATA[ 리다이렉트 대상 url2를 적어주세요. ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>urlreal</name>
-                <label>
-                    <![CDATA[ 현재 티스토리 주소 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://itcider.com</default>
-                <description>
-                    <![CDATA[ 현재 티스토리 주소를 적어주세요. ]]>
-                </description>
-            </variable>
-        </variablegroup>
-        <variable>
-            <name>footerCopyright</name>
-            <label>하단 카피라이트</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default>copyright [##_title_##]</default>
-        </variable>
-        <variable>
-            <name>footerLink1Name</name>
-            <label>하단 링크1 이름</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default>fi스킨 설치하기</default>
-        </variable>
-        <variable>
-            <name>footerLink1Url</name>
-            <label>하단 링크1 URL</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default>https://itcider.com/903</default>
-        </variable>
-        <variable>
-            <name>footerLink2Name</name>
-            <label>하단 링크2 이름</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default>ohon 검색</default>
-        </variable>
-        <variable>
-            <name>footerLink2Url</name>
-            <label>하단 링크2 URL</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default>https://ohon.net</default>
-        </variable>
-        <variable>
-            <name>footerLink3Name</name>
-            <label>하단 링크3 이름</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default></default>
-        </variable>
-        <variable>
-            <name>footerLink3Url</name>
-            <label>하단 링크3 URL</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default></default>
-        </variable>
-        <variable>
-            <name>footerLink4Name</name>
-            <label>하단 링크4 이름</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default></default>
-        </variable>
-        <variable>
-            <name>footerLink4Url</name>
-            <label>하단 링크4 URL</label>
-            <description></description>
-            <type>STRING</type>
-            <option></option>
-            <default></default>
-        </variable>
     </variables>
 </skin>

@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.6
+버전 : V7.7
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -57,7 +57,7 @@
   <!--다크모드 코드 로드-->
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-6.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-7.css" />                                              
   </s_if_var_autoupdate>
 
   <s_if_var_manualupdate>
@@ -96,6 +96,90 @@
         }
       </style>
   </s_if_var_itcidercovergrad>
+
+  <s_if_var_postconfig>
+    <!--제목1 (h2) 꾸미기 설정-->
+    <s_if_var_posth2config>
+    <style>
+      .article_view h2{
+        background: linear-gradient(to right,[##_var_posth2color1_##],[##_var_posth2color2_##],[##_var_posth2color3_##]);
+        border-radius: 10px;
+        padding: 10px;
+        color:[##_var_posth2postcolor_##];
+      }
+    </style>
+    </s_if_var_posth2config>
+    <s_if_var_posth2darkconfig>
+      <style>
+      @media (prefers-color-scheme: dark) {              
+        .article_view h2{
+          background: linear-gradient(to right,[##_var_posth2darkcolor1_##],[##_var_posth2darkcolor2_##],[##_var_posth2darkcolor3_##]);
+          border-radius: 10px;
+          padding: 10px;
+          color:[##_var_posth2darkpostcolor_##]!important;
+        }
+      }
+      </style>
+    </s_if_var_posth2darkconfig>
+
+    <s_if_var_posth3config>
+      <!--제목2 (h3) 꾸미기 설정-->
+      <style>
+        .article_view h3{
+          clear: both;
+          margin: 29px 0 22px;
+          font-size: 1.5em;
+          line-height: 1.5;
+          color: [##_var_posth3postcolor_##];
+          border-left:10px solid [##_var_posth3color1_##];
+          border-bottom:2px solid [##_var_posth3color2_##];
+        }
+      </style>
+    </s_if_var_posth3config>
+    <s_if_var_posth3darkconfig>
+      <style>
+      @media (prefers-color-scheme: dark) {              
+        .article_view h3{
+          clear: both;
+          margin: 29px 0 22px;
+          font-size: 1.5em;
+          line-height: 1.5;
+          color: [##_var_posth3darkpostcolor_##]!important;
+          border-left:10px solid [##_var_posth3darkcolor1_##];
+          border-bottom:2px solid [##_var_posth3darkcolor2_##];
+        }
+      }
+      </style>
+    </s_if_var_posth3darkconfig>
+
+    <s_if_var_posth4config>
+      <!--제목3 (h4) 꾸미기 설정-->
+      <style>
+        .article_view h4{
+          padding: 5px 15px;
+          text-decoration: none;
+          display: inline;
+          box-shadow: inset 0 -7px 0 [##_var_posth4color1_##];
+          color: [##_var_posth4postcolor_##];
+        }
+      </style>
+    </s_if_var_posth4config>
+    <s_if_var_posth4darkconfig>
+      <style>
+      @media (prefers-color-scheme: dark) {              
+        .article_view h4{
+          padding: 5px 15px;
+          text-decoration: none;
+          display: inline;
+          box-shadow: inset 0 -7px 0 [##_var_posth4darkcolor1_##];
+          color: [##_var_posth4darkpostcolor_##]!important;
+        }
+      }
+      </style>
+    </s_if_var_posth4darkconfig>
+
+    </style>
+  </s_if_var_postconfig>
 
   <!--도구바 배경 색상 설정-->
   <s_if_var_sharesearchbtncolor>
@@ -223,7 +307,7 @@
 
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.6 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.7 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -819,6 +903,8 @@
     </main>
     </div>
     [##_revenue_list_lower_##]
+
+  <s_if_var_footerconfig>
     <footer id="footer">
       <div class="inner_footer">
         <s_if_var_footerLink1Name>
@@ -838,30 +924,34 @@
         <p>[##_var_footerCopyright_##]</p>
       </div>
     </footer>
+  </s_if_var_footerconfig>
     </div>
   </s_t3>
   <s_if_var_autoupdate>
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
-          <s_if_var_shareurlcopybtn>
-            <li>
-              <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기"></a>
-              <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기"></a>
-            </li>
-          </s_if_var_shareurlcopybtn>
-          
-          <s_if_var_gototopbtn>
           <li>
+          <s_if_var_shareurlcopybtn>
+              <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기"></a>
+          </s_if_var_shareurlcopybtn>
+
+          <s_if_var_shareurlsharebtn>
+          <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" height="40" alt="공유하기"></a>
+        </s_if_var_shareurlsharebtn>
+        </li>
+
+        <li>
           <s_if_var_sharesearchbtn>
             <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
           </s_if_var_sharesearchbtn>    
-              
+
+          <s_if_var_gototopbtn>
           <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img
               src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" height="40"
               alt="상단으로 올라가기"></a>
-            </li>
           </s_if_var_gototopbtn>
+        </li>
         </ul>
       </div>
     </s_if_var_webshare>
@@ -871,23 +961,27 @@
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
+          <li>
           <s_if_var_shareurlcopybtn>
-            <li>
               <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기"></a>
-              <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="./images/share.png" width="40" height="40" alt="공유하기"></a>
-            </li>
           </s_if_var_shareurlcopybtn>    
 
-          <s_if_var_gototopbtn>
+          <s_if_var_shareurlsharebtn>
+            <a type="button" onclick="snsShare('title','url')" id="shared" title="공유하기" rel="nofollow"><img src="./images/share.png" width="40" height="40" alt="공유하기"></a>
+          </s_if_var_shareurlsharebtn>    
+
+        </li>
+
             <li>
               <s_if_var_sharesearchbtn>
                 <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="./images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
               </s_if_var_sharesearchbtn>         
                 
-              <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="./images/up.png" width="40"
+              <s_if_var_gototopbtn>
+                <a type="button" onclick="topFunction()" title="상단으로 올라가기" rel="nofollow"><img src="./images/up.png" width="40"
                     height="40" alt="상단으로 올라가기"></a>
-            </li>
-          </s_if_var_gototopbtn>
+              </s_if_var_gototopbtn>
+          </li>
         </ul>
       </div>
     </s_if_var_webshare>
@@ -1210,7 +1304,7 @@
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.6
+버전 : V7.7
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
