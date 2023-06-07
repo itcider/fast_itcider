@@ -20,9 +20,13 @@
   .contents_style > div{
     background-color: #1e1e1e!important;
   }
-  .article_view blockquote{
-    border: #fff 1px solid!important;
-    background-color: #121212!important;
+  .article_view blockquote[data-ke-style="box"], 
+  #tt-body-page blockquote[data-ke-style="box"], 
+  blockquote[data-ke-style="style2"], 
+  blockquote[data-ke-style="style3"], 
+  #tt-body-page blockquote[data-ke-style="style2"],
+  #tt-body-page blockquote[data-ke-style="style3"]{
+    background-color: #1e1e1e!important;
   }
   .article_view pre{
     border: #fff 1px solid;
