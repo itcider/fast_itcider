@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V7.7
+버전 : V7.8
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -17,6 +17,16 @@
 
 
 @media (prefers-color-scheme: dark) {
+  .area_tag {
+	  border:1px solid #eee!important;
+  }
+  .rp_general{
+    border-color: #eee!important;
+  }
+  .tt-box-total {
+    border: 1px solid #eee!important;
+    border-bottom: #eee 1px solid !important;
+  }
   .contents_style > div{
     background-color: #1e1e1e!important;
   }
@@ -443,7 +453,7 @@
 }
 /*
 스킨명 : fast itcider
-버전 : V7.7
+버전 : V7.8
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

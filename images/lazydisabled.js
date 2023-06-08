@@ -12,8 +12,3 @@
 ㄴitcider 공식 웹사이트에서만 배포 가능
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
-$(window).on('load', function () {
-        setTimeout(function () {
-            $("#waiting").fadeOut();
-        }, 0);
-    });
