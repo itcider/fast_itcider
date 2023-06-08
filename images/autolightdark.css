@@ -37,6 +37,7 @@
   #tt-body-page blockquote[data-ke-style="style2"],
   #tt-body-page blockquote[data-ke-style="style3"]{
     background-color: #1e1e1e!important;
+    border-color: #fff !important;
   }
   .article_view pre{
     border: #fff 1px solid;
