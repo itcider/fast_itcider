@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>7.7</version>
+        <version>7.8</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -122,25 +122,13 @@
             <variable>
                 <name>autoupdate</name>
                 <label>
-                    <![CDATA[jsdelivr에서 파일을 불러옴(자동 업데이트)-자동이나 수동 하나만 활성화]]>
+                    <![CDATA[외부 서버 사용(jsdelivr)]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>false</default>
                 <description>
-                    <![CDATA[jsdelivr에서 css를 불러옴(자동 업데이트)]]>
-                </description>
-            </variable>
-            <variable>
-                <name>manualupdate</name>
-                <label>
-                    <![CDATA[티스토리에서 파일을 불러옴(수동 업데이트)-자동이나 수동 하나만 활성화]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[티스토리에서 css를 불러옴(수동 업데이트) ]]>
+                    <![CDATA[외부 서버 사용(jsdelivr)]]>
                 </description>
             </variable>
             <variable>
@@ -193,39 +181,37 @@
             <variable>
                 <name>waiting</name>
                 <label>
-                    <![CDATA[  로딩바 (활성화시엔 웹사이트가 느려지지만 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                    <![CDATA[  로딩바 (광고가 많을 시에 사용)  ]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>false</default>
                 <description>
-                    <![CDATA[  로딩바 (활성화시엔 웹사이트가 느려지지만 광고가 많을 시에는 사용하기에 좋습니다.)  ]]>
+                    <![CDATA[  로딩바 (광고가 많을 시에 사용)  ]]>
                 </description>
             </variable>
             <variable>
-                <name>lazyload1</name>
+                <name>lazyload</name>
                 <label>
-                    <![CDATA[ 이미지 지연로드 A (A나 B 하나만 사용) ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
+				    <![CDATA[ 이미지 지연로드 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"itciderlazyload1", "label":"이미지 지연로드 A", "value":"itciderlazyload1"},
+					{"name":"itciderlazyload2", "label":"이미지 지연로드 B", "value":"itciderlazyload2"},
+					{"name":"lazydisabled", "label":"이미지 지연로드 비활성화", "value":"lazydisabled"}
+				]
+			]]>
+                </option>
+                <default>itciderlazyload1</default>
                 <description>
-                    <![CDATA[ 이미지 지연로드 A (A나 B 하나만 사용) ]]>
+                    <![CDATA[  이미지 지연로드 설정  ]]>
                 </description>
             </variable>
-            <variable>
-                <name>lazyload2</name>
-                <label>
-                    <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 이미지 지연로드 B (A나 B 하나만 사용) ]]>
-                </description>
-            </variable>
+           
             <variable>
                 <name>daumcdnfont</name>
                 <label>
@@ -427,217 +413,6 @@
             </variable>
         </variablegroup>
 
-		<variablegroup name="블로그 목차 설정">
-            <variable>
-                <name>tocload</name>
-                <label>
-                    <![CDATA[ 목차 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option/>
-                <default>true</default>
-                <description>
-                    <![CDATA[ 목차 활성화 여부 설정이 가능합니다. ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>tocset</name>
-                <label>
-				    <![CDATA[ 목차설정 ]]>
-				</label>
-                <description></description>
-                <type>SELECT</type>
-                <option>
-			<![CDATA[
-				[
-					{"name":"h2", "label":"제목1", "value":"h2"},
-					{"name":"h2h3", "label":"제목1 제목2", "value":"h2, h3"},
-					{"name":"h2h3h4", "label":"제목1 제목2 제목3", "value":"h2, h3, h4"},
-					{"name":"h3only", "label":"제목2", "value":"h3"},
-					{"name":"h3h4", "label":"제목2 제목3", "value":"h3, h4"},
-					{"name":"h2h4", "label":"제목1 제목3", "value":"h2, h4"},
-					{"name":"h4only", "label":"제목3", "value":"h4"}
-				]
-			]]>
-                </option>
-                <default>h2</default>
-            </variable>
-            
-                       <variable>
-                <name>tocoption</name>
-                <label>
-				    <![CDATA[ 목차 옵션 설정  ]]>
-				</label>
-                <description></description>
-                <type>SELECT</type>
-                <option>
-			<![CDATA[
-				[
-                    {"name":"none", "label":"기본(없음)", "value":"none"},
-                    {"name":"decimal", "label":"숫자", "value":"decimal"},			
-                    {"name":"upper-latin", "label":"대문자", "value":"upper-latin"},
-                    {"name":"lower-latin", "label":"소문자", "value":"lower-latin"},
-					{"name":"disc", "label":"원", "value":"disc"},
-                    {"name":"square", "label":"사각형", "value":"square"},
-                    {"name":"circle", "label":"빈 원", "value":"circle"}				
-				]
-			]]>
-                </option>
-                <default>none</default>
-            </variable>
-            <variable>
-                <name>tocgrad1</name>
-                <label>
-                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#FFFFFF</default>
-                <description>
-                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
-                </description>
-            </variable>
-            <variable>
-                <name>tocgrad2</name>
-                <label>
-                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#ACCCFF</default>
-                <description>
-                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
-                </description>
-            </variable>
-            <variable>
-                <name>darktocgrad1</name>
-                <label>
-                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#1E1E1E</default>
-                <description>
-                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
-                </description>
-            </variable>
-            <variable>
-                <name>darktocgrad2</name>
-                <label>
-                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
-                </label>
-                <type>COLOR</type>
-                <option />
-                <default>#BDBDBD</default>
-                <description>
-                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
-                </description>
-            </variable>
-             <variable>
-                <name>itciderarticlebanner</name>
-                <label>
-                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebannerurl</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 url ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://itcider.com/903</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 url을 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebannerimg</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 이미지 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fiskin.png</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 이미지를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanneralt</name>
-                <label>
-                    <![CDATA[ 목차 위 배너 alt ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fi스킨 무료 다운로드</default>
-                <description>
-                    <![CDATA[ 목차 위 배너 alt를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2url</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 url ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>https://itcider.com/903</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 url을 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2img</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 이미지 ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fiskin.png</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 이미지를 적어주세요. ]]>
-                </description>
-            </variable>
-
-            <variable>
-                <name>itciderarticlebanner2alt</name>
-                <label>
-                    <![CDATA[ 목차 아래 배너 alt ]]>
-                </label>
-                <type>STRING</type>
-                <option />
-                <default>fi스킨 무료 다운로드</default>
-                <description>
-                    <![CDATA[ 목차 아래 배너 alt를 적어주세요. ]]>
-                </description>
-            </variable>
-        </variablegroup>
-
         <variablegroup name="블로그 메인 화면 설정">
 
             <variable>
@@ -709,9 +484,9 @@
                 <label>
                     <![CDATA[ 배너에 사용될 이미지 ]]>
                 </label>
-                <type>STRING</type>
+                <type>IMAGE</type>
                 <option />
-                <default>fiskin.png</default>
+                <default></default>
                 <description>
                     <![CDATA[ 배너에 사용될 이미지를 적어주세요. ]]>
                 </description>
@@ -852,32 +627,218 @@
             </variable>
         </variablegroup>
 
- 		<variablegroup name="게시글 부분 디자인 설정">
-
+		<variablegroup name="블로그 목차 설정">
             <variable>
-                <name>itcidercovernotgrad</name>
+                <name>tocload</name>
                 <label>
-                    <![CDATA[ 본문 상단의 썸네일 활성화 여부 ]]>
+                    <![CDATA[ 목차 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option/>
+                <default>true</default>
+                <description>
+                    <![CDATA[ 목차 활성화 여부 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tocset</name>
+                <label>
+				    <![CDATA[ 목차설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+					{"name":"h2", "label":"제목1", "value":"h2"},
+					{"name":"h2h3", "label":"제목1 제목2", "value":"h2, h3"},
+					{"name":"h2h3h4", "label":"제목1 제목2 제목3", "value":"h2, h3, h4"},
+					{"name":"h3only", "label":"제목2", "value":"h3"},
+					{"name":"h3h4", "label":"제목2 제목3", "value":"h3, h4"},
+					{"name":"h2h4", "label":"제목1 제목3", "value":"h2, h4"},
+					{"name":"h4only", "label":"제목3", "value":"h4"}
+				]
+			]]>
+                </option>
+                <default>h2</default>
+            </variable>
+            
+            <variable>
+                <name>tocoption</name>
+                <label>
+				    <![CDATA[ 목차 옵션 설정  ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+			<![CDATA[
+				[
+                    {"name":"none", "label":"기본(없음)", "value":"none"},
+                    {"name":"decimal", "label":"숫자", "value":"decimal"},			
+                    {"name":"upper-latin", "label":"대문자", "value":"upper-latin"},
+                    {"name":"lower-latin", "label":"소문자", "value":"lower-latin"},
+					{"name":"disc", "label":"원", "value":"disc"},
+                    {"name":"square", "label":"사각형", "value":"square"},
+                    {"name":"circle", "label":"빈 원", "value":"circle"}				
+				]
+			]]>
+                </option>
+                <default>none</default>
+            </variable>
+            <variable>
+                <name>tocgrad1</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#FFFFFF</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러1 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tocgrad2</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#ACCCFF</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러2 (라이트 모드에서)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darktocgrad1</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#1E1E1E</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러1 (다크모드에서의 색상)]]>
+                </description>
+            </variable>
+            <variable>
+                <name>darktocgrad2</name>
+                <label>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#BDBDBD</default>
+                <description>
+                    <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
+                </description>
+            </variable>
+             <variable>
+                <name>itciderarticlebanner</name>
+                <label>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
                 </label>
                 <type>BOOL</type>
                 <option />
                 <default>false</default>
                 <description>
-                    <![CDATA[ 본문 상단의 썸네일 활성화 여부 ]]>
+                    <![CDATA[ 목차위 배너 활성화 여부 ]]>
                 </description>
             </variable>
+
             <variable>
-                <name>notgradpixel</name>
+                <name>itciderarticlebannerurl</name>
                 <label>
-                    <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
+                    <![CDATA[ 목차 위 배너 url ]]>
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>350</default>
+                <default>https://itcider.com/903</default>
                 <description>
-                    <![CDATA[본문 상단의 썸네일 사용시 크기 설정]]>
+                    <![CDATA[ 목차 위 배너 url을 적어주세요. ]]>
                 </description>
             </variable>
+
+            <variable>
+                <name>itciderarticlebannerimg</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 이미지 ]]>
+                </label>
+                <type>IMAGE</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 목차 위 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanneralt</name>
+                <label>
+                    <![CDATA[ 목차 위 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 위 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 활성화 여부 ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2url</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 url ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>https://itcider.com/903</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 url을 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2img</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 이미지 ]]>
+                </label>
+                <type>IMAGE</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 이미지를 적어주세요. ]]>
+                </description>
+            </variable>
+
+            <variable>
+                <name>itciderarticlebanner2alt</name>
+                <label>
+                    <![CDATA[ 목차 아래 배너 alt ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>fi스킨 무료 다운로드</default>
+                <description>
+                    <![CDATA[ 목차 아래 배너 alt를 적어주세요. ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+ 		<variablegroup name="게시글 부분 디자인 설정">
              <variable>
                 <name>itcidercovergrad</name>
                 <label>
@@ -1417,7 +1378,19 @@
         </variablegroup>
 
  		<variablegroup name="사이드바">
-		 <variable>
+             <variable>
+                <name>tistorymenu</name>
+                <label>
+                    <![CDATA[ 사이드바에서 메뉴 활성화 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 사이드바에서 메뉴를 보일지 설정이 가능합니다. ]]>
+                </description>
+            </variable>
+		    <variable>
                 <name>tistorycategory</name>
                 <label>
                     <![CDATA[ 사이드바에서 카테고리 활성화 여부 ]]>
@@ -1427,18 +1400,6 @@
                 <default>true</default>
                 <description>
                     <![CDATA[ 사이드바에서 카테고리를 보일지 설정이 가능합니다. ]]>
-                </description>
-            </variable>
-            <variable>
-                <name>tistorymenu</name>
-                <label>
-                    <![CDATA[ 사이드바에서 메뉴 활성화 여부 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>true</default>
-                <description>
-                    <![CDATA[ 사이드바에서 메뉴를 보일지 설정이 가능합니다. ]]>
                 </description>
             </variable>
             <variable>
@@ -1487,7 +1448,7 @@
                 <description></description>
                 <type>STRING</type>
                 <option></option>
-                <default>copyright [##_title_##]</default>
+                <default>copyright [##_title_##] all right reserved</default>
             </variable>
             <variable>
                 <name>footerLink1Name</name>

@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.7
+버전 : V7.8
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -57,25 +57,38 @@
   <!--다크모드 코드 로드-->
   <s_if_var_autoupdate>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-7.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-8.css" />                                              
   </s_if_var_autoupdate>
 
-  <s_if_var_manualupdate>
+  <s_not_var_autoupdate>
     <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
     <link rel="stylesheet" href="./style.css" />                                                                                        
-  </s_if_var_manualupdate>
+  </s_not_var_autoupdate>
 
   
    
 </head>
 
   <!--글 상단 썸네일 활성화-->
-  <s_if_var_itcidercovernotgrad>
+  <s_not_var_itcidercovergrad>
     <style>                    
     .type_article_header_cover .inner_header {
-      height: [##_var_notgradpixel_##]px; }
+      height: [##_var_gradpixel_##]px; }
+    .area_view .article_header:before {
+      content: "";
+      opacity: 0.6;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: #000;
+    }
+    .area_view .article_header .inner_header {
+      border-radius: 0 0 10px 10px;
+    }
     </style>
-  </s_if_var_itcidercovernotgrad>
+  </s_not_var_itcidercovergrad>
 
   <!--글 상단 그라데이션 활성화-->
   <s_if_var_itcidercovergrad>
@@ -242,19 +255,18 @@
             </div>
 
             <div class="sidebar_contents">
-              <div class="sidebar_menu">
                 <s_sidebar>
-                  <s_sidebar_element>
-                    <s_if_var_tistorymenu>
+                  <s_if_var_tistorymenu>
+                    <div class="sidebar_menu">
+                    <s_sidebar_element>
+                      <!-- 메인 메뉴 (사이드바) -->
+                      <div class="box_gnb">
+                        [##_blog_menu_##]
+                      </div>
+                   </div>
+                  </s_sidebar_element>
+                </s_if_var_tistorymenu>
 
-                    <!-- 메인 메뉴 (사이드바) -->
-                    <div class="box_gnb">
-                      [##_blog_menu_##]
-                    </div>
-                  </s_if_var_tistorymenu>
-
-              </div>
-              </s_sidebar_element>
                   <s_sidebar_element>
                     <div class="sidebar_left">
                       <s_if_var_tistorycategory>
@@ -307,7 +319,7 @@
 
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.7 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V7.8 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -557,7 +569,7 @@
       <s_list>
         <div class="area_category category_type_[##_var_listType_##] category_search_list">
           <s_if_var_itciderbanner>
-            <a href="[##_var_itciderbannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderbannerimg_##]"
+            <a href="[##_var_itciderbannerurl_##]"><img class="itciderbanner" src="[##_var_itciderbannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderbanneralt_##]"><br></a>
             </s_if_var_itciderbanner>
           <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
@@ -593,9 +605,9 @@
             <div class="area_article">
               <div class="article_header type_article_header_cover">
 
-                <s_if_var_itcidercovernotgrad>
+                <s_not_var_itcidercovergrad>
                   <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-                  </s_if_var_itcidercovernotgrad>
+                  </s_not_var_itcidercovergrad>
                 <s_if_var_itcidercovergrad>
                   <div class="inner_header">
                   </s_if_var_itcidercovergrad>
@@ -656,7 +668,7 @@
                 </s_if_var_waiting>
               </s_if_var_autoupdate>
 
-              <s_if_var_manualupdate>
+              <s_not_var_autoupdate>
                 <s_if_var_waiting>                                                
                   <div id="waiting">
                     <div class="itcwait">
@@ -669,12 +681,12 @@
                     </div>
                   </div>
                 </s_if_var_waiting>
-              </s_if_var_manualupdate>
+              </s_not_var_autoupdate>
 
                 <div class="article_view">
                   
               <s_if_var_itciderarticlebanner>
-                <a href="[##_var_itciderarticlebannerurl_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebannerimg_##]"
+                <a href="[##_var_itciderarticlebannerurl_##]"><img class="itciderbanner" src="[##_var_itciderarticlebannerimg_##]"
                     width="100%" height="100%" alt="[##_var_itciderarticlebanneralt_##]"><br></a>
               </s_if_var_itciderarticlebanner>
 
@@ -685,7 +697,7 @@
                 </div>
               </s_if_var_tocload>
               <s_if_var_itciderarticlebanner2>
-                <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="./images/[##_var_itciderarticlebanner2img_##]"
+                <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="[##_var_itciderarticlebanner2img_##]"
                   width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
               </s_if_var_itciderarticlebanner2>
                 [##_article_rep_desc_##]
@@ -748,9 +760,9 @@
 
             <div class="article_header type_article_header_cover">
 
-                <s_if_var_itcidercovernotgrad>
+                <s_not_var_itcidercovergrad>
                   <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-                  </s_if_var_itcidercovernotgrad>
+                  </s_not_var_itcidercovergrad>
                 <s_if_var_itcidercovergrad>
 
                 <div class="inner_header">
@@ -779,9 +791,9 @@
 
           <div class="article_header type_article_header_cover">
 
-            <s_if_var_itcidercovernotgrad>
+            <s_not_var_itcidercovergrad>
               <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-            </s_if_var_itcidercovernotgrad>
+            </s_not_var_itcidercovergrad>
 
             <s_if_var_itcidercovergrad>
               <div class="inner_header">
@@ -821,9 +833,9 @@
 
             <div class="article_header type_article_header_cover">
 
-              <s_if_var_itcidercovernotgrad>
+              <s_not_var_itcidercovergrad>
                 <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
-              </s_if_var_itcidercovernotgrad>
+              </s_not_var_itcidercovergrad>
 
               <s_if_var_itcidercovergrad>
                 <div class="inner_header">
@@ -957,7 +969,7 @@
     </s_if_var_webshare>
   </s_if_var_autoupdate>
 
-  <s_if_var_manualupdate>
+  <s_not_var_autoupdate>
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
@@ -985,7 +997,7 @@
         </ul>
       </div>
     </s_if_var_webshare>
-  </s_if_var_manualupdate>
+  </s_not_var_autoupdate>
 
 </body>
 
@@ -1004,29 +1016,14 @@
   </script>
 </s_if_var_redirection>
 
+
 <s_if_var_autoupdate> 
-
-  <s_if_var_lazyload1>
-    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload.js" defer></script>
-  </s_if_var_lazyload1>
-
-  <s_if_var_lazyload2>
-    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itciderlazyload1.js" defer></script>
-  </s_if_var_lazyload2>
-
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_lazyload_##].js" defer></script>
 </s_if_var_autoupdate>
 
-<s_if_var_manualupdate>  
-
-  <s_if_var_lazyload1>
-    <script src="./images/itciderlazyload.js" defer></script>
-  </s_if_var_lazyload1>
-
-  <s_if_var_lazyload2>
-    <script src="./images/itciderlazyload1.js" defer></script>
-  </s_if_var_lazyload2>
-
-</s_if_var_manualupdate>
+<s_not_var_autoupdate>  
+    <script src="./images/[##_var_lazyload_##].js" defer></script>
+</s_not_var_autoupdate>
 
 <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/icomoon/icomoon.css" />
 <s_if_var_autoupdate>
@@ -1105,7 +1102,7 @@
   </s_if_var_ieredirect>
 </s_if_var_autoupdate>
 
-<s_if_var_manualupdate>
+<s_not_var_autoupdate>
   <s_if_var_webshare>
     <script>
 
@@ -1185,7 +1182,7 @@
   <s_if_var_ieredirect>
     <script src="./images/[##_var_ieconfig_##].js" defer></script>
   </s_if_var_ieredirect>
-</s_if_var_manualupdate>
+</s_not_var_autoupdate>
 
 <s_if_var_tocload>
   <style>
@@ -1304,7 +1301,7 @@
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.7
+버전 : V7.8
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
