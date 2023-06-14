@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V7.8
+버전 : V8.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -56,17 +56,16 @@
 
   <!--다크모드 코드 로드-->
   <s_if_var_autoupdate>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/adsensecss.css" />  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev7-8.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev8-0.css" />                                              
   </s_if_var_autoupdate>
 
   <s_not_var_autoupdate>
+    <link rel="stylesheet" href="./images/adsensecss.css" />  
     <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
     <link rel="stylesheet" href="./style.css" />                                                                                        
   </s_not_var_autoupdate>
-
-  
-   
 </head>
 
   <!--글 상단 썸네일 활성화-->
@@ -214,6 +213,24 @@
     </style>
   </s_not_var_replyprofile>
 
+  <s_if_var_replyrecent>
+    <style>
+      .tt-list-reply{
+          display: flex;
+          flex-direction: column-reverse;
+          -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+      }
+    </style>
+  </s_if_var_replyrecent>
+
+  <s_if_var_replyrecent>
+    <style>
+      #menubar menu_toolbar{
+        display: none!important;
+      }
+    </style>
+  </s_if_var_replyrecent>
 
 <body id="[##_body_id_##]" class="[##_var_colorSet_##]">
   <s_t3>
@@ -222,7 +239,7 @@
       [##_revenue_list_upper_##]
       <!-- box_header -->
       <header class="box_header">
-        <h1 class="title_logo">
+        <p class="title_logo">
           <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
             <s_if_var_logoImage>
               <img src="[##_var_logoImage_##]" class="img_logo" width="100%" height="100%" alt="[##_title_##]">
@@ -231,7 +248,7 @@
               [##_title_##]
             </s_not_var_logoImage>
           </a>
-        </h1>
+        </p>
 
         <button type="button" class="btn_search" title="검색"></button>
         <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button>
@@ -319,7 +336,7 @@
 
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V7.8 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V8.0 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -612,8 +629,9 @@
                   <div class="inner_header">
                   </s_if_var_itcidercovergrad>
                   <div class="info_text">
-                    <strong class="title_post">[##_article_rep_title_##]</strong>
-                    <p class="info">
+                    <h1 class="title_post">
+                      [##_article_rep_title_##]
+                    </h1>                    <p class="info">
                       <nav role="navigation" aria-label="Breadcrumbs" class="bf-breadcrumb clearfix bc-top-style">
                         <div class="container bf-breadcrumb-container">
                           <span class="date">[##_article_rep_date_year_##]. [##_article_rep_date_month_##]. [##_article_rep_date_day_##]에 최초 게시됨</span><br>
@@ -700,6 +718,39 @@
                 <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="[##_var_itciderarticlebanner2img_##]"
                   width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
               </s_if_var_itciderarticlebanner2>
+              <s_if_var_adsensetopad>
+              <div class="adsense-ads">
+                <div class="revenue_unit_item adsense adsenseconfig-left">
+                    <ins class="adsbygoogle adsense-left"
+                                data-ad-client="ca-pub-[##_var_adsensecapub_##]"
+                                data-ad-slot="[##_var_adsenseslot_##]"
+                                data-ad-format="rectangle"
+                                data-full-width-responsive="true"></ins>
+                    <script>
+                      //모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.
+                      if(window.innerWidth < 768) {
+                        $(".adsenseconfig-left").remove();
+                        document.getElementsByClassName('adsenseconfig-left').remove();
+                        document.querySelector('.adsenseconfig-left').remove();
+                      } else {
+                          (adsbygoogle = window.adsbygoogle || []).push({});
+                      }
+                      //모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.
+                    </script>
+                </div>
+                <div class="revenue_unit_item adsense adsenseconfig-right">
+                    <ins class="adsbygoogle adsense-right"
+                                data-ad-client="ca-pub-[##_var_adsensecapub_##]"
+                                data-ad-slot="[##_var_adsenseslot2_##]"
+                                data-ad-format="rectangle"
+                                data-full-width-responsive="true" ></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            </s_if_var_adsensetopad>
+
                 [##_article_rep_desc_##]
               </div>
 
@@ -943,7 +994,7 @@
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
-          <li>
+          <li class="lefttoolbox">
           <s_if_var_shareurlcopybtn>
               <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" height="40" alt="링크 복사하기"></a>
           </s_if_var_shareurlcopybtn>
@@ -953,7 +1004,7 @@
         </s_if_var_shareurlsharebtn>
         </li>
 
-        <li>
+        <li class="righttoolbox">
           <s_if_var_sharesearchbtn>
             <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
           </s_if_var_sharesearchbtn>    
@@ -973,7 +1024,7 @@
     <s_if_var_webshare>
       <div class="shareBtn">
         <ul>
-          <li>
+          <li class="lefttoolbox">
           <s_if_var_shareurlcopybtn>
               <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied" title="url복사" rel="nofollow"><img src="./images/url.png" width="40" height="40" alt="링크 복사하기"></a>
           </s_if_var_shareurlcopybtn>    
@@ -984,8 +1035,8 @@
 
         </li>
 
-            <li>
-              <s_if_var_sharesearchbtn>
+        <li class="righttoolbox">
+             <s_if_var_sharesearchbtn>
                 <a  href="[##_var_sharesearchlink_##]" type="button" title="검색하기" rel="nofollow"><img src="./images/search.png" width="40" height="40" alt="[##_var_sharesearchalt_##]"></a>
               </s_if_var_sharesearchbtn>         
                 
@@ -999,7 +1050,91 @@
     </s_if_var_webshare>
   </s_not_var_autoupdate>
 
+  <s_if_var_adsenseautoadon>
+  <script>
+    function autoAppendAds() {
+        var $ads = $('.article_view > div > p > ins');
+        var $contents = $('.article_view > div > p');
+        if($ads.length == 0 && $contents.length > 0) {
+            var adsBlock = '<div class="adsense-ads">';
+            adsBlock += ' <div class="revenue_unit_item adsense adsenseconfig-left">';
+            adsBlock += ' <ins class="adsbygoogle adsense-left"';
+            adsBlock += ' data-ad-client="ca-pub-[##_var_adsensecapub_##]"';
+            adsBlock += ' data-ad-slot="[##_var_adsenseslot_##]"';
+            adsBlock += ' data-ad-format="rectangle"';
+            adsBlock += ' data-full-width-responsive="true"';
+            adsBlock += ' style="width:336px;"></ins></div>';
+            adsBlock += ' <div class="revenue_unit_item adsense adsenseconfig-right">';
+            adsBlock += ' <ins class="adsbygoogle adsense-right"';
+            adsBlock += ' data-ad-client="ca-pub-[##_var_adsensecapub_##]"';
+            adsBlock += ' data-ad-slot="[##_var_adsenseslot2_##]"';
+            adsBlock += ' data-ad-format="rectangle"';
+            adsBlock += ' data-full-width-responsive="true"';
+            adsBlock += ' style="width:336px;"></ins>';
+            adsBlock += ' </div></div>';
+    
+            var adsCount = Math.round($contents.length/60) + 1;
+    
+            for(var i=0;i<adsCount;i++) {
+                var index = Math.floor($contents.length/(adsCount+1)*(i+1));
+                $contents.eq(index).after(adsBlock);
+            }
+            //모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.
+            if($(window).width() < 768) {
+              $(".adsenseconfig-left").remove();
+              document.getElementsByClassName('adsenseconfig-left').remove();
+              document.querySelector('.adsenseconfig-left').remove();
+            }
+            //모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.
+
+            function pushAds(i, adsCount) {
+                delay(100).then(function(){
+                    if(i < adsCount) {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        pushAds(i+1, adsCount);
+                    }
+                });
+            }
+            if($(window).width() < 710) {
+                pushAds(0, adsCount);
+            } else {
+                pushAds(0, adsCount*2);
+            }
+        }
+    }
+    
+    $(document).ready(function() {
+        autoAppendAds();
+    });
+    </script>
+
+<s_if_var_autoupdate> 
+  <s_if_var_adsensereconf> 
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/adsensereload.js" defer></script>
+  </s_if_var_adsensereconf> 
+  <!--모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.-->
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/adsenseprotector.js" defer></script>
+  <!--모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.-->
+</s_if_var_autoupdate>
+
+<s_not_var_autoupdate>  
+  <s_if_var_adsensereconf> 
+    <script src="./images/adsensereload.js" defer></script>
+  </s_if_var_adsensereconf> 
+  <!--모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.-->
+  <script src="./images/adsenseprotector.js" defer></script>
+  <!--모바일 접속시에 광고를 하나만 띄우는 옵션입니다. 애드센스 정책 위반이 될 수 있으므로 지우지 마세요.-->
+</s_not_var_autoupdate>
+
+</s_if_var_adsenseautoadon>
+
+    
+  <s_if_var_adsensejs>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    crossorigin="anonymous"></script>
+  </s_if_var_adsensejs>
 </body>
+
 
 <s_if_var_redirection>
   <script>
@@ -1019,10 +1154,16 @@
 
 <s_if_var_autoupdate> 
   <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_lazyload_##].js" defer></script>
+  <s_if_var_autoaltmaker>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/altmaker.js" defer></script>
+  </s_if_var_autoaltmaker>
 </s_if_var_autoupdate>
 
 <s_not_var_autoupdate>  
     <script src="./images/[##_var_lazyload_##].js" defer></script>
+    <s_if_var_autoaltmaker>
+      <script src="./images/altmaker.js" defer></script>
+    </s_if_var_autoaltmaker>
 </s_not_var_autoupdate>
 
 <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/icomoon/icomoon.css" />
@@ -1301,7 +1442,7 @@
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V7.8
+버전 : V8.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>7.8</version>
+        <version>8.0</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -224,6 +224,18 @@
                     <![CDATA[티스토리 폰트 사용 여부 ]]>
                 </description>
             </variable>
+             <variable>
+                <name>autoaltmaker</name>
+                <label>
+                    <![CDATA[자동으로 alt 태그 생성]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[자동으로 alt 태그 생성 ]]>
+                </description>
+            </variable>
             
         </variablegroup>
 
@@ -262,6 +274,93 @@
                 <default>위 블로그글은 저작권법에 의해서 보호됩니다. 무단 전재 또는 복제시 관련법에 따라 처벌될 수 있습니다.</default>
                 <description>
                     <![CDATA[ 출처 표기 문구 ]]>
+                </description>
+            </variable>
+        </variablegroup>
+
+        <variablegroup name="애드센스 자동광고 [이 옵션 적용시 책임은 모두 사용자에 있습니다.]">
+            <variable>
+                <name>adsensetopad</name>
+                <label>
+                    <![CDATA[ 애드센스 본문 상단 광고 켜기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 애드센스 본문 상단 광고 켜기 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsenseautoadon</name>
+                <label>
+                    <![CDATA[ 애드센스 본문 중간 자동 광고 켜기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 애드센스 본문 중간 자동 광고 켜기 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsensecapub</name>
+                <label>
+                    <![CDATA[ 애드센스 pub코드 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 애드센스 pub코드을 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsenseslot</name>
+                <label>
+                    <![CDATA[ 애드센스 slot 코드 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 애드센스 slot 코드를 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsenseslot2</name>
+                <label>
+                    <![CDATA[ 애드센스 slot2 코드 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+                <description>
+                    <![CDATA[ 애드센스 slot2 코드를 적어주세요. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsensejs</name>
+                <label>
+                    <![CDATA[ 애드센스 광고가 안 나올때 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 애드센스 광고가 안 나올때 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>adsensereconf</name>
+                <label>
+                    <![CDATA[ 애드센스 광고 재로딩 [사용에 대한 책임은 사용자에 있습니다.] ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 애드센스 광고 재로딩 [사용에 대한 책임은 사용자에 있습니다.] ]]>
                 </description>
             </variable>
         </variablegroup>
@@ -625,6 +724,31 @@
                     <![CDATA[ 댓글 및 방명록 프로필 이미지 활성화 여부 ]]>
                 </description>
             </variable>
+            <variable>
+                <name>replyrecent</name>
+                <label>
+                    <![CDATA[ 댓글 최신순으로 설정 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 댓글 최신순으로 설정 ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>tistorytoolbar</name>
+                <label>
+                    <![CDATA[ 티스토리 툴바 제거 여부 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+                <description>
+                    <![CDATA[ 티스토리 툴바 제거 여부 ]]>
+                </description>
+            </variable>
+            
         </variablegroup>
 
 		<variablegroup name="블로그 목차 설정">
