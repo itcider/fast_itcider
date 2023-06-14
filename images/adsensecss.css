@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 스킨명 : fast itcider
 버전 : V8.0
@@ -12,8 +13,50 @@
 ㄴitcider 공식 웹사이트에서만 배포 가능
 위 주의사항을 어기실 경우 사용 불가합니다.
 */
-/* fi skin dark mode start*/
 
+.adsense-ads {
+  display: flex;
+  margin: 20px 0 20px;
+}
+
+.adsenseconfig-left {
+  margin: auto;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.adsenseconfig-right {
+  margin: auto;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.adsbygoogle.adsense-left {
+  display: block;
+  width: 336px;
+  height: 280px;
+}
+
+.adsbygoogle.adsense-right {
+  display: block;
+  width: 336px;
+  height: 280px;
+}
+
+.adsbygoogle.adsense-left {
+  display: block;
+  width: 336px;
+  height: 280px;
+  max-width: inherit!important;
+}
+
+.adsbygoogle.adsense-right {
+  display: block;
+  width: 336px;
+  height: 280px;
+  max-width: inherit!important;
+
+}
 /*
 스킨명 : fast itcider
 버전 : V8.0
