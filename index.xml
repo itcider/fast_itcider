@@ -340,6 +340,18 @@
                 </description>
             </variable>
             <variable>
+                <name>adsensetwo</name>
+                <label>
+                    <![CDATA[ 광고 2개 사용하기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+                <description>
+                    <![CDATA[ 광고 2개 사용하기 ]]>
+                </description>
+            </variable>
+            <variable>
                 <name>adsensejs</name>
                 <label>
                     <![CDATA[ 애드센스 광고가 안 나올때 ]]>

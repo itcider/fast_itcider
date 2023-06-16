@@ -224,13 +224,15 @@
     </style>
   </s_if_var_replyrecent>
 
-  <s_if_var_replyrecent>
+  <s_if_var_tistorytoolbar>
     <style>
       #menubar menu_toolbar{
         display: none!important;
       }
     </style>
-  </s_if_var_replyrecent>
+  </s_if_var_tistorytoolbar>
+
+
 
 <body id="[##_body_id_##]" class="[##_var_colorSet_##]">
   <s_t3>
@@ -1133,6 +1135,17 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     crossorigin="anonymous"></script>
   </s_if_var_adsensejs>
+
+  
+  <s_not_var_adsensetwo>
+    <script>
+    if(window.innerWidth < 999999999999) {
+      document.querySelector('.adsenseconfig-left').remove();
+      document.getElementsByClassName('adsenseconfig-left').remove();
+      $(".adsenseconfig-left").remove();
+    }    
+    </script>
+  </s_not_var_adsensetwo>
 </body>
 
 
