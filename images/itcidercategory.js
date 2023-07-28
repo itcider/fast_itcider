@@ -1,6 +1,6 @@
 /*
 스킨명 : fast itcider
-버전 : V8.0
+버전 : V8.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -132,7 +132,7 @@ function slider_control() {
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.8.0
+ Version: 1.8.1
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick

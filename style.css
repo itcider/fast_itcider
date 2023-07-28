@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V8.0
+버전 : V8.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -2570,10 +2570,36 @@ blockquote[data-ke-style="style3"],
 .og-text{
   border-radius: 0 20px 20px 0!important;  
 }
-
-.article_view a {
-margin: 0; 
+.tt_article_useless_p_margin p a{
+  word-break: break-all;
+   color: #2f7fff;
+   transition: color .25s ease-in;
+   color: #2f7fff;
+   background-repeat: no-repeat;
+   background-size: 100% 0.2em;
+   background-position: 0 100%;
+     background-image: linear-gradient(to right,#2f7fff,#5B9AFF,#aecdff);
+   transition: all .25s ease-in;
+   padding: 2px 0;
+   font-weight: bold;
+border-radius:0px!important;
+}
+.tt_article_useless_p_margin p a:hover{
+  background-size: 100% 100% !important;
+  color: #fff !important;
+  border-radius: 5px!important;
+  padding:5px;
+  font-weight: bold;
+}
+.article_view a:not(.tt_article_useless_p_margin p a){
+  margin: 0; 
 border-radius: 20px!important;
+}
+.tt-box-total{
+  margin-top:30px;
+}
+.tt-area-reply{
+  margin-bottom:10px!important;
 }
 pre {
   border-radius: 20px!important;  
@@ -3363,7 +3389,7 @@ border-radius: 5%;
   }
 /*
 스킨명 : fast itcider
-버전 : V8.0
+버전 : V8.1
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
