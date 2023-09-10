@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V8.2
+버전 : V9.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -36,9 +36,7 @@
     background-color: #1e1e1e!important;
     border-color: #fff !important;
   }
-  .article_view pre{
-    border: #fff 1px solid;
-  }
+
   .area_popup .box_form .btn_search_del  .svg_bg {
 
     fill: #fff!important;
@@ -71,7 +69,9 @@
     background-color: #1E1E1E!important;
     border: 1px solid #fff!important;
   }
-  
+  .area_tag {
+    background:black!important;
+  } 
   .tt-area-write .tt-box-account input, .tt-box-textarea .tt-inner-g {
     background-color: #1E1E1E!important;
     color: #fff!important;
@@ -83,22 +83,23 @@
     background-color: #1E1E1E!important;
   }
   .area_tag .tag_content a {
-    border: solid 1px #fff !important;
-    }
+    background: #1e1e1e!important;
+  
+  }
     .itciderbanner{
       border: #fff solid 1px!important;
     }
   .layer_post .btn_mark {
     color: #1E1E1E !important;
   }
-  .area_popup .box_form {
-    border: 1px solid #fff!important;
-     }
+
   
   .area_popup .box_form .inp_search {
     color: #fff!important;
   }
-  
+  .area_tag .tag_content a{
+    background: #1e1e1e!important;
+  }
   
 
   @media screen and (max-width: 767px) {
@@ -320,9 +321,6 @@
     font-weight: 500;
   }
 
-  .area_sidebar .sub_category_list {
-    border-left: 3px solid #888 !important;
-  }
 
   .area_sidebar .t_menu_home a,
   .area_sidebar .t_menu_tag a,
@@ -356,14 +354,12 @@
   }
 
   .tag_zone a {
-    border: solid 1px #999 !important;
     color: #eee !important;
+    background:#000!important;
   }
 
   .area_popup .box_form {
-    border-bottom: 1px solid #ccc !important;
-    border: 1px solid #fff!important;
-
+background:#000!important;
   }
 
 	span.selected, a.link_num{
@@ -383,15 +379,17 @@
 
   input.inp_comment,
   input.inp_search {
-    background-color: #1E1E1E !important;
+    background-color: #000 !important;
     color: #fff !important;
   }
 
   ul#toc {
-    background-color: #1E1E1E !important;
+    background-color: #000 !important;
     color: #fff !important;
   }
-
+  #toc > li {
+    background: #1e1e1e!important;
+  }
   li {
     color: #fff !important;
   }
@@ -399,7 +397,10 @@
   img {
     color: #fff !important;
   }
+  .area_sidebar .link_add, .t_menu_guestbook a,.t_menu_home a,.t_menu_tag a ,.t_menu_link_1 a,.t_menu_link_2 a,.t_menu_link_3 a,.t_menu_link_4 a,.t_menu_link_5 a {
+    background: #000!important;
 
+  }
   button.btn_register {
     background-color: #1E1E1E !important;
     border: 1px solid rgb(255, 255, 255) !important;
@@ -461,10 +462,29 @@
     border-bottom: #eee 3px solid !important;
   }
 
+  .category_list > li{
+    background:#000!important;
+    border-radius:10px;
+    color:white!important;
+  }
+  .sub_category_list:hover{
+      background:#1e1e1e!important;
+      border-radius:10px;
+  }
+  .area_sidebar .box_tool {
+    background: #000!important;
+  }
+  .theme_gray .thema_apply .box_tag a,.tag_zone a,.link_footer {
+    color: #fff!important;
+    background: #000!important;
+   }
+   .category_type_notice .item_category{
+  background: black !important; 
+  }
 }
 /*
 스킨명 : fast itcider
-버전 : V8.2
+버전 : V9.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

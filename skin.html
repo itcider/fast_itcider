@@ -1,6 +1,6 @@
 <!--
 스킨명 : fast itcider
-버전 : V8.2
+버전 : V9.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -51,18 +51,18 @@
   </s_not_var_jqueryconfig>
 
   <s_if_var_jqueryconfig>
-    <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   </s_if_var_jqueryconfig>
 
   <!--다크모드 코드 로드-->
   <s_if_var_autoupdate>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/adsensecss.css" />  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/syscss.css" />  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/[##_var_darkmodeconfig_##].css" />     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev8-2.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/stylev9-0.css" />                                              
   </s_if_var_autoupdate>
 
   <s_not_var_autoupdate>
-    <link rel="stylesheet" href="./images/adsensecss.css" />  
+    <link rel="stylesheet" href="./images/syscss.css" />  
     <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />  
     <link rel="stylesheet" href="./style.css" />                                                                                        
   </s_not_var_autoupdate>
@@ -338,7 +338,7 @@
 
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
-          <a href="https://itcider.com/903">Fi스킨 V8.2 by itcider.com</a>
+          <a href="https://itcider.com/903">Fi스킨 V9.0 by itcider.com</a>
           <!-- itcider 스킨 소개 - 더 많은 분들이 사용할 수 있도록 지우지 말아주세요-->
           <!--이 문구를 삭제할 경우 itcider skin license를 위반하는 것입니다. 위반할 경우 fi skin을 사용할 수 없습니다.-->
           </div>
@@ -585,6 +585,7 @@
         </div>
       </s_cover_group>
 
+      
       <s_list>
         <div class="area_category category_type_[##_var_listType_##] category_search_list">
           <s_if_var_itciderbanner>
@@ -594,6 +595,7 @@
           <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
 
           <ul class="list_category">
+            
             <s_list_rep>
               <li class="item_category">
                 <a href="[##_list_rep_link_##]" class="link_category">
@@ -720,6 +722,7 @@
                 <a href="[##_var_itciderarticlebanner2url_##]"><img class="itciderbanner" src="[##_var_itciderarticlebanner2img_##]"
                   width="100%" height="100%" alt="[##_var_itciderartilcebanneralt2_##]"><br></a>
               </s_if_var_itciderarticlebanner2>
+                 
               <s_if_var_adsensetopad>
               <div class="adsense-ads">
                 <div class="revenue_unit_item adsense adsenseconfig-left">
@@ -1131,20 +1134,10 @@
 </s_if_var_adsenseautoadon>
 
     
-  <s_if_var_adsensejs>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    crossorigin="anonymous"></script>
-  </s_if_var_adsensejs>
 
   
   <s_not_var_adsensetwo>
-    <script>
-    if(window.innerWidth < 999999999999) {
-      document.querySelector('.adsenseconfig-left').remove();
-      document.getElementsByClassName('adsenseconfig-left').remove();
-      $(".adsenseconfig-left").remove();
-    }    
-    </script>
+    <script src="./images/sysnottwo.js" defer></script>
   </s_not_var_adsensetwo>
 </body>
 
@@ -1239,7 +1232,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercopy.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
   </s_if_var_webshare> 
     <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcidercategory.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/itcider_top.js" defer></script>
@@ -1319,7 +1312,7 @@
     </script>
 
     <script src="./images/itcidercopy.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
   </s_if_var_webshare> 
 
     <script src="./images/itcidercategory.js" defer></script>
@@ -1342,7 +1335,7 @@
   <style>
     @media (prefers-color-scheme: dark) {
 
-    #toc a:hover {
+    #toc li:hover {
       background: linear-gradient(180deg, [##_var_darktocgrad1_##] 50%, [##_var_darktocgrad2_##] 50%)!important;
     }
     }
@@ -1351,7 +1344,7 @@
         .book-toc ul {
         list-style-type: [##_var_tocoption_##];
     }
-    #toc a:hover {
+    #toc li:hover {
       background: linear-gradient(180deg, [##_var_tocgrad1_##] 50%, [##_var_tocgrad2_##] 50%);
     }
    </style>
@@ -1450,12 +1443,17 @@
       $( 'span.mod_date' ).append( date);
     } );
   </script>
+   <script>
+
+    $(function() { $('.tags').each(function () { var comma = $(this).html(); $(this).html(comma.replace(/,/g, '')); }); });
+  
+   </script>
 
   <div id="Copyright_Message">
   </div>
 <!--
 스킨명 : fast itcider
-버전 : V8.2
+버전 : V9.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license

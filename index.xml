@@ -2,7 +2,7 @@
 <skin>
     <information>
         <name>fast itcider</name>
-        <version>8.2</version>
+        <version>9.0</version>
         <description>
             <![CDATA[FI스킨은 사용자의 편의, 빠른 로딩, 쉬운 설정이 가능한 무료 티스토리 스킨입니다. ]]>
         </description>
@@ -52,7 +52,29 @@
                 <default></default>
             </variable>
         </variablegroup>
-      
+
+        <variablegroup name="블로그 디자인 설정">
+
+            <variable>
+                <name>listType</name>
+                <label>
+				<![CDATA[ 블로그 형태 설정 ]]>
+				</label>
+                <description></description>
+                <type>SELECT</type>
+                <option>
+                    <![CDATA[
+				[
+                    {"name":"notice", "label":"블로그형", "value":"notice"},
+					{"name":"related", "label":"갤러리형", "value":"related"}
+				]
+			]]>
+                </option>
+                <default>notice</default>
+            </variable>
+        </variablegroup>
+
+
         <variablegroup name="티스토리 블로그 seo 설정">
 
             <variable>
@@ -351,18 +373,7 @@
                     <![CDATA[ 광고 2개 사용하기 ]]>
                 </description>
             </variable>
-            <variable>
-                <name>adsensejs</name>
-                <label>
-                    <![CDATA[ 애드센스 광고가 안 나올때 ]]>
-                </label>
-                <type>BOOL</type>
-                <option />
-                <default>false</default>
-                <description>
-                    <![CDATA[ 애드센스 광고가 안 나올때 ]]>
-                </description>
-            </variable>
+          
             <variable>
                 <name>adsensereconf</name>
                 <label>
@@ -547,22 +558,7 @@
             </variable>
             
 
-            <variable>
-                <name>listType</name>
-                <label>
-				<![CDATA[ 메인페이지 리스트 방식 ]]>
-				</label>
-                <description></description>
-                <type>SELECT</type>
-                <option>
-                    <![CDATA[
-				[
-					{"name":"related", "label":"블로그형", "value":"related"}
-				]
-			]]>
-                </option>
-                <default>related</default>
-            </variable>
+
 
             <variable>
                 <name>itciderbanner</name>
@@ -864,7 +860,7 @@
                 </label>
                 <type>COLOR</type>
                 <option />
-                <default>#BDBDBD</default>
+                <default>#1e1e1e</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러2 (다크모드에서의 색상)]]>
                 </description>
