@@ -441,10 +441,7 @@ body {
     color: #4167d9 !important; }
   .theme_green .thema_apply .selected {
     color: #11998e !important; }
-  .theme_gray .thema_apply .selected {
-    color: #000 !important;
-
-   } }
+ }
 
 /* html */
 html, body {
