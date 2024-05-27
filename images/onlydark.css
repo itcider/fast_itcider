@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 스킨명 : fast itcider
-버전 : V9.0
+버전 : V10.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
@@ -171,16 +171,21 @@
   hljs-meta{
     background-color: #ebebeb !important;
   }
-  span.selected {
-    color: #000 !important;
+  .link_num .selected{
+    background:black!important;
+    color:white!important;
   }
+  
 
   div.swal2-popup {
     background-color: #333 !important;
     color: #fff !important;
   }
 
+  .theme_gray .thema_apply .selected {
+    color: #fff !important;
 
+   }
 
   .div_swal {
     color: rgb(255, 255, 255) !important;
@@ -467,7 +472,7 @@ background:#000!important;
     border-radius:10px;
     color:white!important;
   }
-  .sub_category_list:hover{
+  .sub_category_list >li:hover{
       background:#1e1e1e!important;
       border-radius:10px;
   }
@@ -484,7 +489,7 @@ background:#000!important;
 }
 /*
 스킨명 : fast itcider
-버전 : V9.0
+버전 : V10.0
 제작자 : itcider 쉽고 시원한 it
 제작자 웹사이트 : itcider.com
 사용 조건 : itcider license
